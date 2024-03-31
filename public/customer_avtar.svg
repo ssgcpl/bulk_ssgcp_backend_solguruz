@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120.947" height="120.947" viewBox="0 0 120.947 120.947">
+  <g id="Group_100648" data-name="Group 100648" transform="translate(-13150.027 4791.5)">
+    <g id="Group_100647" data-name="Group 100647" transform="translate(13023.027 -4874.5)">
+      <rect id="Rectangle_26756" data-name="Rectangle 26756" width="120.947" height="120.947" transform="translate(127 83)" fill="#c5ccc4"/>
+      <g id="vuesax_bold_profile-add" data-name="vuesax/bold/profile-add" transform="translate(146.841 102.841)">
+        <g id="profile-add" transform="translate(0 0)">
+          <path id="Vector" d="M16.028,0a16.013,16.013,0,0,0-.4,32.022,2.722,2.722,0,0,1,.742,0H16.6A16.016,16.016,0,0,0,16.028,0Z" transform="translate(24.464 6.749)" fill="#fff"/>
+          <path id="Vector-2" data-name="Vector" d="M40.9,4.707c-9.414-6.276-24.767-6.276-34.249,0C2.362,7.575,0,11.456,0,15.606s2.362,8,6.614,10.832A31.176,31.176,0,0,0,23.755,31.2,31.176,31.176,0,0,0,40.9,26.438c4.252-2.868,6.614-6.715,6.614-10.9C47.477,11.388,45.148,7.542,40.9,4.707ZM30.5,18.137H26.286v4.218a2.531,2.531,0,0,1-5.061,0V18.137H17.007a2.531,2.531,0,0,1,0-5.061h4.218V8.858a2.531,2.531,0,1,1,5.061,0v4.218H30.5a2.531,2.531,0,1,1,0,5.061Z" transform="translate(16.737 43.039)" fill="#fff"/>
+          <path id="Vector-3" data-name="Vector" d="M0,0H80.983V80.983H0Z" transform="translate(80.983 80.983) rotate(180)" fill="none" opacity="0"/>
+        </g>
+      </g>
+    </g>
+    <ellipse id="Ellipse_482" data-name="Ellipse 482" cx="15.5" cy="10.5" rx="15.5" ry="10.5" transform="translate(13194 -4724)" fill="#fff"/>
+  </g>
+</svg>

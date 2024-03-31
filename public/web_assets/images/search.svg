@@ -1,0 +1,15 @@
+<svg id="Component_99_1" data-name="Component 99 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_25701" data-name="Rectangle 25701" width="24" height="24" transform="translate(194 841)" fill="#9dadbd"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_45" data-name="Mask Group 45" transform="translate(-194 -841)" clip-path="url(#clip-path)">
+    <g id="Iconly_Bold_Search" data-name="Iconly/Bold/Search" transform="translate(197 844)">
+      <g id="Search" transform="translate(0 0)">
+        <path id="Search-2" data-name="Search" d="M17.611,15.945l-2.3-1.856a.887.887,0,0,0-1.253,0,.976.976,0,0,0,0,1.372h0l1.908,2.187a1.182,1.182,0,0,0,1.684,0,1.213,1.213,0,0,0,0-1.7Z" fill="#9dadbd"/>
+      </g>
+      <path id="Search_-_Bd" data-name="Search - Bd" d="M7.72,0A7.762,7.762,0,0,0,0,7.8a7.762,7.762,0,0,0,7.72,7.8,7.762,7.762,0,0,0,7.72-7.8,7.846,7.846,0,0,0-2.261-5.518A7.678,7.678,0,0,0,7.72,0Z" transform="translate(0 0)" fill="none" stroke="#9dadbd" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

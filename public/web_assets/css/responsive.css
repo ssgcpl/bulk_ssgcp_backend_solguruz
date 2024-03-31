@@ -1,0 +1,135 @@
+@media only screen and (max-width: 1400px) {
+  
+}
+@media only screen and (max-width: 1200px) {
+   
+}
+@media only screen and (max-width: 1024px) {
+ 
+}
+
+@media only screen and (max-width: 991px) {
+  .main-wapper { padding: 63px 0 0; }
+  .tag-list ul { display: block; white-space: nowrap; overflow-x: auto; flex-wrap: nowrap; overflow-y: hidden; margin: 0 -5px; }
+  .tag-list ul li { display: inline-block; }
+
+  /* header .navbar-nav { flex-flow: column-reverse; } */
+  /* header .right-side { align-items: baseline; } */
+  header .navbar-light .navbar-toggler { padding: 0; margin: 0 0 0 15px; }
+  header .menu-list { border: 0; }
+  header .navbar-nav { align-items: start; }
+  header .navbar-nav li { padding: 0; width: 100%; }
+  header .navbar-nav li a, 
+  header .navbar-nav li.dropdown a{ padding: 10px 20px; width: 100%; display: inline-block; }
+  header .navbar-nav li a .icon { display: inline-block; }
+
+  header .navbar-collapse{ position: fixed; background: rgb(228 239 246); top: 63px; left: 0px; bottom: 0; width: 280px; height: 100vh !important; transition: .3s; padding-top: 0px; box-shadow: 0px 2px 1px 0px #e2e2e2; }
+  header .collapse:not(.in) { display: block; left: -280px; transition: .3s; }
+  header .collapse.in{ left: 0px; transition: .3s; display: block; }  
+ 
+  header .navbar-nav .dropdown { width: 100%; padding: 0; }  
+  header .navbar-nav li.dropdown ul.dropdown-menu { position: relative; box-shadow: none; background: none; padding: 0 0 0 45px; }
+
+  section.product-detail .product-slider { margin: 0 0 30px; position: unset; }
+  section.my-cart .sticky-cart { position: unset; }
+  section.contact-page .contact-info { margin: 0 0 20px; }
+
+
+}
+@media only screen and (max-width: 768px) {
+  header .navbar .contact-info { display: none; }
+
+} 
+@media only screen and (max-width: 767px) {
+  
+}
+@media only screen and (max-width: 667px) {
+  .page-title h1 { font-size: 24px; }
+  .section-title h2 { font-size: 22px; }
+  
+    
+}
+
+@media only screen and (max-width: 568px) {
+  .return-prduct-modal .book-price-weight ul li { padding: 0 5px; }
+  .modal .modal-content { border-radius: 6px; }
+  .secondary-btn, .primary-btn { font-size: 14px; padding: 8px 20px; }
+  body { font-size: 14px; }
+  section { padding: 30px 0; }
+  section.cms-page h2  { margin: 20px 0 15px; font-size: 20px; }
+  .book-box .detail .sale-price { font-size: 14px; }
+  .book-box .detail .sale-price span { font-size: 12px; }
+  .qty-items .qty {  }
+  .ticket-box { box-shadow: none; padding: 0; margin: 0; border-bottom: 10px solid #f7f7f7; }
+  .wishlist-detail-modal .product-list-box .img { width: 35%; }
+  .product-list-box .detail { padding: 0 0 0 15px; }
+  .product-list-box .detail h6{ font-size: 14px; }
+  .product-list-box .detail .sale-price { font-size: 16px; } 
+  .product-list-box .detail .out-of-stock .out { font-size: 12px; }
+  
+  .search-field .box select { padding: 0 8px; max-width: 110px; }
+  .search-field .box .form-control { padding: 0 15px; }
+  .search-field .box { padding: 3px 0; }
+  .search-field .box .search-btn { margin-right: 5px; }
+
+  .order-list { box-shadow: 0px 5px 0px 0px #f5f5f5; padding: 10px 0; border: 0; }
+  .earnings-modal .list .box .detail h6 { font-size: 14px; }
+  .earnings-modal .list .point h4 { font-size: 12px; }
+  .otp-modal .otp-box .otp-input .form-control { margin: 0 3px; }
+
+  section.my-cart .order-list { padding: 10px; }
+
+  section.home-search { padding: 10px 0; }
+  section.inner-page-banner { padding: 10px 0; }
+
+  section.product-detail .product-content h1 { font-size: 22px; }
+  section.product-detail .product-content .book-price-weight ul li { padding: 0 5px; }
+  section.product-detail .product-content .book-price-weight ul li .price { font-size: 14px; }
+  section.product-detail .product-content .book-price-weight ul li p { font-size: 14px; }
+
+  section.contact-page .contact-info { padding: 15px; }
+  section.contact-page .contact-info h5{ font-size: 16px; }
+  section.contact-page .contact-info ul li .box .img { width: 40px; height: 40px; font-size: 16px; } 
+
+  section.my-cart .cart-list .img { width: 30%; }
+  section.my-cart .cart-list .details { padding: 0 0 0 15px; }
+  section.my-cart .cart-list .details p{ margin: 0 0 4px; } 
+  section.my-cart .cart-list .details h5{ margin: 0; }
+  section.my-cart .cart-list .details .price-qty { margin: 0 0 5px; }
+  section.my-cart .order-detail .box .img { width: 30%; }
+  section.my-cart .order-detail .box .details { padding: 0 0 0 10px; }
+  section.my-cart .order-detail .box .details .head h5{ font-size: 14px; }
+  section.my-cart .order-detail .box .details p{ margin: 0;  }
+  section.my-cart .order-detail .box .details .detail-btn .view {  }
+
+  section.auth-page .auth-form { border-radius: 0; padding: 15px; }
+  section.digital-coupon .coupon-listing { padding: 15px 5px; }
+  section.digital-coupon .coupon-listing .coupon-list ul.list li .box .code { padding: 4px 15px; font-size: 13px; }
+  section.digital-coupon .coupon-listing .coupon-list ul.list li .box .redeemed { padding: 4px 15px; font-size: 14px; }
+
+  section.shop-our-book .custom-tab-box ul.custom-nav-tabs li { width: 50%; min-width: auto;}
+  section.order-placed-page .search-field { padding: 10px; }
+  section.profile-page .panel .panel-body .item { padding: 0; }
+
+  footer.footer { padding: 30px 0 0px; }
+  footer.footer .about-info .footer-logo img { max-width: 140px; }
+  footer .footer-bottom { margin: 0px; }
+
+  section.profile-page .panel { border: 0; margin: 0; }
+  section.refer-earn-content .box { padding: 20px; }
+  section.refer-earn-content .box .your-code { margin: 30px 0; }
+
+  section.return-product .order-list{ padding: 10px; }
+  section.suggestion-page .wish-publish { padding: 0; box-shadow: none; }
+  section.wishlist-return .return-pro-list { margin: 0; height: auto; padding: 15px 0; box-shadow: none; border-bottom: 1px solid #e2e2e2; }
+  section.wishlist-return .return-pro-list .return-product .img { width: 80px; }
+
+
+}
+@media only screen and (max-width: 480px) {
+   .custom-tab-box ul.custom-nav-tabs li { padding: 0; }
+   section.product-detail .product-slider .img img { max-width: 250px; }
+}
+@media only screen and (max-width: 320px) {
+
+}
