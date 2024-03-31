@@ -1,0 +1,24 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Wish List data found",
+    "data": {
+        "wish_list_id": "5",
+        "book_id": "4",
+        "name": "test  hn",
+        "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/favicon_16735053078189.png",
+        "sale_price": "295",
+        "mrp": "500.00",
+        "quantity": "1",
+        "sub_heading": "head hn",
+        "weight": "12",
+        "status_label": "Out of stock",
+        "dealers": [
+            {
+                "dealer_id": "8",
+                "first_name": "dsdsdsd",
+                "profile_image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/basque-honey-dining-tables_16742119452273.jpg"
+            }
+        ]
+    }
+}

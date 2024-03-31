@@ -1,0 +1,39 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Data Found Successfully",
+    "data": [
+        {
+            "book_id": "20",
+            "name": "the Bible",
+            "sale_price": "",
+            "mrp": "500.00",
+            "image": "http://cloud1.kodyinfotech.com:7000/ssgc-bulk-order-web/public/uploads/media/book_16740394854126.png",
+            "quantity": "0",
+            "added_to_cart": "0",
+            "cart_item_id": ""
+        },
+        {
+            "book_id": "18",
+            "name": "THE SOUND AND THE FURY",
+            "sale_price": "",
+            "mrp": "500.00",
+            "image": "http://cloud1.kodyinfotech.com:7000/ssgc-bulk-order-web/public/uploads/media/book_16740392737976.png",
+            "quantity": "0",
+            "added_to_cart": "0",
+            "cart_item_id": ""
+        }
+    ],
+    "links": {
+        "first": "http://cloud1.kodyinfotech.com:7000/ssgc-bulk-order-web/public/api/customer/home/trending_book_list?page=1",
+        "last": "http://cloud1.kodyinfotech.com:7000/ssgc-bulk-order-web/public/api/customer/home/trending_book_list?page=1",
+        "prev": "",
+        "next": ""
+    },
+    "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 20,
+        "total": 2
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Book details",
+    "data": {
+        "book_id": "5",
+        "name": "gfagfagfag",
+        "sub_heading": "agagad",
+        "description": "gagagag",
+        "additional_info": "agagaga",
+        "sale_price": "301.89",
+        "mrp": "1111.00",
+        "weight": "11",
+        "language": "both",
+        "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/avengers-death-infinity-war_16735055604656.jpg",
+        "cover_images": [
+            {
+                "id": "9",
+                "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/Bedroom-Furniture-Sets_16735055608058.jpg"
+            }
+        ],
+        "added_to_cart": "1",
+        "cart_item_id": "6",
+        "related_products": [
+            {
+                "book_id": "4",
+                "name": "test  hn",
+                "sale_price": "245",
+                "mrp": "500.00",
+                "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/favicon_16735053078189.png",
+                "quantity": "1",
+                "added_to_cart": "0",
+                "cart_item_id": ""
+            }
+        ]
+    }
+}

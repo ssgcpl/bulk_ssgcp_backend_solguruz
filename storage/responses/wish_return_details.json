@@ -1,0 +1,16 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Wish Return data found",
+    "data": {
+        "wish_return_id": "7",
+        "book_id": "4",
+        "name": "test  hn",
+        "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/favicon_16735053078189.png",
+        "sale_price": "295",
+        "quantity": "1",
+        "description": "asfafafaa fffffffffffffffff",
+        "dealer_id": "",
+        "dealer_name": ""
+    }
+}

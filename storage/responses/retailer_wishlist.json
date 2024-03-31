@@ -1,0 +1,28 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Wish List data found",
+    "data": [
+        {
+            "wish_list_id": "2",
+            "book_id": "4",
+            "name": "test  hn",
+            "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/favicon_16735053078189.png",
+            "sale_price": 245,
+            "mrp": "500.00",
+            "quantity": "1"
+        }
+    ],
+    "links": {
+        "first": "http://localhost/ssgc-bulk-order-web/public/api/customer/wishlist/retailer_wishlist?page=1",
+        "last": "http://localhost/ssgc-bulk-order-web/public/api/customer/wishlist/retailer_wishlist?page=1",
+        "prev": "",
+        "next": ""
+    },
+    "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 15,
+        "total": 1
+    }
+}

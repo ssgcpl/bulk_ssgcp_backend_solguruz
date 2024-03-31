@@ -1,0 +1,854 @@
+[2024-03-13 00:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 00:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 00:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 00:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 00:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 00:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 00:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 00:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 00:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 00:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 00:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 00:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 01:00:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 01:00:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 01:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 01:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 01:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 01:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 01:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 01:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 01:40:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 01:40:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 01:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 01:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 02:00:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 02:00:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 02:10:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 02:10:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 02:20:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 02:20:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 02:30:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 02:30:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 02:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 02:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 02:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 02:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 03:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 03:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 03:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 03:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 03:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 03:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 03:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 03:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 03:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 03:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 03:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 03:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 04:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 04:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 04:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 04:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 04:20:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 04:20:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 04:30:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 04:30:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 04:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 04:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 04:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 04:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 05:00:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 05:00:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 05:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 05:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 05:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 05:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 05:30:03] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 05:30:03] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 05:40:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 05:40:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 05:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 05:50:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 06:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 06:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 06:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 06:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 06:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 06:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 06:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 06:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 06:40:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 06:40:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 06:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 06:50:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 07:00:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 07:00:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 07:10:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 07:10:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 07:20:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 07:20:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 07:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 07:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 07:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 07:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 07:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 07:50:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 08:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 08:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 08:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 08:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 08:20:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 08:20:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 08:30:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 08:30:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 08:40:03] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 08:40:03] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 08:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 08:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 09:00:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 09:00:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 09:10:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 09:10:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 09:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 09:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 09:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 09:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 09:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 09:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 09:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 09:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 09:58:23] local.INFO: New Order created with Order Id. : 476 For User - 390  
+[2024-03-13 10:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 10:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 10:10:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 10:10:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 10:20:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 10:20:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 10:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 10:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 10:40:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 10:40:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 10:40:40] local.ERROR: The resource owner or authorization server denied the request. {"exception":"[object] (League\\OAuth2\\Server\\Exception\\OAuthServerException(code: 9): The resource owner or authorization server denied the request. at /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/Exception/OAuthServerException.php:243)
+[stacktrace]
+#0 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/AuthorizationValidators/BearerTokenValidator.php(111): League\\OAuth2\\Server\\Exception\\OAuthServerException::accessDenied()
+#1 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/ResourceServer.php(84): League\\OAuth2\\Server\\AuthorizationValidators\\BearerTokenValidator->validateAuthorization()
+#2 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(204): League\\OAuth2\\Server\\ResourceServer->validateAuthenticatedRequest()
+#3 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(147): Laravel\\Passport\\Guards\\TokenGuard->getPsrRequestViaBearerToken()
+#4 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(110): Laravel\\Passport\\Guards\\TokenGuard->authenticateViaBearerToken()
+#5 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/PassportServiceProvider.php(309): Laravel\\Passport\\Guards\\TokenGuard->user()
+#6 [internal function]: Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}()
+#7 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php(58): call_user_func()
+#8 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Models/Helpers/CommonHelper.php(1602): Illuminate\\Auth\\RequestGuard->user()
+#9 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Http/Controllers/Api/Customer/NestedCategoryController.php(128): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->isProductExist()
+#10 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->nested_categories()
+#11 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#12 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#13 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#14 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#15 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#16 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#18 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#20 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#22 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#23 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#24 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#33 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#34 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#36 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#37 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#39 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#41 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#43 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#45 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#47 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#48 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#49 {main}
+
+[previous exception] [object] (Lcobucci\\JWT\\Token\\InvalidTokenStructure(code: 0): The JWT string must have two dots at /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Token/InvalidTokenStructure.php:13)
+[stacktrace]
+#0 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Parser.php(95): Lcobucci\\JWT\\Token\\InvalidTokenStructure::missingOrNotEnoughSeparators()
+#1 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Parser.php(58): Lcobucci\\JWT\\Parser->splitJwt()
+#2 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/AuthorizationValidators/BearerTokenValidator.php(109): Lcobucci\\JWT\\Parser->parse()
+#3 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/ResourceServer.php(84): League\\OAuth2\\Server\\AuthorizationValidators\\BearerTokenValidator->validateAuthorization()
+#4 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(204): League\\OAuth2\\Server\\ResourceServer->validateAuthenticatedRequest()
+#5 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(147): Laravel\\Passport\\Guards\\TokenGuard->getPsrRequestViaBearerToken()
+#6 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(110): Laravel\\Passport\\Guards\\TokenGuard->authenticateViaBearerToken()
+#7 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/PassportServiceProvider.php(309): Laravel\\Passport\\Guards\\TokenGuard->user()
+#8 [internal function]: Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}()
+#9 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php(58): call_user_func()
+#10 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Models/Helpers/CommonHelper.php(1602): Illuminate\\Auth\\RequestGuard->user()
+#11 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Http/Controllers/Api/Customer/NestedCategoryController.php(128): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->isProductExist()
+#12 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->nested_categories()
+#13 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#14 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#15 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#16 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#17 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#18 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#20 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#22 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#24 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#25 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#26 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#28 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#30 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#32 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#33 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#41 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#45 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#49 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#50 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#51 {main}
+"} 
+[2024-03-13 10:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 10:50:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 11:00:03] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 11:00:03] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 11:01:04] local.INFO: New Order created with Order Id. : 477 For User - 448  
+[2024-03-13 11:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 11:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 11:20:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 11:20:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 11:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 11:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 11:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 11:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 11:42:41] local.INFO: Notification result216-->{"multicast_id":8441706322866206439,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710310361759622%7600d8cd7600d8cd"}]}  
+[2024-03-13 11:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 11:50:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 12:00:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 12:00:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 12:08:45] local.INFO: New Order created with Order Id. : 478 For User - 343  
+[2024-03-13 12:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 12:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 12:20:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 12:20:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 12:25:22] local.INFO: New Order created with Order Id. : 479 For User - 259  
+[2024-03-13 12:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 12:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 12:36:55] local.INFO: Notification result259-->{"multicast_id":2814600798371861010,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710313615895981%7600d8cd7600d8cd"}]}  
+[2024-03-13 12:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 12:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 12:40:21] local.INFO: Notification result135-->{"multicast_id":210654680643187761,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710313821726627%7600d8cd7600d8cd"}]}  
+[2024-03-13 12:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 12:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 12:55:42] local.INFO: Notification result28-->{"multicast_id":899467257029288704,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710314742474162%7600d8cd7600d8cd"}]}  
+[2024-03-13 12:55:42] local.INFO: Notification result28-->{"multicast_id":21775571146724994,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710314742726819%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 13:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 13:04:18] local.INFO: Notification result28-->{"multicast_id":369843119005384926,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710315258151300%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:04:18] local.INFO: Notification result28-->{"multicast_id":7094471494111905439,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710315258395437%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 13:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 13:14:04] local.INFO: Notification result413-->{"multicast_id":695129943680086022,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710315844036326%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 13:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 13:23:09] local.INFO: Notification result121-->{"multicast_id":3095707841787946721,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316389540828%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:23:09] local.INFO: Notification result121-->{"multicast_id":7089673729852651163,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316389766252%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:23:10] local.INFO: Notification result121-->{"multicast_id":7816506968973298833,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316389982482%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:23:10] local.INFO: Notification result121-->{"multicast_id":3285468797298868644,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:23:10] local.INFO: Notification result121-->{"multicast_id":8463684106623915365,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:24:31] local.INFO: Notification result431-->{"multicast_id":7178737487195653151,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316471347449%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:26:49] local.INFO: Notification result254-->{"multicast_id":1274312582024947830,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316609229717%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:28:15] local.INFO: Notification result431-->{"multicast_id":2574271870961544972,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316695514593%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:29:09] local.INFO: Notification result121-->{"multicast_id":1802480561486962347,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316749474108%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:29:09] local.INFO: Notification result121-->{"multicast_id":3147380076808171904,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316749700445%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:29:09] local.INFO: Notification result121-->{"multicast_id":1016602309762316719,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316749883290%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:29:10] local.INFO: Notification result121-->{"multicast_id":5753452273313664664,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:29:10] local.INFO: Notification result121-->{"multicast_id":3388458991275174177,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 13:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 13:30:12] local.INFO: Notification result431-->{"multicast_id":7723815033843602397,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316812517190%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:31:16] local.INFO: Notification result121-->{"multicast_id":7217552387750811939,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316876831937%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:31:18] local.INFO: Notification result121-->{"multicast_id":692638204151450393,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316878146847%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:31:19] local.INFO: Notification result121-->{"multicast_id":3768009453607292413,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710316879526836%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:31:22] local.INFO: Notification result121-->{"multicast_id":6854515519763742120,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:31:23] local.INFO: Notification result121-->{"multicast_id":2526924188291014771,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:33:22] local.INFO: Notification result254-->{"multicast_id":4922553477275085973,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317002296909%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 13:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 13:41:48] local.INFO: Notification result53-->{"multicast_id":6383823779896471270,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317508859339%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:43:19] local.INFO: Notification result225-->{"multicast_id":613407769997611182,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317599640996%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:43:19] local.INFO: Notification result225-->{"multicast_id":1485269215082996416,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317599905714%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:44:09] local.INFO: Notification result67-->{"multicast_id":5016535222661858101,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317649931575%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:44:10] local.INFO: Notification result67-->{"multicast_id":3922742610434914106,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317650151327%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:44:33] local.ERROR: The resource owner or authorization server denied the request. {"exception":"[object] (League\\OAuth2\\Server\\Exception\\OAuthServerException(code: 9): The resource owner or authorization server denied the request. at /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/Exception/OAuthServerException.php:243)
+[stacktrace]
+#0 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/AuthorizationValidators/BearerTokenValidator.php(111): League\\OAuth2\\Server\\Exception\\OAuthServerException::accessDenied()
+#1 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/ResourceServer.php(84): League\\OAuth2\\Server\\AuthorizationValidators\\BearerTokenValidator->validateAuthorization()
+#2 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(204): League\\OAuth2\\Server\\ResourceServer->validateAuthenticatedRequest()
+#3 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(147): Laravel\\Passport\\Guards\\TokenGuard->getPsrRequestViaBearerToken()
+#4 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(110): Laravel\\Passport\\Guards\\TokenGuard->authenticateViaBearerToken()
+#5 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/PassportServiceProvider.php(309): Laravel\\Passport\\Guards\\TokenGuard->user()
+#6 [internal function]: Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}()
+#7 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php(58): call_user_func()
+#8 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Models/Helpers/CommonHelper.php(1602): Illuminate\\Auth\\RequestGuard->user()
+#9 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Http/Controllers/Api/Customer/NestedCategoryController.php(128): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->isProductExist()
+#10 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->nested_categories()
+#11 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#12 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#13 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#14 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#15 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#16 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#18 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#20 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#22 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#23 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#24 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#33 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#34 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#36 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#37 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#39 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#41 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#43 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#45 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#47 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#48 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#49 {main}
+
+[previous exception] [object] (Lcobucci\\JWT\\Token\\InvalidTokenStructure(code: 0): The JWT string must have two dots at /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Token/InvalidTokenStructure.php:13)
+[stacktrace]
+#0 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Parser.php(95): Lcobucci\\JWT\\Token\\InvalidTokenStructure::missingOrNotEnoughSeparators()
+#1 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Parser.php(58): Lcobucci\\JWT\\Parser->splitJwt()
+#2 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/AuthorizationValidators/BearerTokenValidator.php(109): Lcobucci\\JWT\\Parser->parse()
+#3 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/ResourceServer.php(84): League\\OAuth2\\Server\\AuthorizationValidators\\BearerTokenValidator->validateAuthorization()
+#4 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(204): League\\OAuth2\\Server\\ResourceServer->validateAuthenticatedRequest()
+#5 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(147): Laravel\\Passport\\Guards\\TokenGuard->getPsrRequestViaBearerToken()
+#6 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(110): Laravel\\Passport\\Guards\\TokenGuard->authenticateViaBearerToken()
+#7 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/PassportServiceProvider.php(309): Laravel\\Passport\\Guards\\TokenGuard->user()
+#8 [internal function]: Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}()
+#9 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php(58): call_user_func()
+#10 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Models/Helpers/CommonHelper.php(1602): Illuminate\\Auth\\RequestGuard->user()
+#11 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Http/Controllers/Api/Customer/NestedCategoryController.php(128): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->isProductExist()
+#12 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->nested_categories()
+#13 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#14 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#15 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#16 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#17 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#18 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#20 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#22 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#24 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#25 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#26 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#28 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#30 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#32 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#33 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#41 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#45 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#49 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#50 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#51 {main}
+"} 
+[2024-03-13 13:45:00] local.INFO: Notification result410-->{"multicast_id":5303242981250494801,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317700396056%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:46:06] local.INFO: Notification result307-->{"multicast_id":3896982100464474083,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317766789260%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:47:07] local.INFO: Notification result232-->{"multicast_id":5941936650926217186,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317827673503%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:48:10] local.INFO: Notification result189-->{"multicast_id":1957931597274940125,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317890022446%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:49:14] local.INFO: Notification result342-->{"multicast_id":3545692881822063585,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710317954030742%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 13:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 13:50:07] local.INFO: Notification result446-->{"multicast_id":9160414413873993133,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318007465420%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:51:18] local.INFO: Notification result343-->{"multicast_id":2958027766982526263,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:51:18] local.INFO: Notification result343-->{"multicast_id":3565974407179226103,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:51:18] local.INFO: Notification result343-->{"multicast_id":6355696120192786320,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318078754702%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:51:19] local.INFO: Notification result343-->{"multicast_id":7407542224200771045,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 13:54:22] local.INFO: Notification result247-->{"multicast_id":7813276799327383628,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318262394473%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:58:27] local.INFO: Notification result28-->{"multicast_id":8051170631901135562,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318507550281%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:58:27] local.INFO: Notification result28-->{"multicast_id":5499801878039950050,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318507953146%7600d8cd7600d8cd"}]}  
+[2024-03-13 13:59:48] local.INFO: Notification result437-->{"multicast_id":3994025105703002408,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318588625879%7600d8cd7600d8cd"}]}  
+[2024-03-13 14:00:03] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 14:00:03] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 14:00:57] local.INFO: Notification result259-->{"multicast_id":5064380665221399312,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318657191458%7600d8cd7600d8cd"}]}  
+[2024-03-13 14:02:07] local.INFO: Notification result343-->{"multicast_id":4933905460600319616,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 14:02:08] local.INFO: Notification result343-->{"multicast_id":1703311737457905252,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 14:02:09] local.INFO: Notification result343-->{"multicast_id":6928058783138100166,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318729067225%7600d8cd7600d8cd"}]}  
+[2024-03-13 14:02:09] local.INFO: Notification result343-->{"multicast_id":3627575082048162582,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 14:06:09] local.INFO: Notification result446-->{"multicast_id":530957645995363575,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710318969468595%7600d8cd7600d8cd"}]}  
+[2024-03-13 14:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 14:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 14:19:32] local.INFO: New Order created with Order Id. : 480 For User - 182  
+[2024-03-13 14:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 14:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 14:21:41] local.INFO: New Order created with Order Id. : 481 For User - 257  
+[2024-03-13 14:25:08] local.INFO: Notification result437-->{"multicast_id":6939906169835099321,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710320108730700%7600d8cd7600d8cd"}]}  
+[2024-03-13 14:25:33] local.ERROR: The resource owner or authorization server denied the request. {"exception":"[object] (League\\OAuth2\\Server\\Exception\\OAuthServerException(code: 9): The resource owner or authorization server denied the request. at /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/Exception/OAuthServerException.php:243)
+[stacktrace]
+#0 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/AuthorizationValidators/BearerTokenValidator.php(111): League\\OAuth2\\Server\\Exception\\OAuthServerException::accessDenied()
+#1 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/ResourceServer.php(84): League\\OAuth2\\Server\\AuthorizationValidators\\BearerTokenValidator->validateAuthorization()
+#2 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(204): League\\OAuth2\\Server\\ResourceServer->validateAuthenticatedRequest()
+#3 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(147): Laravel\\Passport\\Guards\\TokenGuard->getPsrRequestViaBearerToken()
+#4 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(110): Laravel\\Passport\\Guards\\TokenGuard->authenticateViaBearerToken()
+#5 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/PassportServiceProvider.php(309): Laravel\\Passport\\Guards\\TokenGuard->user()
+#6 [internal function]: Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}()
+#7 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php(58): call_user_func()
+#8 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Models/Helpers/CommonHelper.php(1602): Illuminate\\Auth\\RequestGuard->user()
+#9 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Http/Controllers/Api/Customer/NestedCategoryController.php(128): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->isProductExist()
+#10 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->nested_categories()
+#11 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#12 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#13 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#14 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#15 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#16 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#18 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#20 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#22 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#23 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#24 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#33 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#34 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#36 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#37 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#39 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#41 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#43 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#45 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#47 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#48 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#49 {main}
+
+[previous exception] [object] (Lcobucci\\JWT\\Token\\InvalidTokenStructure(code: 0): The JWT string must have two dots at /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Token/InvalidTokenStructure.php:13)
+[stacktrace]
+#0 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Parser.php(95): Lcobucci\\JWT\\Token\\InvalidTokenStructure::missingOrNotEnoughSeparators()
+#1 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Parser.php(58): Lcobucci\\JWT\\Parser->splitJwt()
+#2 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/AuthorizationValidators/BearerTokenValidator.php(109): Lcobucci\\JWT\\Parser->parse()
+#3 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/ResourceServer.php(84): League\\OAuth2\\Server\\AuthorizationValidators\\BearerTokenValidator->validateAuthorization()
+#4 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(204): League\\OAuth2\\Server\\ResourceServer->validateAuthenticatedRequest()
+#5 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(147): Laravel\\Passport\\Guards\\TokenGuard->getPsrRequestViaBearerToken()
+#6 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(110): Laravel\\Passport\\Guards\\TokenGuard->authenticateViaBearerToken()
+#7 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/PassportServiceProvider.php(309): Laravel\\Passport\\Guards\\TokenGuard->user()
+#8 [internal function]: Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}()
+#9 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php(58): call_user_func()
+#10 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Models/Helpers/CommonHelper.php(1602): Illuminate\\Auth\\RequestGuard->user()
+#11 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Http/Controllers/Api/Customer/NestedCategoryController.php(128): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->isProductExist()
+#12 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->nested_categories()
+#13 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#14 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#15 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#16 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#17 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#18 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#20 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#22 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#24 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#25 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#26 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#28 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#30 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#32 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#33 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#41 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#45 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#49 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#50 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#51 {main}
+"} 
+[2024-03-13 14:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 14:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 14:39:04] local.INFO: Notification result259-->{"multicast_id":2729618361968079963,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710320944137565%7600d8cd7600d8cd"}]}  
+[2024-03-13 14:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 14:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 14:43:58] local.INFO: Notification result257-->{"multicast_id":3982419857943314801,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710321238294525%7600d8cd7600d8cd"}]}  
+[2024-03-13 14:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 14:50:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 15:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 15:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 15:08:42] local.INFO: Notification result245-->{"multicast_id":677796490525829863,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710322722611248%7600d8cd7600d8cd"}]}  
+[2024-03-13 15:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 15:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 15:19:48] local.INFO: Job dispatched178151  
+[2024-03-13 15:19:57] local.INFO: Delete CSV product_all_barcodes_178151.csv  
+[2024-03-13 15:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 15:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 15:23:21] local.INFO: Notification result135-->{"multicast_id":7029181281661564208,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710323601924001%7600d8cd7600d8cd"}]}  
+[2024-03-13 15:26:36] local.INFO: Job dispatched178157  
+[2024-03-13 15:26:43] local.INFO: Delete CSV product_all_barcodes_178157.csv  
+[2024-03-13 15:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 15:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 15:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 15:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 15:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 15:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 16:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 16:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 16:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 16:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 16:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 16:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 16:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 16:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 16:37:36] local.INFO: Notification result451-->{"multicast_id":8378870416894467306,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"InvalidRegistration"}]}  
+[2024-03-13 16:40:01] local.INFO: Notification result169-->{"multicast_id":6643203490523471505,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710328201052116%7600d8cd7600d8cd"}]}  
+[2024-03-13 16:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 16:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 16:44:03] local.INFO: Notification result168-->{"multicast_id":1314125227170042661,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710328442965184%7600d8cd7600d8cd"}]}  
+[2024-03-13 16:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 16:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 16:56:58] local.INFO: Notification result159-->{"multicast_id":724012036704799310,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710329218438235%7600d8cd7600d8cd"}]}  
+[2024-03-13 16:59:59] local.INFO: Notification result437-->{"multicast_id":2202326177002648261,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710329398972292%7600d8cd7600d8cd"}]}  
+[2024-03-13 17:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 17:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 17:10:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 17:10:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 17:16:30] local.INFO: Notification result92-->{"multicast_id":2634489725740701915,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710330390613998%7600d8cd7600d8cd"}]}  
+[2024-03-13 17:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 17:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 17:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 17:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 17:31:46] local.INFO: Notification result396-->{"multicast_id":7009649248007820985,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710331306404723%7600d8cd7600d8cd"}]}  
+[2024-03-13 17:39:55] local.INFO: Notification result182-->{"multicast_id":3851951211993530970,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710331795010644%7600d8cd7600d8cd"}]}  
+[2024-03-13 17:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 17:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 17:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 17:50:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 17:51:41] local.ERROR: The resource owner or authorization server denied the request. {"exception":"[object] (League\\OAuth2\\Server\\Exception\\OAuthServerException(code: 9): The resource owner or authorization server denied the request. at /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/Exception/OAuthServerException.php:243)
+[stacktrace]
+#0 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/AuthorizationValidators/BearerTokenValidator.php(111): League\\OAuth2\\Server\\Exception\\OAuthServerException::accessDenied()
+#1 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/ResourceServer.php(84): League\\OAuth2\\Server\\AuthorizationValidators\\BearerTokenValidator->validateAuthorization()
+#2 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(204): League\\OAuth2\\Server\\ResourceServer->validateAuthenticatedRequest()
+#3 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(147): Laravel\\Passport\\Guards\\TokenGuard->getPsrRequestViaBearerToken()
+#4 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(110): Laravel\\Passport\\Guards\\TokenGuard->authenticateViaBearerToken()
+#5 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/PassportServiceProvider.php(309): Laravel\\Passport\\Guards\\TokenGuard->user()
+#6 [internal function]: Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}()
+#7 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php(58): call_user_func()
+#8 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Models/Helpers/CommonHelper.php(1602): Illuminate\\Auth\\RequestGuard->user()
+#9 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Http/Controllers/Api/Customer/NestedCategoryController.php(128): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->isProductExist()
+#10 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->nested_categories()
+#11 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#12 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#13 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#14 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#15 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#16 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#17 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#18 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#20 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#22 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#23 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#24 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#33 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#34 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#35 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#36 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#37 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#39 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#41 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#43 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#45 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#47 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#48 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#49 {main}
+
+[previous exception] [object] (Lcobucci\\JWT\\Token\\InvalidTokenStructure(code: 0): The JWT string must have two dots at /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Token/InvalidTokenStructure.php:13)
+[stacktrace]
+#0 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Parser.php(95): Lcobucci\\JWT\\Token\\InvalidTokenStructure::missingOrNotEnoughSeparators()
+#1 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/lcobucci/jwt/src/Parser.php(58): Lcobucci\\JWT\\Parser->splitJwt()
+#2 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/AuthorizationValidators/BearerTokenValidator.php(109): Lcobucci\\JWT\\Parser->parse()
+#3 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/league/oauth2-server/src/ResourceServer.php(84): League\\OAuth2\\Server\\AuthorizationValidators\\BearerTokenValidator->validateAuthorization()
+#4 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(204): League\\OAuth2\\Server\\ResourceServer->validateAuthenticatedRequest()
+#5 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(147): Laravel\\Passport\\Guards\\TokenGuard->getPsrRequestViaBearerToken()
+#6 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/Guards/TokenGuard.php(110): Laravel\\Passport\\Guards\\TokenGuard->authenticateViaBearerToken()
+#7 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/passport/src/PassportServiceProvider.php(309): Laravel\\Passport\\Guards\\TokenGuard->user()
+#8 [internal function]: Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}()
+#9 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Auth/RequestGuard.php(58): call_user_func()
+#10 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Models/Helpers/CommonHelper.php(1602): Illuminate\\Auth\\RequestGuard->user()
+#11 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/app/Http/Controllers/Api/Customer/NestedCategoryController.php(128): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->isProductExist()
+#12 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\Api\\Customer\\NestedCategoryController->nested_categories()
+#13 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#14 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#15 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#16 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#17 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#18 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#20 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#22 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
+#24 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
+#25 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
+#26 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#28 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#29 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#30 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#31 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#32 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#33 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#35 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#36 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#37 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#38 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#39 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#41 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#43 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/fruitcake/laravel-cors/src/HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#45 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#47 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#49 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#50 /home/1199381.cloudwaysapps.com/hzmfqvzptm/public_html/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#51 {main}
+"} 
+[2024-03-13 17:52:57] local.INFO: Notification result257-->{"multicast_id":3134442930374258002,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710332577645371%7600d8cd7600d8cd"}]}  
+[2024-03-13 17:56:03] local.INFO: New Order created with Order Id. : 482 For User - 391  
+[2024-03-13 18:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 18:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 18:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 18:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 18:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 18:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 18:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 18:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 18:34:28] local.INFO: New Order created with Order Id. : 483 For User - 431  
+[2024-03-13 18:35:06] local.INFO: Notification result431-->{"multicast_id":93889106758481313,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710335106026950%7600d8cd7600d8cd"}]}  
+[2024-03-13 18:35:12] local.INFO: New Order created with Order Id. : 484 For User - 28  
+[2024-03-13 18:36:12] local.INFO: Notification result28-->{"multicast_id":2654080655003306701,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710335172828703%7600d8cd7600d8cd"}]}  
+[2024-03-13 18:36:13] local.INFO: Notification result28-->{"multicast_id":4441306357933078622,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710335173304474%7600d8cd7600d8cd"}]}  
+[2024-03-13 18:36:56] local.INFO: Notification result343-->{"multicast_id":2356607502344514227,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"InvalidRegistration"}]}  
+[2024-03-13 18:36:57] local.INFO: Notification result343-->{"multicast_id":4007757071329286803,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:36:58] local.INFO: Notification result343-->{"multicast_id":677920389301358971,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:37:00] local.INFO: Notification result343-->{"multicast_id":9127158455338208272,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:37:01] local.INFO: Notification result343-->{"multicast_id":8920824284396400250,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:37:01] local.INFO: Notification result343-->{"multicast_id":3241586784775988408,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710335221567527%7600d8cd7600d8cd"}]}  
+[2024-03-13 18:40:03] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 18:40:03] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 18:44:01] local.INFO: New Order created with Order Id. : 485 For User - 446  
+[2024-03-13 18:48:32] local.INFO: Notification result446-->{"multicast_id":7539504469949563262,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710335912466030%7600d8cd7600d8cd"}]}  
+[2024-03-13 18:50:03] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 18:50:03] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 18:51:42] local.INFO: New Order created with Order Id. : 486 For User - 207  
+[2024-03-13 18:56:31] local.INFO: Notification result121-->{"multicast_id":7252321193011963302,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710336391767186%7600d8cd7600d8cd"}]}  
+[2024-03-13 18:56:32] local.INFO: Notification result121-->{"multicast_id":5301044394987280873,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710336392517840%7600d8cd7600d8cd"}]}  
+[2024-03-13 18:56:33] local.INFO: Notification result121-->{"multicast_id":530390206005735424,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710336393130686%7600d8cd7600d8cd"}]}  
+[2024-03-13 18:56:33] local.INFO: Notification result121-->{"multicast_id":7518610355946701865,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:56:33] local.INFO: Notification result121-->{"multicast_id":8689522618615204240,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:57:54] local.INFO: New Order created with Order Id. : 487 For User - 380  
+[2024-03-13 18:59:08] local.INFO: Notification result343-->{"multicast_id":7328820862109187251,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"InvalidRegistration"}]}  
+[2024-03-13 18:59:08] local.INFO: Notification result343-->{"multicast_id":983902578303032705,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:59:09] local.INFO: Notification result343-->{"multicast_id":3857297378900122743,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:59:09] local.INFO: Notification result343-->{"multicast_id":1443920096028510787,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:59:09] local.INFO: Notification result343-->{"multicast_id":1268433765894860025,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 18:59:10] local.INFO: Notification result343-->{"multicast_id":6413198128957968963,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710336550088363%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 19:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 19:03:11] local.INFO: Notification result207-->{"multicast_id":5338617787932702435,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710336791654771%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:05:03] local.INFO: Notification result431-->{"multicast_id":1417417152598418636,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710336903387853%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:05:43] local.INFO: Notification result431-->{"multicast_id":7578263329554496290,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710336943777701%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:07:18] local.INFO: Notification result28-->{"multicast_id":1107392049960429020,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710337038002848%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:07:18] local.INFO: Notification result28-->{"multicast_id":5139954075317595718,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710337038188006%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 19:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 19:13:44] local.INFO: Notification result121-->{"multicast_id":8781098588422189929,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710337424328696%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:13:45] local.INFO: Notification result121-->{"multicast_id":2029516040927721999,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710337425635428%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:13:47] local.INFO: Notification result121-->{"multicast_id":4441817748549130451,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710337427213640%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:13:48] local.INFO: Notification result121-->{"multicast_id":9148276616215065042,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 19:13:50] local.INFO: Notification result121-->{"multicast_id":1521519968990503421,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 19:14:51] local.INFO: New Order created with Order Id. : 488 For User - 438  
+[2024-03-13 19:18:23] local.INFO: Notification result438-->{"multicast_id":483089693624310892,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710337703044792%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:18:23] local.INFO: Notification result438-->{"multicast_id":1999200608318422238,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 19:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 19:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 19:20:30] local.INFO: Notification result438-->{"multicast_id":8963014070041474333,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710337830341466%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:20:30] local.INFO: Notification result438-->{"multicast_id":6932037761811058164,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 19:22:12] local.INFO: New Order created with Order Id. : 489 For User - 254  
+[2024-03-13 19:24:20] local.INFO: Notification result254-->{"multicast_id":7327581138160449999,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710338060734130%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:28:38] local.INFO: Notification result254-->{"multicast_id":2693816250996181261,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710338318661143%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:30:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 19:30:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 19:31:32] local.INFO: Notification result121-->{"multicast_id":7608349305922041215,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710338492617883%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:31:34] local.INFO: Notification result121-->{"multicast_id":7853848891259819634,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710338493731663%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:31:34] local.INFO: Notification result121-->{"multicast_id":4983085752378156773,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710338494954232%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:31:35] local.INFO: Notification result121-->{"multicast_id":6218795642182517024,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 19:31:35] local.INFO: Notification result121-->{"multicast_id":5511063134702853800,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"NotRegistered"}]}  
+[2024-03-13 19:32:40] local.INFO: Notification result431-->{"multicast_id":5712323725625617928,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710338560235549%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:36:03] local.INFO: Notification result254-->{"multicast_id":5969223340586356289,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710338763773551%7600d8cd7600d8cd"}]}  
+[2024-03-13 19:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 19:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 19:43:20] local.INFO: New Order created with Order Id. : 490 For User - 168  
+[2024-03-13 19:49:36] local.INFO: New Order created with Order Id. : 491 For User - 453  
+[2024-03-13 19:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 19:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 20:00:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 20:00:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 20:04:37] local.INFO: Notification result453-->{"multicast_id":7265322797980503348,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1710340477379026%7600d8cd7600d8cd"}]}  
+[2024-03-13 20:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 20:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 20:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 20:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 20:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 20:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 20:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 20:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 20:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 20:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 21:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 21:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 21:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 21:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 21:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 21:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 21:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 21:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 21:40:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 21:40:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 21:49:43] local.INFO: New Order created with Order Id. : 492 For User - 432  
+[2024-03-13 21:50:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 21:50:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 21:52:08] local.INFO: New Order created with Order Id. : 493 For User - 92  
+[2024-03-13 22:00:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 22:00:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 22:10:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 22:10:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 22:20:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 22:20:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 22:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 22:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 22:40:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 22:40:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 22:50:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 22:50:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 23:00:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 23:00:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 23:10:01] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 23:10:01] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 23:20:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 23:20:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 23:30:02] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 23:30:02] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 23:40:03] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 23:40:03] local.INFO: Under Process Order Cron Excecuted Ended  
+[2024-03-13 23:50:03] local.INFO: Under Process Order Cron Excecuted started  
+[2024-03-13 23:50:03] local.INFO: Under Process Order Cron Excecuted Ended  

@@ -1,0 +1,43 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Returnable books available",
+    "data": [
+        {
+            "order_item_id": "2",
+            "book_id": "5",
+            "order_id": "1",
+            "name": "gfagfagfag",
+            "sale_price": "-242.50",
+            "mrp": "1111.00",
+            "quantity": "1",
+            "max_returnable_qty": "13",
+            "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/avengers-death-infinity-war_16735055604656.jpg",
+            "added_to_cart": "0"
+        },
+        {
+            "order_item_id": "1",
+            "book_id": "4",
+            "order_id": "1",
+            "name": "test  hn",
+            "sale_price": "-24750.00",
+            "mrp": "500.00",
+            "quantity": "1",
+            "max_returnable_qty": "1",
+            "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/favicon_16735053078189.png",
+            "added_to_cart": "0"
+        }
+    ],
+    "links": {
+        "first": "http://localhost/ssgc-bulk-order-web/public/api/customer/make_my_return_list?page=1",
+        "last": "http://localhost/ssgc-bulk-order-web/public/api/customer/make_my_return_list?page=1",
+        "prev": "",
+        "next": ""
+    },
+    "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 15,
+        "total": 2
+    }
+}

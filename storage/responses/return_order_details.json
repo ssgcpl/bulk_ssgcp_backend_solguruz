@@ -1,0 +1,42 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Return order details.",
+    "data": {
+        "order_return_id": "5",
+        "return_at": "2023-01-19 14:41:21",
+        "return_date": "19-01-2023",
+        "return_time": "14:41 pm",
+        "total_return_quantity": "2",
+        "accepted_quantity": "",
+        "total_sale_price": "546.89",
+        "status": "return_placed",
+        "status_label": "Return placed",
+        "return_address": "lorem ipsum",
+        "receiver_number": "12345678",
+        "return_items": [
+            {
+                "return_item_id": "6",
+                "product_id": "4",
+                "name": "test  hn",
+                "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/favicon_16735053078189.png",
+                "total_quantity": "1",
+                "total_sale_price": "245.00",
+                "accepted_quantity": "",
+                "rejected_quantity": "",
+                "return_sale_price": "0.00"
+            },
+            {
+                "return_item_id": "7",
+                "product_id": "5",
+                "name": "gfagfagfag",
+                "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/avengers-death-infinity-war_16735055604656.jpg",
+                "total_quantity": "1",
+                "total_sale_price": "301.89",
+                "accepted_quantity": "",
+                "rejected_quantity": "",
+                "return_sale_price": "0.00"
+            }
+        ]
+    }
+}

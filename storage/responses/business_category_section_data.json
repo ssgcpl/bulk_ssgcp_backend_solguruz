@@ -1,0 +1,31 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Data Found Successfully",
+    "data": [
+        {
+            "business_category_id": "1",
+            "category_name": "bb",
+            "type": "books",
+            "list": [
+                {
+                    "product_id": "5",
+                    "search_type": "",
+                    "name": "gfagfagfag",
+                    "sale_price": "200.89",
+                    "mrp": "1111.00",
+                    "image": "http://localhost/ssgc-bulk-order-web/public/uploads/media/avengers-death-infinity-war_16735055604656.jpg",
+                    "quantity": "0",
+                    "added_to_cart": "0",
+                    "cart_item_id": "",
+                    "stock_status": "in_stock",
+                    "stock_status_label": "In stock",
+                    "type": "",
+                    "type_label": "",
+                    "expiry_date": ""
+                }
+            ],
+            "container": []
+        }
+    ]
+}

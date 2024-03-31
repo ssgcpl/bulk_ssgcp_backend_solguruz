@@ -1,0 +1,28 @@
+{
+    "success": "1",
+    "status": "200",
+    "message": "Return orders list.",
+    "data": [
+        {
+            "order_return_id": "5",
+            "return_at": "2023-01-19 14:41:21",
+            "return_date": "19-01-2023",
+            "total_return_quantity": "2",
+            "total_sale_price": "546.89",
+            "status": "return_placed",
+            "status_label": "Return placed"
+        }
+    ],
+    "links": {
+        "first": "http://localhost/ssgc-bulk-order-web/public/api/customer/my_return/return_orders_list?page=1",
+        "last": "http://localhost/ssgc-bulk-order-web/public/api/customer/my_return/return_orders_list?page=1",
+        "prev": "",
+        "next": ""
+    },
+    "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 15,
+        "total": 1
+    }
+}
