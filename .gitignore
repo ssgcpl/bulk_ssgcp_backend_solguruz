@@ -22,3 +22,6 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 /storage/app/mpdf
+/storage/log
+/storage/*.key
+/old    
