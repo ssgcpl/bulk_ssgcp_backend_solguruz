@@ -1,0 +1,112 @@
+@extends('layouts.admin.app')
+@section('css')
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.4.0/cropper.css">
+@endsection
+@section('content')
+<!-- BEGIN: Content-->
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+        <div class="content-header-left col-md-9 col-12 mb-2">
+            <div class="row breadcrumbs-top">
+                <div class="col-12">
+                    <h2 class="content-header-title float-left mb-0">{{trans('countries.admin_heading')}} </h2>
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">{{ trans('common.home') }}</a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="{{route('country.index')}}">{{ trans('countries.plural') }}</a></li>
+                            <li class="breadcrumb-item active">{{ trans('countries.show') }}
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if ($errors->any())
+      <div class="alert alert-danger">
+        <b>{{trans('common.whoops')}}</b>
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
+
+     <section id="multiple-column-form">
+      <div class="row match-height">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">
+              {{ trans('countries.details')}}
+              </h4>
+              @can('country-list')
+                <a href="{{route('country.index')}}" class="btn btn-success">
+                    <i class="fa fa-arrow-left"></i>
+                    {{ trans('common.back') }}
+                </a>
+              @endcan
+            </div>
+            <div class="card-content">
+              <div class="card-body">    
+                <form method="POST" id="CountryForm" action="{{route('country.update',$country->id)}}" accept-charset="UTF-8" enctype="multipart/form-data" >
+                  <input name="_method" type="hidden" value="PUT">
+                  @csrf
+                  <div class="form-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                     <div class="form-group">
+                        <label for="country name" class="content-label">{{trans('countries.country_name')}}<span class="text-danger custom_asterisk">*</span></label>
+                        <p class="details">{{ $country->name }}</p>
+                      </div>  
+                    </div>
+                  </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                     <div class="form-group">
+                        <label for="country code" class="content-label">{{trans('countries.country_code')}}<span class="text-danger custom_asterisk">*</span></label>
+                        <p class="details">{{ $country->country_code}} </p>
+                       </div>  
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group @error('flag') ? has-error : ''  @enderror">
+                            <label for="country flag" class="content-label">{{trans('countries.flag')}}<span class="text-danger custom_asterisk">*</span></label>
+                      <p>
+                       <img src="{{asset($country['flag'])}}" height="75px" width ="75px">
+                        </p>
+                         </div>
+                      </div>
+                    </div>
+                </div>
+                  </div>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+</div>
+@endsection
+@section('js')
+<script>
+    $(document).ready(function () {
+   
+});
+</script>
+@endsection
+
+
