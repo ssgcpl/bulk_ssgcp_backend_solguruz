@@ -40,7 +40,7 @@ class ReturnController extends BaseController
       $validator = Validator::make($request->all(), [
        
         'category_id' => 'nullable|exists:categories,id,is_live,1',
-        'language'    => 'required|in:english,hindi',
+        'language'    => 'required|in:english,hindi,all',
     
       ]);
 
@@ -53,11 +53,21 @@ class ReturnController extends BaseController
 
         $user        = Auth::guard('api')->user();
         $now         = Carbon::now();
-       
+        $lang = ['hindi'];
+        if(isset($request->language) && $request->language != ''){
+          $lang = $request->language;
+         }
+        if($lang == 'english'){
+          $lang = ['english','both'];
+        }elseif($lang == 'all'){
+          $lang = ['hindi','english','both'];
+        }else{
+          $lang = ['hindi','both'];
+        }
         $all_category_ids = $this->get_all_child_categories(@$request->category_id);
         // echo "<pre>";print_r($all_category_ids);exit;
         $data = OrderItem::where('is_returned','0')
-                      ->whereIn('language',['both',$request->language])
+                      ->whereIn('language',$lang)
                       ->whereHas('order',function($que) use($user){
                           $que->where(['user_id'=> $user->id,'order_status'=>'completed']);
                         })->whereHas('product',function($q) use($now,$all_category_ids,$request){

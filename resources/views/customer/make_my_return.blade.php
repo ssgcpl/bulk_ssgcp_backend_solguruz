@@ -21,7 +21,10 @@
       <div class="custom-tab-box">                  
         <ul class="nav custom-nav-tabs" id="myTabLang" role="tablist">
           <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="hindi" data-bs-toggle="tab" href="#tab11" role="tab" aria-controls="tab11" aria-selected="true">हिन्दी</a>
+            <a class="nav-link active" id="all" data-bs-toggle="tab" href="#tab33" role="tab" aria-controls="tab33" aria-selected="true">All</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="hindi" data-bs-toggle="tab" href="#tab11" role="tab" aria-controls="tab11" aria-selected="true">हिन्दी</a>
           </li>
           <li class="nav-item" role="presentation">
             <a class="nav-link" id="english" data-bs-toggle="tab" href="#tab22" role="tab" aria-controls="tab22" aria-selected="false">English</a>
@@ -39,7 +42,18 @@
             </ul>
           </div>
 
-          <div class="tab-pane fade show active" id="tab11" role="tabpanel" aria-labelledby="tab1">
+          <div class="tab-pane fade show active" id="tab33" role="tabpanel" aria-labelledby="tab1">
+            <div class="row" id="books_list_all">
+            </div>
+            <div id="no_data_all" class="no-data-found d-none">
+                <div class="box">
+                        <img src="{{ asset('web_assets/images/no-purchase-yet.png') }}" alt="" />
+                        <h5>Sorry! No Result Found :)</h5>
+                        <p>We Couldn't Find What You're Looking For</p>
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab11" role="tabpanel" aria-labelledby="tab1">
             <div class="row" id="books_list_hindi">
             </div>
             <div id="no_data_hindi" class="no-data-found d-none">

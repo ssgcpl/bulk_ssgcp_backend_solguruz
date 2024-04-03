@@ -1604,21 +1604,21 @@ public function sendNotifications($user,$title,$body){
           if($user) {
             $count = Product::whereHas('categories',function($q) use($business_category_id,$childs,$lang)        {
                     $q->whereIn('category_id',$childs);
-                  })->where(['business_category_id'=>$business_category_id,'is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->whereIn('visible_to',['both',$user->user_type])->whereIn('language',['both',strtolower($lang)])->count();
+                  })->where(['business_category_id'=>$business_category_id,'is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->whereIn('visible_to',['both',$user->user_type])->whereIn('language',$lang)->count();
              }else {
             $count = Product::whereHas('categories',function($q) use($business_category_id,$childs,$lang)        {
                     $q->whereIn('category_id',$childs);
-                  })->where(['business_category_id'=>$business_category_id,'is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->whereIn('visible_to',['retailer','both'])->whereIn('language',['both',strtolower($lang)])->count();
+                  })->where(['business_category_id'=>$business_category_id,'is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->whereIn('visible_to',['retailer','both'])->whereIn('language',$lang)->count();
           }
         }else {
           if($user){
             $count = Product::whereHas('categories',function($q) use($childs,$lang)   {
                     $q->whereIn('category_id',$childs);
-                  })->where(['is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->whereIn('visible_to',['both',$user->user_type])->whereIn('language',['both',strtolower($lang)])->count();
+                  })->where(['is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->whereIn('visible_to',['both',$user->user_type])->whereIn('language',$lang)->count();
           }else {
             $count = Product::whereHas('categories',function($q) use($childs,$lang)        {
                     $q->whereIn('category_id',$childs);
-                  })->where(['is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->whereIn('visible_to',['retailer','both'])->whereIn('language',['both',strtolower($lang)])->count();  
+                  })->where(['is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->whereIn('visible_to',['retailer','both'])->whereIn('language',$lang)->count();  
           }
         }
        }

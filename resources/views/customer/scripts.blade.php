@@ -3280,6 +3280,7 @@ $(document).ready(function(){
         load_more_books(page,category_id,language); 
         $("#books_list").html("");
         $("#books_list_hindi").html("");
+        $('#books_list_all').html("");
         $(window).scroll(function() { //detect page scroll
               if($(window).scrollTop() + $(window).height() >= $(document).height() - 250) { //if user scrolled from top to bottom of the page
                //  console.log(page+"/"+last_page);
@@ -3322,11 +3323,15 @@ $(document).ready(function(){
                       {
                         $("#books_list_hindi").html("");
                         $("#books_list").html("");
+                        $('#books_list_all').html("");
                       }
                       if(response.data.length == 0){
                         if(language == 'hindi')
                         {
                           $("#no_data_hindi").removeClass('d-none');
+                        }else if(language == 'all')
+                        {
+                          $("#no_data_all").removeClass('d-none');
                         }
                         else
                         {
@@ -3337,6 +3342,7 @@ $(document).ready(function(){
                       {
                         $("#no_data_hindi").addClass('d-none');
                         $("#no_data").addClass('d-none');
+                        $("#no_data_all").addClass('d-none');
                         $.each(response.data,function(key,value){
                           last_page = response.meta.last_page;
                           if(value.added_to_cart == '1')
@@ -3369,6 +3375,8 @@ $(document).ready(function(){
                           if(language == 'hindi')
                           {
                             $("#books_list_hindi").append(books_html);
+                          }else if(language == 'all'){
+                            $("#books_list_all").append(books_html);
                           }
                           else
                           {
@@ -3483,6 +3491,7 @@ $(document).ready(function(){
                       }
                       if(response.data.length == 0){
                         $("#no_data_hindi").removeClass('d-none');
+                        $("#no_data_all").removeClass('d-none');
                       }
                       else
                       {
@@ -4114,6 +4123,7 @@ $(document).ready(function(){
         load_more_books(page,category_id,language); 
         $("#books_list").html("");
         $("#books_list_hindi").html("");
+        $('#books_list_all').html("");
         $(window).scroll(function() { //detect page scroll
               if($(window).scrollTop() + $(window).height() >= $(document).height() - 250) { //if user scrolled from top to bottom of the page
                 if(page < last_page)
@@ -4143,11 +4153,15 @@ $(document).ready(function(){
                       {
                         $("#books_list_hindi").html("");
                         $("#books_list").html("");
+                        $('#books_list_all').html("");
                       }
                       if(response.data.length == 0){
                         if(language == 'hindi')
                         {
                           $("#no_data_hindi").removeClass('d-none');
+                        }else if(language == 'all')
+                        {
+                          $("#no_data_all").removeClass('d-none');
                         }
                         else
                         {
@@ -4158,6 +4172,7 @@ $(document).ready(function(){
                       {
                         $("#no_data_hindi").addClass('d-none');
                         $("#no_data").addClass('d-none');
+                        $("#no_data_all").addClass('d-none');
                         $.each(response.data,function(key,value){
                           last_page = response.meta.last_page;
                           
@@ -4188,6 +4203,8 @@ $(document).ready(function(){
                           if(language == 'hindi')
                           {
                             $("#books_list_hindi").append(books_html);
+                          }else if(language == 'all'){
+                            $("#books_list_all").append(books_html);
                           }
                           else
                           {
@@ -6097,8 +6114,10 @@ $(document).ready(function(){
                             if(language == 'hindi')
                             {
                               $("#no_data_hindi").removeClass('d-none');
-                            }
-                            else
+                            }else if(language == 'all')
+                            {
+                                $("#no_data_all").removeClass('d-none');
+                            }else
                             {
                               $("#no_data_english").removeClass('d-none');
                             }
@@ -6112,6 +6131,7 @@ $(document).ready(function(){
                         {
                           $("#no_data_hindi").addClass('d-none');
                           $("#no_data_english").addClass('d-none');
+                          $("#no_data_all").addClass('d-none');
                           $("#no_data_my_wish_return").addClass('d-none');
                           last_page = response.meta.last_page;
                           $.each(response.data,function(){
@@ -7240,6 +7260,7 @@ $(document).ready(function(){
       @elseif(\Request::route()->getName()=='books_list' || \Request::route()->getName()=='make_my_return')
         $('#books_list').html("");
         $('#books_list_hindi').html("");
+        $('#books_list_all').html("");
         call_action = 'books_list';
       @elseif(\Request::route()->getName()=='wish_return')
         var tab = "{{ app('request')->input('t') }}";

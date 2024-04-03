@@ -40,7 +40,7 @@ class ProductController extends BaseController
       $validator = Validator::make($request->all(), [
         'business_category_id'    => 'required|exists:business_categories,id,is_live,1,status,active',
         'category_id'  => 'nullable|exists:categories,id,is_live,1',
-        'language' => 'required|in:english,hindi',
+        'language' => 'required|in:english,hindi,all',
         'user_id' => 'sometimes|nullable|exists:users,id',
       ]);
       if($validator->fails()){
@@ -52,6 +52,10 @@ class ProductController extends BaseController
 
         $data = Product::where(['business_category_id'=>$request->business_category_id,'is_live' => '1','status' => 'active','stock_status' => 'in_stock'])
           ->whereIn('language',['both',$request->language]);
+          if($request->language == 'all'){
+            $data = Product::where(['business_category_id'=>$request->business_category_id,'is_live' => '1','status' => 'active','stock_status' => 'in_stock'])
+            ->whereIn('language',['both','hindi','english']);
+          }
          
         //Check if user is logged in and show data according to the account type
         if(isset($request->user_id) && $request->user_id != null){

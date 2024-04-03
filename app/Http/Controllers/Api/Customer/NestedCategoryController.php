@@ -106,9 +106,16 @@ class NestedCategoryController extends BaseController
   */
   public function nested_categories($business_category_id = ""){
       $layout = '';
-      $lang = 'hindi';
+      $lang = ['hindi'];
       if(isset($_GET['lang']) && $_GET['lang'] != ''){
               $lang = $_GET['lang'];
+      }
+      if($lang == 'english'){
+        $lang = ['english','both'];
+      }elseif($lang == 'all'){
+        $lang = ['hindi','english','both'];
+      }else{
+        $lang = ['hindi','both'];
       }
       if($business_category_id != "") {
           $business_category = BusinessCategory::where(['id'=>$business_category_id, 'is_live'=>'1', 'status' => 'active'])->first();
@@ -226,15 +233,22 @@ class NestedCategoryController extends BaseController
   }
 
   public function nested_categories_return(){
-      $language = 'hindi';
+      $language = ['hindi'];
       if(isset($_GET['lang']) && $_GET['lang'] != ''){
               $language = $_GET['lang'];
+      }
+      if($language == 'english'){
+        $language = ['english','both'];
+      }elseif($language == 'all'){
+        $language = ['hindi','english','both'];
+      }else{
+        $language = ['hindi','both'];
       }
      $user  = Auth::guard('api')->user();
      $now         = Carbon::now();
      $all_category_ids = $this->get_all_child_categories();
      $itemIds = OrderItem::where('is_returned','0')
-                      ->whereIn('language',['both',$language])
+                      ->whereIn('language',$language)
                       ->whereHas('order',function($que) use($user){
                           $que->where(['user_id'=> $user->id,'order_status'=>'completed']);
                         })->whereHas('product',function($q) use($now,$all_category_ids){
@@ -331,14 +345,14 @@ class NestedCategoryController extends BaseController
     switch ($layout) {
       case 'books':
         $categories = \App\Models\ProductCategory::whereHas('product', function($q) use ($lang) {
-                                                    $q->whereIn('language',[strtolower($lang),'both'])
+                                                    $q->whereIn('language',$lang)
                                                       ->where('status','active')
                                                       ->where('is_live','1'); 
                                                 })->groupBy('category_id')->pluck('category_id');
         break;
       case 'my_return':
         $categories = \App\Models\ProductCategory::whereHas('product', function($q) use ($lang) {
-                                                    $q->where('language',[strtolower($lang),'both'])
+                                                    $q->whereIn('language',$lang)
                                                       ->where('status','active')
                                                       ->where('is_live','1'); 
                                                 })->groupBy('category_id')->pluck('category_id');
@@ -348,7 +362,7 @@ class NestedCategoryController extends BaseController
         break;
       default:
         $categories = \App\Models\ProductCategory::whereHas('product', function($q) use ($lang) {
-                                                    $q->where('language',[strtolower($lang),'both'])
+                                                    $q->whereIn('language',$lang)
                                                       ->where('status','active')
                                                       ->where('is_live','1'); 
                                                 })->groupBy('category_id')->pluck('category_id');
