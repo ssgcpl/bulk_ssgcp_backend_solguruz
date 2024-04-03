@@ -332,6 +332,27 @@ class SettingsTableSeeder extends Seeder
             ['value' => 'booksubmission15@gmail.com', 
             'status' => 'active'],
         );  
+        //Version Control
+        Setting::updateOrCreate(
+            ['name' => 'android_app_version'],
+            ['value' => '1.0.0',
+            'status' => 'active'],
+        );
+        Setting::updateOrCreate(
+            ['name' => 'android_app_version_update_type'],
+            ['value' => 'soft', // soft/hard
+            'status' => 'active'],
+        );
+        Setting::updateOrCreate(
+            ['name' => 'apple_app_version'],
+            ['value' => '1.0.0',
+            'status' => 'active'],
+        );
+        Setting::updateOrCreate(
+            ['name' => 'apple_app_version_update_type'],
+            ['value' => 'soft', // soft/hard
+            'status' => 'active'],
+        );
 	Setting::updateOrCreate(
             ['name' => 'payu_job_delay_in_seconds'],
             ['value' => '60',

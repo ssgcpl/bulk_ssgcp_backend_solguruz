@@ -140,7 +140,35 @@ class HomeController extends BaseController
         return $this->sendError('',trans('common.something_went_wrong'));
     }
   }
-
+  /**
+  * Home: App version
+  * @response
+  {
+    "success": "1",
+    "status": "200",
+    "message": "Data Found Successfully",
+    "data": {
+        "android_version": "1.0.0",
+        "android_version_update_type": "soft",
+        "iphone_version": "1.0.0",
+        "iphone_version_update_type": "soft"
+    }
+  }
+  */
+  public function app_version() {
+      try{
+        $version = [
+          "android_version" => Setting::get('android_app_version'),
+          "android_version_update_type" => Setting::get('android_app_version_update_type'),
+          "iphone_version" => Setting::get('apple_app_version'),
+          "iphone_version_update_type" => Setting::get('apple_app_version_update_type'),
+        ];
+        return $this->sendResponse($version, trans('common.data_found'));
+      } catch(\Exception $e) {
+          DB::rollback();
+          return $this->sendError('',trans('common.something_went_wrong'));
+      }  
+    }
   /**
   * For Backend Use
   */

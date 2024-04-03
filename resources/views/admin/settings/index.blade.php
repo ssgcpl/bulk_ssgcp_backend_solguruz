@@ -494,7 +494,51 @@
                                                 </div>
                                             </div>
 
-
+                                            <hr style="border-top: 3px solid #434345;">
+                                            <h3>Version Control</h3>
+                                            <br/>
+                                            <div class="form-body">
+                                                <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Android<span class="text-danger custom_asterisk">*</span></label>             
+                                                        <input type="text" class="form-control number_decimal" name="android_app_version" placeholder="Android" value="{{ old('android_app_version') ? old('android_app_version') : $settings['android_app_version']}}" required maxlength="100">
+                                                        @if ($errors->has('android_app_version')) 
+                                                        <strong class="help-block alert-danger">{{ $errors->first('android_app_version') }}</strong>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Update Type<span class="text-danger custom_asterisk">*</span></label>             
+                                                        <select name="android_app_version_update_type" class="form-control" required>
+                                                        <option value="soft" @if($settings['android_app_version_update_type'] == 'soft') selected @endif>Soft</option>
+                                                        <option value="hard" @if($settings['android_app_version_update_type'] == 'hard') selected @endif>Hard</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Apple<span class="text-danger custom_asterisk">*</span></label>             
+                                                        <input type="text" class="form-control number_decimal" name="apple_app_version" placeholder="Apple" value="{{ old('apple_app_version') ? old('apple_app_version') : $settings['apple_app_version']}}" required maxlength="100">
+                                                        @if ($errors->has('apple_app_version')) 
+                                                        <strong class="help-block alert-danger">{{ $errors->first('apple_app_version') }}</strong>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Update Type<span class="text-danger custom_asterisk">*</span></label>             
+                                                        <select name="apple_app_version_update_type" class="form-control" required>
+                                                        <option value="soft" @if($settings['apple_app_version_update_type'] == 'soft') selected @endif>Soft</option>
+                                                        <option value="hard" @if($settings['apple_app_version_update_type'] == 'hard') selected @endif>Hard</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
 
                                             <hr style="border-top: 3px solid #434345;">
                                             <h3>{{ trans('settings.email_setting') }}</h3>

@@ -40,7 +40,7 @@ Route::prefix('customer')->group( function() {
     Route::get('states', 'Api\Customer\StateController@index');
     Route::get('cities/{state_id?}', 'Api\Customer\CityController@index');
     Route::get('postcodes/{city_id?}', 'Api\Customer\CityController@postcodes');
-    // Route::get('app_version', 'Api\Customer\HomeController@app_version');
+    Route::get('app_version', 'Api\Customer\HomeController@app_version');
 
     // CMS
     Route::get('cms','Api\Customer\CmsController@cms_page');
