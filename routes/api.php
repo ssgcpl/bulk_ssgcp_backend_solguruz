@@ -65,6 +65,8 @@ Route::prefix('customer')->group( function() {
        
 
     Route::middleware(['auth:api'])->group( function () {
+        //Delete account
+        Route::get('delete_account', 'Api\Customer\Auth\AuthController@delete_profile')->name('delete_account');
         Route::post('logout', 'Api\Customer\Auth\AuthController@logout');
         Route::post('update_device_token', 'Api\Customer\Auth\AuthController@update_device_token');
 

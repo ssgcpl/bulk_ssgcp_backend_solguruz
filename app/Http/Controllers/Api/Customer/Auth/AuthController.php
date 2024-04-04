@@ -164,7 +164,7 @@ class AuthController extends BaseController
         
         if(isset($request->email))
         {
-            $user = User::where('email',$request->email)->first();
+            $user = User::where('email',$request->email)->where('status','!=','deleted')->first();
             if($user && ($user->email_verified_at != NULL || $user->verified == '1'))
             {
                 return $this->sendError('', trans('auth.account_exists_with_this_email')); 
@@ -172,7 +172,7 @@ class AuthController extends BaseController
         }
         
 
-        $user = User::where('mobile_number',$request->mobile_number)->first();
+        $user = User::where('mobile_number',$request->mobile_number)->where('status','!=','deleted')->first();
         if($user && ($user->email_verified_at != NULL || $user->verified == '1'))
         {
             return $this->sendError('', trans('auth.account_exists_with_this_phone')); 
@@ -487,7 +487,7 @@ class AuthController extends BaseController
         ]);
         if($request->mobile_number != null){
 
-            $user = User::where('mobile_number',$request->mobile_number)->whereIn('user_type',['retailer','dealer'])->first();
+            $user = User::where('mobile_number',$request->mobile_number)->where('status','active')->whereIn('user_type',['retailer','dealer'])->first();
             if(!$user)
             {
                 return $this->sendError('',trans('auth.user_not_valid'));
@@ -626,7 +626,7 @@ class AuthController extends BaseController
         if(isset($request->mobile_number))
         {
 
-            $user = User::where('mobile_number',$request->mobile_number)->whereIn('user_type',['retailer','dealer'])->first();
+            $user = User::where('mobile_number',$request->mobile_number)->where('status','active')->whereIn('user_type',['retailer','dealer'])->first();
 
             if(!$user)
             {
@@ -1247,5 +1247,25 @@ class AuthController extends BaseController
             DB::rollback();
             return $this->sendError('', trans('auth.otp_sent_error'));
         }
+    }
+    /**
+    * Auth: Delete profile
+    *
+    * @authenticated
+    *
+    * @response {
+    *    "success": "1",
+    *    "status": "200",
+    *    "message": "Your account has been deleted successfully."
+    * }
+    */
+    public function delete_profile(){
+        $user = Auth::guard('api')->user();
+        $user = User::find($user->id);
+        $user->status = 'deleted';
+        $user->update();
+
+        DeviceDetail::where('user_id',$user->id)->delete();
+        return $this->sendResponse('', trans('auth.account_deleted_successfully'));
     }
 }

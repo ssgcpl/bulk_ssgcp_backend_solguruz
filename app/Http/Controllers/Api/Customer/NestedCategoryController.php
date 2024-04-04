@@ -146,7 +146,7 @@ class NestedCategoryController extends BaseController
           $categories = Category::where('is_live','1')->whereIn('id',$root_categories)->where('status','active')->whereNull('parent_id')->orderBy('id','asc')->get();
       } else {
         $categories = \App\Models\ProductCategory::whereHas('product', function($q) use ($lang) {
-                                                    $q->where('language',[strtolower($lang),'both'])
+                                                    $q->whereIn('language',$lang)
                                                       ->where('status','active')
                                                       ->where('is_live','1'); 
                                                 })->pluck('category_id');

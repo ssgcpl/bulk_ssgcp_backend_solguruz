@@ -88,6 +88,6 @@ return [
     'verification_link'              => 'Verification link has been sent successfully',
     'same_email'                     => 'You are already using this email. Please use different email.',
     'invalid_user_type' => "Please use an admin account to login into the panel",
-    
+    'account_deleted_successfully'    => 'Your account has been deleted successfully.',
 
 ];

@@ -43,6 +43,7 @@ class Kernel extends HttpKernel
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            'ensure.user.not.deleted',
         ],
         'cors' => [
             \Fruitcake\Cors\HandleCors::class,
@@ -68,5 +69,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
         'cors' => \App\Http\Middleware\Cors::class, 
+        'ensure.user.not.deleted' => \App\Http\Middleware\EnsureUserNotDeleted::class,
     ];
 }
