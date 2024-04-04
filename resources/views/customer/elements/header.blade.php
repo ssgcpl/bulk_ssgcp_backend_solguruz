@@ -78,6 +78,9 @@
                         <li>
                           <a href="#" data-bs-toggle="modal" data-bs-target="#logout-modal" title=""><span class="icon"><img src="{{asset('web_assets/images/logout.svg')}}" alt=""></span>Logout</a>
                         </li>
+                        <li>
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#delete-account-modal" title=""><span class="icon"><img src="{{asset('web_assets/images/delete_icon.svg')}}" alt=""></span>Delete Account</a>
+                        </li>
                       </ul>
                     </div>
                 </div>

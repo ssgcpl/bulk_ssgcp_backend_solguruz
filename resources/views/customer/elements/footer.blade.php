@@ -457,7 +457,24 @@
   </div>
 </div>
 
-
+<!-- Delete account Modal  -->
+<div class="modal fade delete-confirm" id="delete-account-modal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" >Completed Test</h5> -->
+        <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body text-center">        
+        <p>Are you sure you want to delete account?</p>
+         <div class="button-list text-center">
+          <a href="javascript:void(0)" type="button" class="btn secondary-btn me-1" data-bs-dismiss="modal">No</a>
+          <a href="javascript:void(0)" id="delete_account" type="button" class="btn primary-btn">Yes</a>
+        </div> 
+      </div>      
+    </div>
+  </div>
+</div>
 
 <!-- Welcome page after signup --->
 <div id="welcome_page" class="fade modal green-color delete-confirm" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -713,6 +713,39 @@ $(document).ready(function(){
 	})
   /* ########## LOGOUT ENDS ############ */
 
+	/* ########## DELETE ACCOUNT STARTS ############ */
+ $("#delete_account").click(function(){
+     $("#delete-account-modal").modal("hide");
+     $.ajax({
+           url: BASE_URL+"delete_account",
+           type: "GET",
+           beforeSend: function(xhr){
+                xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+                xhr.setRequestHeader('Authorization', 'Bearer '+token);
+                 $('.loader').css('visibility','visible');
+
+            },
+            error:function(response){
+             if(response.status == '401'){
+              auth_guard_route(response.status);
+            }
+            },
+           success: function(response) {
+              if(response.status == "200") {
+                    localStorage.removeItem("user_token");
+                    toastr.success(response.message);
+                    setTimeout(function() {
+                        window.location.href = "{{ route('signin') }}";
+                    }, 2000);
+              } else {
+               toastr.error(response.message);
+              }
+               $('.loader').css('visibility','hidden');
+           }
+    });
+})
+/* ########## DELETE ACCOUNT ENDS ############ */
+
   /*############## PROFILE - SCRIPT STARTS #################*/
   @if(Request::route()->getName() == 'customer.profile')
 
