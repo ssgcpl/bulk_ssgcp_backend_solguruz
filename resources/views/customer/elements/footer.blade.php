@@ -218,7 +218,7 @@
         </div>
         <div class="form-check form-switch mb-3">
           <label class="form-check-label" for="flexSwitchCheckDefault">Delivery Address</label>
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="is_delivery_address">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="is_delivery_address" checked>
         </div>
         <div class="button-list">            
           <input id="save_address_btn" name="save_address_btn" type="submit" class="w-100 btn primary-btn" value="SAVE">  
