@@ -147,7 +147,7 @@
   $(document).ready(function() {
 
   $('.add_new_gro').click(function() {
-      var html = ` <div class="row"> 
+      var html = ` <div class="row align-items-center"> 
                         <div class="col-md-6">
                               <div class="form-group ">
                                 <label for="gro_no" class="content-label">{{ trans('stocks.gro_no') }}<span class="text-danger custom_asterisk">*</span></label>
@@ -170,7 +170,7 @@
                             <div class="col-md-1"><i class="fa fa-close close_gro_div"></i></div>
                             </div>
                      `;
-      $('#gro_div').append(html);                          
+      $('#gro_div').prepend(html);                          
   });
 
    $('body').on('click', '.close_gro_div', function(){
