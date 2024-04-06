@@ -278,6 +278,7 @@ class OrderController extends Controller
             $name = $emp->product->get_name();
           }*/
         	$emp['product_name']= $emp->book_name;
+          $emp['sku_id']= $emp->product->sku_id;
         	$emp['product_image'] = ($emp->product->image) ? '<img src="'.asset($emp->product->image).'" width="100%" height="100%">' : '';
         	$emp['supplied_qty'] =  ($emp->supplied_quantity) ? '<input type="textbox" name="supplied_qty"'.$emp->id.'" id="supplied_qty_'.$emp->id.'" value="'.$emp->supplied_quantity.'" disabled style="width:100px;"></input><a class="edit_supplied_qty" href="javascript:void(0)"  id="'.$emp->id.'"><span class="fa fa-edit errspan"></span></a>':$emp->supplied_quantity;
         	$emp['weight'] = number_format($emp->product->weight * $emp->supplied_quantity,'2','.',',');

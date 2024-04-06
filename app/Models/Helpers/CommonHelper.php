@@ -1417,6 +1417,7 @@ public function sendNotifications($user,$title,$body){
             $order_items[] = [
                   'id' => $ik+1,
                   'name' => $product_name,
+                  'sku_id'=>$item->product->sku_id,
                   'quantity' => $item->supplied_quantity,
                   'mrp' => $item->mrp,
                   'rate' =>$item->sale_price,

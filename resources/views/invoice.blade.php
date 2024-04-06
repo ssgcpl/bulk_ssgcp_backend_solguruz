@@ -91,6 +91,7 @@
                                 <tr align="center" valign="top">
                                     <th class="items_table">Sr</th>
                                     <th class="items_table">Product</th>                                
+                                    <th>SKU Id</th>                                                                                         
                                     <th class="items_table">Qty</th>
                                     <th class="items_table">MRP<br/> (Per Item)</th>
                                     <th class="items_table">Rate after T.D</th> 
@@ -107,6 +108,7 @@
                                     @endif
                                         <td class="items_table" align="center">{{$order_item['id']}}</td> 
                                         <td class="items_table">{{$order_item['name']}}</td> 
+                                        <td class="items_table" align="center">{{ $order_item['sku_id'] }}</td>
                                         <td class="items_table" align="center">{{$order_item['quantity']}}</td> 
                                         <td class="items_table" align="right">{{$order_item['mrp']}}</td> 
                                         <td class="items_table" align="right">{{$order_item['rate']}}</td> 

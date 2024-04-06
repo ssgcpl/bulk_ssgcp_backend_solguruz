@@ -119,6 +119,7 @@
                             <tr>
                               <th>{{trans('common.id')}}</th>
                               <th>{{trans('orders.product_name')}}</th>
+                              <th style="width: 60px;">{{trans('products.sku_id')}}</th>
                               <th>{{trans('orders.product_image')}}</th>
                               <th>{{trans('orders.mrp')}}</th>
                               <th>{{trans('orders.sale_price')}}</th>
@@ -136,6 +137,7 @@
                             <tr>
                               <th>{{trans('common.id')}}</th>
                               <th>{{trans('orders.product_name')}}</th>
+                              <th>{{trans('products.sku_id')}}</th>
                               <th>{{trans('orders.product_image')}}</th>
                               <th>{{trans('orders.mrp')}}</th>
                               <th>{{trans('orders.sale_price')}}</th>
@@ -602,6 +604,7 @@
         columns: [
            { data: 'id'},
            { data: 'product_name',orderable: false},
+           { data: 'sku_id',orderable: false},
            { data: 'product_image',
             mRender : function(data, type, row) { 
                 return row['product_image'];
