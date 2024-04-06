@@ -72,7 +72,17 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-2">
+                  <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="content-label">Print Status</label>
+                        <select id="print_status" class = "form-control">
+                        <option value=''>all</option>
+                        <option value='remaining'>{{trans('orders.remaining')}}</option>
+                        <option value="printed">{{trans('orders.printed') }}</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
                       <div class="form-group">
                         <label class="">{{trans('orders.order_type')}}</label>
                         <select id="order_type" class = "form-control" name='order_type'>
@@ -82,7 +92,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <div class="form-group">
                         <label class="">{{trans('orders.order_status')}}</label>
                         <select id="order_status" class = "form-control" name=''>
@@ -97,7 +107,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                       <div class="form-group">
                         <label class="">{{trans('orders.user_type')}}</label>
                         <select id="user_type" class = "form-control" name=''>
@@ -107,19 +117,21 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-md-2">
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
                         <div class="form-group">
                           <label class="content-label">Start Date</label>
                           <input id="start_date" type="" class="form-control datepicker_future_not_allow" autocomplete="off" name="" value="">
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <div class="form-group">
                           <label class="content-label">End Date</label>
                           <input id="end_date" type="" class="form-control datepicker_future_not_allow" name="" autocomplete="off" name="" value="">
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <div class="form-group">
                           <label class="content-label"> </label>
                           <a href="javascript:void(0)" id="apply_date" class="form-control btn btn-success">Apply
@@ -208,6 +220,7 @@
 
     function fill_datatable() {
 
+        var print_status = $("#print_status").val();
         var order_status = $("#order_status").val();
         var order_type   = $("#order_type").val();
         var user_type    = $("#user_type").val();
@@ -271,6 +284,7 @@
                     'user_type':user_type,
                     'order_type':order_type,
                     'order_status':order_status,
+                    'print_status':print_status,
                     'start_date':start_date,
                     'end_date':end_date,
                    },
@@ -299,7 +313,7 @@
     });
     }
 
-    $('#order_type,#order_status,#user_type').on('change', function(){
+    $('#order_type,#order_status,#user_type,#print_status').on('change', function(){
       fill_datatable();
     });
 

@@ -98,6 +98,10 @@ class OrderController extends Controller
               });*/
               $query = $query->where('user_type',$user_type);
             }
+            if($request['print_status'] !=''){
+          	  $print_status = $request['print_status'];
+              $query = $query->where('print_status',$print_status);
+            }
 
             ## Filter by visible to
             if ($request['order_type'] !=''){
@@ -119,6 +123,7 @@ class OrderController extends Controller
         $filter = $filter->whereHas('user',function($q1) use($searchValue){
                            $q1->where('company_name','like','%'.$searchValue.'%');
                            $q1->orwhere('mobile_number','like','%'.$searchValue.'%');
+                           $q1->orwhere('print_status','like','%'.$searchValue.'%');
                      })->orWhere(function($q)use ($searchValue) {
                             $q->where('id',$searchValue)
                             ->where('order_status','<>','pending')
@@ -140,6 +145,7 @@ class OrderController extends Controller
         	$emp['company_name'] = $emp->user->company_name;
         	$emp['number'] = $emp->user->mobile_number;
           $order_status = ucfirst(str_replace('_',' ',$emp->order_status));
+          $color_code = 'FFA500';
           if($emp->order_status == 'processing') {
             $color_code = "#FFD700";
           }else if($emp->order_status == 'pending_payment') {
