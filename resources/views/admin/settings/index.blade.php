@@ -84,7 +84,7 @@
                                                                 class="text-danger custom_asterisk">*</span></label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addon1">+1</span>
+                                                                <span class="input-group-text" id="basic-addon1">+91</span>
                                                             </div>
                                                             <input type="tel" pattern="\d*" minlength="10"
                                                                 maxlength="10" title="You can only enter numbers."
@@ -217,7 +217,7 @@
                                                                 class="text-danger custom_asterisk">*</span></label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addon1">+1</span>
+                                                                <span class="input-group-text" id="basic-addon1">+91</span>
                                                             </div>
                                                             <input type="tel" pattern="\d*" minlength="10"
                                                                 maxlength="10" title="You can only enter numbers."

@@ -39,7 +39,7 @@
                 </li>
                 <li>
                     <div class="icon"><i class="fas fa-phone-alt"></i></div>
-                    <div class="details"><a href="tel:{{\App\Models\Setting::get('customer_care_no')}}" title="">+1 {{\App\Models\Setting::get('customer_care_no')}}</a></div>
+                    <div class="details"><a href="tel:{{\App\Models\Setting::get('customer_care_no')}}" title="">+91 {{\App\Models\Setting::get('customer_care_no')}}</a></div>
                 </li>
               </ul>
           </div>

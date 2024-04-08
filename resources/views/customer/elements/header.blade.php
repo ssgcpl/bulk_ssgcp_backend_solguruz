@@ -12,7 +12,7 @@
         <img class="mobile-hide" src="{{asset('web_assets/images/logo.svg')}}" alt="">
       </a>
       <div class="contact-info">
-        Mobile: {{\App\Models\Setting::get('customer_care_no')}}<br>
+        Mobile: +91 {{\App\Models\Setting::get('customer_care_no')}}<br>
         Email: {{\App\Models\Setting::get('contact_email')}}
       </div>  
       <div class="right-side"> 
