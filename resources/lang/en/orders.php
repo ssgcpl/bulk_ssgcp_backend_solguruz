@@ -77,7 +77,7 @@ return [
     'stock_added' => 'Stock added Successfully',
     'total_sale_price_quantity' => 'Sale Price * Qty',
     'order_printed'=>'Order Print Status Updated Successfully',
-    'printed' => 'printed',
-    'remaining' => 'remaining',
+    'printed' => 'Printed',
+    'remaining' => 'Remaining',
 
  ];

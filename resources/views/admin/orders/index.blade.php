@@ -76,7 +76,7 @@
                       <div class="form-group">
                         <label class="content-label">Print Status</label>
                         <select id="print_status" class = "form-control">
-                        <option value=''>all</option>
+                        <option value=''>All</option>
                         <option value='remaining'>{{trans('orders.remaining')}}</option>
                         <option value="printed">{{trans('orders.printed') }}</option>
                         </select>

@@ -70,13 +70,13 @@ class SettingsTableSeeder extends Seeder
 
         Setting::updateOrCreate(
             ['name' => 'contact_email'],
-            ['value' => 'ssgc_buk_order@gmail.com',
+            ['value' => 'ssgc018@gmail.com',
             'status' => 'active'],
         );
 
         Setting::updateOrCreate(
             ['name' => 'customer_care_no'],
-            ['value' => '1234567890',
+            ['value' => '9389409346',
             'status' => 'active'],
         );
 
@@ -282,7 +282,7 @@ class SettingsTableSeeder extends Seeder
 
         Setting::updateOrCreate(
             ['name' => 'order_return_contact_number'],
-            ['value' => '12345678',
+            ['value' => '9389409346',
             'status' => 'active'],
         );
 
@@ -351,6 +351,12 @@ class SettingsTableSeeder extends Seeder
         Setting::updateOrCreate(
             ['name' => 'apple_app_version_update_type'],
             ['value' => 'soft', // soft/hard
+            'status' => 'active'],
+        );
+        //bundles weight
+        Setting::updateOrCreate(
+            ['name' => 'bundles_weight'],
+            ['value' => '40.00',
             'status' => 'active'],
         );
 	Setting::updateOrCreate(

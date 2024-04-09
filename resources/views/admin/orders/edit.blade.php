@@ -153,12 +153,12 @@
                         <div class="col-md-7"></div>
                          <div class="col-md-2">
                               <div class="form-group">
-                              <a href="javascript:void(0)" id="add_item" class="form-control btn btn-success">Add Item
+                              <a href="javascript:void(0)" @if($order->order_status =='completed') disabled class="form-control btn btn-secondary" @else id="add_item" class="form-control btn btn-success"  @endif >Add Item
                               </a></div>
                         </div>
                         <div class="col-md-3">
                               <div class="form-group">
-                              <a href="javascript:void(0)" id="update_order" class="form-control btn btn-success">Update Order
+                              <a href="javascript:void(0)" @if($order->order_status =='completed')  disabled class="form-control btn btn-secondary" @else id="update_order" class="form-control btn btn-success" @endif>Update Order
                               </a></div>
                         </div>
                       </div>
@@ -174,7 +174,7 @@
                               <b>Total Payable Amount : </b>  {{$order->total_payable }}<br>
                               <b>Total Weight (in KG) </b> : {{number_format($order->total_weight,'2','.',',')}}<br>
                               <b> Total Supply Quantity </b>: {{ $total_supplied_quantity }}<br>
-                              Bundles : <input type="text" class="form-control" name="bundles" id="bundles" value="{{$order->bundles}}">
+                              Bundles : <input @if($order->order_status=='completed') readonly @endif type="text" class="form-control" name="bundles" id="bundles" value="{{number_format($order->total_weight / \App\Models\Setting::get('bundles_weight'),2)}}">
                             </p>
                         </div>
                         <div class="col-md-4">
@@ -182,7 +182,7 @@
                           <p class="details">
                           Delivery Charges For Dealers :   <br>
                           <label></label>
-                          <input type="text" class="form-control" name="delivery_charges" id="delivery_charges" value="{{$order->delivery_charges}}" >
+                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" name="delivery_charges" id="delivery_charges" value="{{$order->delivery_charges}}" >
                           <label></label>
                           </p>
                           @endif
@@ -190,11 +190,11 @@
                         <div class="col-md-4">
                            <p class="details">
                           Transaction ID :   <br>
-                          <input type="text" class="form-control" name="transaction_id" id="transaction_id" value="{{$order->transaction_id}}">
+                          <input type="text" class="form-control"  @if($order->order_status=='completed') readonly @endif name="transaction_id" id="transaction_id" value="{{$order->transaction_id}}">
                           <label></label>
                           <br>
                           Payment Status :   <br>
-                          <select name="payment_status" id="payment_status" class="form-control">
+                          <select @if($order->order_status=='completed') disabled @endif name="payment_status" id="payment_status" class="form-control">
                             <option value="pending" {{@($order->payment_status =='pending')? 'selected':''}}>{{trans('orders.pending')}}</option>
                             <option value="paid" {{@($order->payment_status =='paid')? 'selected':''}}>{{trans('orders.paid')}}</option>
                             <option value="failed" {{@($order->payment_status =='failed')? 'selected':''}}>{{trans('orders.failed')}}</option>
@@ -207,12 +207,12 @@
                         <div class="col-md-7"></div>
                          <div class="col-md-2">
                              <div class="form-group">
-                             <a href="javascript:void(0)" id="add_detail" name="add_detail" class="form-control btn btn-success">Add</a>
+                             <a href="javascript:void(0)" id="add_detail" name="add_detail" @if($order->order_status =='completed') disabled class="form-control btn btn-secondary"  @else class="form-control btn btn-success" @endif>Add</a>
                               </div>
                       </div>
                       <div class="col-md-3">
                               <div class="form-group">
-                              <a href="javascript:void(0)" id="send_update" class="form-control btn btn-success">Send Update 
+                              <a href="javascript:void(0)" id="send_update" @if($order->order_status =='completed') disabled class="form-control btn btn-secondary" @else class="form-control btn btn-success" @endif>Send Update 
                               </a></div>
                       </div>
                       </div>
@@ -227,7 +227,7 @@
 
                     <div class="row">
                       <div class="col-md-6">
-                        <h5>Shipping Address &nbsp; <a href="javascript:void(0)" class="edit_address" name="shipping" id="{{$order->id}}"><i class="fa fa-edit"></i></a></h5>
+                        <h5>Shipping Address &nbsp; @if($order->order_status !='completed')  <a href="javascript:void(0)" class="edit_address" name="shipping" id="{{$order->id}}"><i class="fa fa-edit"></i></a> @endif</h5>
                           <table>
                             <tr>
                               <td>Customer Name :</td>
@@ -273,7 +273,7 @@
                       </div>
 
                       <div class="col-md-6">
-                          <h5>Billing Address   &nbsp;<a href="javascript:void(0)" class="edit_billing_address" name="billing" id="{{$order->id}}"><i class="fa fa-edit"></i></a></h5>
+                          <h5>Billing Address   &nbsp; @if($order->order_status !='completed') <a href="javascript:void(0)" class="edit_billing_address" name="billing" id="{{$order->id}}"><i class="fa fa-edit"></i></a>@endif</h5>
                           <table>
                               <tr>
                                 <td>Customer Name :</td>
@@ -328,22 +328,22 @@
                        <div class="col-md-6">
                         <div class="form-group">
                           <label>Courier Name</label>
-                          <input type="text" class="form-control" id="courier_name" name="courier_name">
+                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" id="courier_name" name="courier_name">
                         </div>
                         <div class="form-group">
                           <label>Tracking Number</label>
-                          <input type="text" class="form-control" id="tracking_number" name="tracking_number">
+                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" id="tracking_number" name="tracking_number">
                         </div>
                         <div class="form-group">
                           <label>Customer Note</label>
-                          <input type="text" class="form-control" id="customer_note" name="customer_note">
+                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" id="customer_note" name="customer_note">
                         </div>
                         <div class="form-group">
                           <label>Admin Note</label>
-                          <input type="text" class="form-control" id="admin_note" name="admin_note">
+                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" id="admin_note" name="admin_note">
                         </div>
                         <div class="form-group">
-                           <input type="submit" class="btn btn-success" id="update_note" name="update_note" value="Update">
+                           <input type="submit" @if($order->order_status =='completed')  disabled class="btn btn-secondary" @else class="btn btn-success" @endif id="update_note" name="update_note" value="Update">
                         </div>
                         </div>
                         <div class="col-md-6 note_div">
@@ -581,6 +581,7 @@
     fill_datatable();
     function fill_datatable() {
       var order_id = $("#order_id").val();
+      var order_status = $("#order_status").val();
       $('.data_table_ajax').DataTable({ 
         aaSorting : [[0, 'desc']],
         lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
@@ -597,6 +598,7 @@
             data: {
                     "_token": "{{csrf_token()}}",
                     'order_id':order_id,
+                    'order_status':order_status,
                    },
            //success:function(data) { console.log(data); },
             error:function(data){ console.log(data); },
@@ -620,7 +622,9 @@
            {
             data: '',
                 mRender : function(data, type, row) {
-                
+                if(order_status == 'completed'){
+                  return '<a href="'+row['view_product']+'"><i class="fa fa-eye"></i></a>';
+                }
                 return '<a href="'+row['view_product']+'"><i class="fa fa-eye"></i></a> @can("order-delete")<a class="" href="#" onclick=" return delete_alert('+row["id"]+') "><i class="fa fa-trash"></i><form action="'+row["delete"]+'"  id="form_'+row['id']+'" method="post">@method("delete")@csrf</form></a>@endcan';
       
                }, orderable: false, searchable: false
@@ -656,7 +660,7 @@
                     }
                     else{
                      toastr.success(response.success);
-                     //location.reload();
+                     location.reload();
                     }
 
                   }

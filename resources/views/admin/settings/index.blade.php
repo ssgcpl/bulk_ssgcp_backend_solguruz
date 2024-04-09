@@ -412,6 +412,20 @@
                                                             @endif
                                                         </div>
                                                     </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label>Bundle Weight<span
+                                                                    class="text-danger custom_asterisk">*</span></label>
+                                                            <input type="text" class="form-control"
+                                                                name="bundles_weight" placeholder="Bundle Weight"
+                                                                value="{{ old('bundles_weight') ? old('bundles_weight') : $settings['bundles_weight'] }}"
+                                                                required maxlength="100">
+                                                            @if ($errors->has('bundles_weight'))
+                                                                <strong
+                                                                    class="help-block alert-danger">{{ $errors->first('bundles_weight') }}</strong>
+                                                            @endif
+                                                        </div>
+                                                    </div>
 
                                                 </div>
                                             </div>
