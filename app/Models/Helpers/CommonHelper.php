@@ -1379,6 +1379,7 @@ public function sendNotifications($user,$title,$body){
 
   public function generateInvoiceData($order){
           $order_items = [];
+          $order_items_old = [];
           $billing_address = [];
           $shipping_address = [];
           if($order->order_type == 'physical_books'){
@@ -1416,6 +1417,7 @@ public function sendNotifications($user,$title,$body){
               } 
             $order_items[] = [
                   'id' => $ik+1,
+                  'sku_id'=>$item->product->sku_id,
                   'name' => $product_name,
                   'sku_id'=>$item->product->sku_id,
                   'quantity' => $item->supplied_quantity,
@@ -1424,16 +1426,26 @@ public function sendNotifications($user,$title,$body){
                   'total' =>number_format($item->sale_price * $item->supplied_quantity,'2','.',','),
                   'weight' => $weight,
                   'total_weight'=>$total_weight,
+                  'isoldbook'=>($item->product->business_category_id == 2) ? true : false
                 ];
           }
+          usort($order_items, function($a, $b) {
+            if ($a['isoldbook'] == $b['isoldbook']) {
+                return 0;
+            }
+            return ($a['isoldbook']) ? 1 : -1;
+        });
+        foreach ($order_items as $ik => &$item) {
+          $item['id'] = $ik + 1;
+      }
           $data = [
             'invoice_no' => $order->order_id,'order_type'=>$order->order_type,'dated' => date('M d, Y',strtotime($order->created_at)),
             'order_id' => $order->id,'user_name'=>$order->user->first_name." ".$order->user->last_name,'billing_address' => $billing_address,'shipping_address'=>$shipping_address,
             'order_items' => $order_items,'total_weight'=>number_format($order->total_weight,'2','.',','),'bundles'=>$order->bundles,'payment_type'=>$payment_type,'total_amount'=> $order->total_payable,'total_sale_price'=>$order->total_sale_price,'delivery_charges'=>$order->delivery_charges,
-       ];
+          ];
       return $data;  
     }
-
+  
     public function generateOrderReturnInvoiceData($order_return){
           $order_return_items = [];
           if($order_return->user->delivery_address) {

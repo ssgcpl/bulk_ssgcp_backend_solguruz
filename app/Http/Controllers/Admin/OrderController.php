@@ -791,7 +791,7 @@ class OrderController extends Controller
         }*/
         Artisan::call('optimize:clear');
         $pdf = \PDF::loadHtml(view('invoice', ['data_array' => $data_array]));
-        $name = 'uploads/invoice/order_invoices_'.time().'.pdf';
+        $name = 'public/uploads/invoice/order_invoices_'.time().'.pdf';
         $pdf->save($name);
 
       /*  $dir = public_path('uploads/order_pdf');

@@ -355,6 +355,10 @@
          $('.mark:checked').each(function(){
             id.push($(this).val());
          });
+         if(id.length == 0) {
+          alert("Please select order which you would like to download the invoice");
+          return false;
+        }
 
         if(confirm("Are you sure want to download pdf?"))
         {
