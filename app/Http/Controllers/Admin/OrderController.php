@@ -122,7 +122,8 @@ class OrderController extends Controller
         if($searchValue != ''){
         $filter = $filter->whereHas('user',function($q1) use($searchValue){
                            $q1->where('company_name','like','%'.$searchValue.'%');
-                           $q1->orwhere('mobile_number','like','%'.$searchValue.'%');
+                           $q1->orwhere('mobile_number','like',$searchValue);
+                           $q1->orwhere('email','like',$searchValue);
                            $q1->orwhere('print_status','like','%'.$searchValue.'%');
                      })->orWhere(function($q)use ($searchValue) {
                             $q->where('id',$searchValue)
