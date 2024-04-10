@@ -29,7 +29,7 @@ class OrderListResource extends JsonResource
            // 'order_time'   => date('h:i A', strtotime($this->created_at)),
             'order_date'   => date('d-m-Y', strtotime($this->placed_at)),
             'order_time'   => date('h:i A', strtotime($this->placed_at)),
-            'order_total'  => (string)floor($this->total_payable),
+            'order_total'  => (string)number_format($this->total_payable,2),
         ];
     }
 }

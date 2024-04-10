@@ -28,8 +28,8 @@ class RetailerWishlistResource extends JsonResource
             'book_id'     => $this->product_id ? (string)$this->product_id : '',
             'name'        => $this->product ? (string)$this->product->get_name() : '',
             'image'       => $this->product ? $this->product->image ? (string)asset($this->product->image) : '' :'',
-            'sale_price'  => $this->product ? (string)floor($this->product->get_price($user)) :'',
-            'mrp'         => $this->product ? $this->product->mrp ? (string)floor($this->product->mrp) : '' : '',
+            'sale_price'  => $this->product ? (string)number_format($this->product->get_price($user),2) :'',
+            'mrp'         => $this->product ? $this->product->mrp ? (string)number_format($this->product->mrp,2) : '' : '',
             'quantity' => $this->wish_product_qty ? (string)$this->wish_product_qty :'0',
            
         ];

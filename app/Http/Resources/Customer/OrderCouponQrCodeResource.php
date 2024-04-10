@@ -22,7 +22,7 @@ class OrderCouponQrCodeResource extends JsonResource
             'state'            => $this->coupon_qr_code ? (string)$this->coupon_qr_code->state : '' ,
             'customer_name'    => $this->customer_name ?? '',
             'customer_contact' => $this->customer_contact ?? '',
-            'sale_price'       => (string)floor($this->sale_price) ?? '',
+            'sale_price'       => (string)number_format($this->sale_price,2) ?? '',
             'country_code'     => $this->order_item->order->user ? $this->order_item->order->user->country->country_code : ""
         ];
     }

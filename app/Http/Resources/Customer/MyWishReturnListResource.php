@@ -29,7 +29,7 @@ class MyWishReturnListResource extends JsonResource
             'book_id'     => $this->product_id ? (string)$this->product_id : '',
             'name'        => $this->product ? (string)$this->product->get_name() : '',
             'image'       => $this->product ? $this->product->image ? (string)asset($this->product->image) : '' :'',
-            'sale_price'  => $sale_price ? (string)floor($sale_price) :'0',
+            'sale_price'  => $sale_price ? (string)number_format($sale_price,2) :'0',
             'quantity' => $this->wish_return_qty ? (string)$this->wish_return_qty :'0',
             'description' => $this->description ? (string)$this->description :'',
             'dealer_id' => $this->dealer_id ? (string)$this->dealer_id :'',

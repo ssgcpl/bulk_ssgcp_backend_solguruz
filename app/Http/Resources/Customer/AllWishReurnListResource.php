@@ -40,8 +40,8 @@ class AllWishReurnListResource extends JsonResource
             'book_id'            => $this->id ? (string)$this->id : '',
             'name'               => $name,
             'image'              => $this->image ? (string)asset($this->image) : '',
-            'sale_price'         => (string)floor($this->get_price($user)),
-            'mrp'                => $this->mrp ? (string)floor($this->mrp) : '',
+            'sale_price'         => (string)number_format($this->get_price($user),2),
+            'mrp'                => $this->mrp ? (string)number_format($this->mrp,2) : '',
             'exist_under_dealer' => $exist_under_dealer
         
         ];

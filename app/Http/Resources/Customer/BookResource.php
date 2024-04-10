@@ -32,8 +32,8 @@ class BookResource extends JsonResource
         return [
             'book_id'     => $this->id ? (string)$this->id : '' ,
             'name'        => (string)$name, 
-            'sale_price'  => $this->price ? (string)floor($this->price) : '',
-            'mrp'         => $this->mrp ? (string)floor($this->mrp) : '' ,
+            'sale_price'  => $this->price ? (string)number_format($this->price,2) : '',
+            'mrp'         => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'image'       => $this->image ? (string)asset($this->image) : '',
             'quantity'    => $this->quantity ? (string)$this->quantity : '0' ,
             'added_to_cart' => $this->added_to_cart ? (string)$this->added_to_cart : '0' ,

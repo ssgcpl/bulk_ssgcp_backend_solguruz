@@ -35,8 +35,8 @@ class CouponCartItemResource extends JsonResource
             'coupon_id'    => isset($item) ? (string)$item->id : '' ,
             'name'         => $name,
             'description'  => $description,
-            'mrp'          => isset($item) ? (string)floor($item->mrp) : '' ,
-            'sale_price'   => (string)floor($sale_price),
+            'mrp'          => isset($item) ? (string)number_format($item->mrp,2) : '' ,
+            'sale_price'   => (string)number_format($sale_price,2),
             'cover_image'  => $cover_image ? $cover_image : '',
             'type'         => $type,
             'expiry_date'  => $end_date ? $end_date : ''

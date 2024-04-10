@@ -46,7 +46,7 @@ class OrderDetailResource extends JsonResource
            // 'order_time'       => date('h:i A', strtotime($this->created_at)),
             'order_date'       => date('d-m-Y', strtotime($this->placed_at)),
             'order_time'       => date('h:i A', strtotime($this->placed_at)),
-            'order_total'      => (string)floor($this->total_payable),
+            'order_total'      => (string)number_format($this->total_payable,2),
             'order_status'     => $this->order_status ? (string)(str_replace('_', ' ', ucfirst($this->order_status)) ) : '',
             'billing_address'  => ($this->billing_address) ? new AddressResource($this->billing_address) : $this->object,
             'shipping_address' => ($this->shipping_address) ? new AddressResource($this->shipping_address) : $this->object,
@@ -54,11 +54,11 @@ class OrderDetailResource extends JsonResource
             'coupon_items'     => $coupon_items,
             'payment_method'   => $payment_method,
             'order_summary'    => [
-                'total_mrp'           => (string)floor($this->total_mrp),
-                'discount_on_mrp'     => (string)floor($this->discount_on_mrp),
-                'delivery_charges'    => (string)floor($this->delivery_charges),
-                'coin_point_discount' => (string)floor($this->redeemed_points_discount),
-                'total_payable'       => (string)floor($this->total_payable),
+                'total_mrp'           => (string)number_format($this->total_mrp,2),
+                'discount_on_mrp'     => (string)number_format($this->discount_on_mrp,2),
+                'delivery_charges'    => (string)number_format($this->delivery_charges,2),
+                'coin_point_discount' => (string)number_format($this->redeemed_points_discount,2),
+                'total_payable'       => (string)number_format($this->total_payable,2),
             ],
             
         ];

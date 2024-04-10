@@ -24,8 +24,8 @@ class CouponDetailResource extends JsonResource
         return [
             'sub_coupon_id' => $this->id ? (string)$this->id : '' ,
             'name'          => (string)$this->coupon->name,
-            'sale_price'    => (string)floor($this->get_price($user)),
-            'mrp'           => $this->mrp ? (string)floor($this->mrp) : '' ,
+            'sale_price'    => (string)number_format($this->get_price($user),2),
+            'mrp'           => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'type'          => $this->coupon ? (string)trans('coupons.'.$this->coupon->item_type) : '',
             'expiry_date'   => $this->coupon ?(string) date('d-m-Y',strtotime($this->coupon->end_date)) : '' , 
             'description'   => $this->description,

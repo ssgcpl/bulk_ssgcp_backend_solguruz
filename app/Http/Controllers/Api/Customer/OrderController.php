@@ -693,11 +693,11 @@ class OrderController extends BaseController
             $total_payable = $total_payable + $delivery_charges;
 
             $response = [
-                'total_mrp'           => (string)$total_mrp,
-                'discount_on_mrp'     => (string)$discount_on_mrp,
-                'delivery_charges'    => (string)$delivery_charges,
-                'coin_point_discount' => (string)$coin_point_discount,
-                'total_payable'       => (string)$total_payable,
+                'total_mrp'           => (string)number_format($total_mrp,2),
+                'discount_on_mrp'     => (string)number_format($discount_on_mrp,2),
+                'delivery_charges'    => (string)number_format($delivery_charges,2),
+                'coin_point_discount' => (string)number_format($coin_point_discount,2),
+                'total_payable'       => (string)number_format($total_payable,2),
             ];
             return $this->sendResponse($response, trans('orders_api.cart_summary_updated'));
         } catch(\Exception $e) {
