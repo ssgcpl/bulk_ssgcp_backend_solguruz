@@ -115,7 +115,7 @@ class CityController extends Controller
     public function store(Request $request)
     {
         $validator= $request->validate([
-            'city_name'  => 'required|regex:/^[\w\-\s]+$/u|max:30|unique:cities,name',
+            'city_name'  => 'required|regex:/^[\w\-\s]+$/u|max:30|unique:cities,name,NULL,id,state_id,' . $request->state_name,
             'country_name'  => 'required|exists:countries,id',
             'state_name'    => 'required|exists:states,id',
         ]);
@@ -179,7 +179,7 @@ class CityController extends Controller
         }
 
         $validator= $request->validate([
-             'city_name'  => ['required','min:2','max:50','regex:/^[\w\-\s]+$/u','unique:cities,name,'.$city->id],
+             'city_name'  => ['required','min:2','max:50','regex:/^[\w\-\s]+$/u','unique:cities,name,'.$city->id.',id,state_id,' . $request->state_name],
              'country_name' => 'required|exists:countries,id',
              'state_name'    => 'required|exists:states,id',
         ]);
