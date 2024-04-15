@@ -328,22 +328,22 @@
                        <div class="col-md-6">
                         <div class="form-group">
                           <label>Courier Name</label>
-                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" id="courier_name" name="courier_name">
+                          <input type="text" class="form-control" id="courier_name" name="courier_name">
                         </div>
                         <div class="form-group">
                           <label>Tracking Number</label>
-                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" id="tracking_number" name="tracking_number">
+                          <input type="text" class="form-control" id="tracking_number" name="tracking_number">
                         </div>
                         <div class="form-group">
                           <label>Customer Note</label>
-                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" id="customer_note" name="customer_note">
+                          <input type="text" class="form-control" id="customer_note" name="customer_note">
                         </div>
                         <div class="form-group">
                           <label>Admin Note</label>
-                          <input type="text" @if($order->order_status=='completed') readonly @endif class="form-control" id="admin_note" name="admin_note">
+                          <input type="text" class="form-control" id="admin_note" name="admin_note">
                         </div>
                         <div class="form-group">
-                           <input type="submit" @if($order->order_status =='completed')  disabled class="btn btn-secondary" @else class="btn btn-success" @endif id="update_note" name="update_note" value="Update">
+                           <input type="submit"  class="btn btn-success" id="update_note" name="update_note" value="Update">
                         </div>
                         </div>
                         <div class="col-md-6 note_div">
