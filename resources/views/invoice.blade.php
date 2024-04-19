@@ -134,7 +134,21 @@
         @endforeach
 
         <tr>
-            <td class="items_table" align="center" colspan="9"><b>Total Weight: {{$data['total_weight']}}(Kg) Bundles: {{number_format($data['total_weight'] / \App\Models\Setting::get('bundles_weight'), 2)}}</b></td>
+                <td class="items_table" align="center" colspan="9">
+                    <b>Total Weight: {{$data['total_weight']}}(Kg) Bundles:
+                        @php
+                        $totalWeight = str_replace(',', '', $data['total_weight']);
+                        $bundlesWeight = \App\Models\Setting::get('bundles_weight');
+                        $bundles = 0;
+                        if(is_numeric($totalWeight) && $bundlesWeight != 0) {
+                        $bundles = number_format($totalWeight / $bundlesWeight, 2);
+                        } elseif(is_string($totalWeight)) {
+                        $bundles = number_format(floatval($totalWeight) / $bundlesWeight, 2);
+                        }
+                        echo $bundles;
+                        @endphp
+                    </b>
+                </td>
         </tr>
         <tr>
             <td class="items_table" colspan="8"><b>Subtotal:</b></td>
