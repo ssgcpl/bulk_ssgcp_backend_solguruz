@@ -60,7 +60,7 @@ class OrderController extends BaseController
         $validator=  Validator::make($request->all(),[
             'book_id'  => 'required|exists:products,id',
             'quantity' => 'required|numeric|min:1',
-            'language' => 'nullable|in:english,hindi'
+            'language' => 'nullable|in:english,hindi,all'
         ]);
 
         if($validator->fails()) {

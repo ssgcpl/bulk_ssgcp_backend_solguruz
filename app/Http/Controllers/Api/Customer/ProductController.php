@@ -142,7 +142,7 @@ class ProductController extends BaseController
         $validator = Validator::make($request->all(), [
           'book_id'  => 'required|exists:products,id,is_live,1,status,active',
           'user_id'  => 'sometimes|nullable|exists:users,id',
-          'language' => 'nullable|in:english,hindi'
+          'language' => 'nullable|in:english,hindi,all'
         ]);
 
         if($validator->fails()){
