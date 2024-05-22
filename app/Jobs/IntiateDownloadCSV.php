@@ -67,7 +67,8 @@ class IntiateDownloadCSV implements ShouldQueue
                 }
                 $data_array = ['id' => $barcode->id,
                                     'product_title' => $barcode->product->get_name(),
-                                    'barcode_value' => $barcode->barcode_value,
+                                   // 'barcode_value' => $barcode->barcode_value,
+                                    'barcode_value' => "\t" . $barcode->barcode_value, // Prefix with tab character
                                     'Last Generated on Date/Time'=>date('Y-m-d H:i A',strtotime($barcode->created_at))];
                 fputcsv($file, $data_array); 
                 if($lastId == $barcode->id){
