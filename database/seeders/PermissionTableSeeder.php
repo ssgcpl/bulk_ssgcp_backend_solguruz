@@ -151,6 +151,9 @@ class PermissionTableSeeder extends Seeder
             'reason-create',
             'reason-edit',
             'reason-delete',
+            
+            'datewise-report',
+            'order-report'
         ];
 
         foreach ($permissions as $permission) {

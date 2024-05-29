@@ -74,5 +74,8 @@ return [
     'coupon_management' => 'Coupon Management',
     'order_return'=>'Order Return',
     'pending_orders'=>'Pending Orders',
+    'reports'=>'Reports',
+    'datewise_report'=>'Datewise Reports',
+    'order_report'=>'Order Reports',
     ];
 

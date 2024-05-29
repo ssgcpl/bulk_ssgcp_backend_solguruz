@@ -150,8 +150,22 @@
         <li class="{{ (request()->is('admin/notifications*')) ? 'active' : '' }} nav-item"><a href="{{route('notifications.index')}}"><i class="feather icon-bell"></i><span class="menu-title" >{{trans('sidebar.notifications')}}</span></a>
         @endcan
  -->
+        @canany(['order-report', 'datewise-report'])
+        <li class="nav-item"><a href="#"><i class="feather icon-align-left"></i><span class="menu-title" >{{trans('sidebar.reports')}}</span></a>
+            <ul class="menu-content">
+                @can('datewise-report')
+                <li class="{{ (request()->is('admin/report*')) ? 'active' : '' }} nav-item"><a href="{{route('reports.index')}}"><i class="feather icon-minus"></i><span class="menu-title" >{{trans('sidebar.datewise_report')}}</span></a></li>
+                @endcan
+                @can('order-report')
+                <li class="{{ (request()->is('admin/orderreport*')) ? 'active' : '' }} nav-item"><a href="{{route('orderreport.index')}}"><i class="feather icon-minus"></i><span class="menu-title" >{{trans('sidebar.order_report')}}</span></a></li>
+                @endcan
+
+            </ul>
+        </li>
+        @endcanany
+
         @can('setting-list')
-        <li class="{{ (request()->is('admin/settings*')) ? 'active' : '' }} nav-item"><a href="{{route('settings.index')}}"><i class="feather icon-settings"></i><span class="menu-title" >{{trans('sidebar.setting')}}</span></a>
+        <li class="{{ (request()->is('admin/settings*')) ? 'active' : '' }} nav-item"><a href="{{route('settings.index')}}"><i class="feather icon-settings"></i><span class="menu-title" >{{trans('sidebar.setting')}}</span></a></li>
         @endcan
 
     

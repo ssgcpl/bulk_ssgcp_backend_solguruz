@@ -79,5 +79,10 @@ return [
     'order_printed'=>'Order Print Status Updated Successfully',
     'printed' => 'Printed',
     'remaining' => 'Remaining',
-
+    'order_report'=>'Order Report',
+    'mobile_number'=>'Mobile Number',
+    'placed_at'=>'Placed at',
+    'no_of_items'=>'Total Items',
+    'payment_status'=>'Payment status',
+    'order_by'=>'Order By',
  ];

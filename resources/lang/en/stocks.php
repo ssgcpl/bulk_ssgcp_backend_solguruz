@@ -65,4 +65,10 @@ return [
 
     'gto_in_qty' => 'GTO In Quantity', 
     'gto_out_qty' => 'GTO Out Quantity', 
+    'balance_inside_qty'=>'Balance Inside Qty.',
+    'balance_outside_qty'=>'Balance Outside Qty.',
+    'need'=>'Need',
+    'possiable_book_qty'=>'Possible Books Qty.',
+    'order_qty'=>'Order Qty.',
+    'datewise_stock_report_heading' =>'Datewise Hold Order Report',
 ];

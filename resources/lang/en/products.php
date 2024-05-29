@@ -89,4 +89,7 @@ return [
     'per_book' => '(Per Book)',
     'return_book_list_success' => 'Returnable books available',
     'return_book_list_empty' => 'No returnable books available',
+    'title_of_book'=>'Title of Book',
+    'order_on_hold_qty'=>'Order On Hold Qty.',
+
 ];

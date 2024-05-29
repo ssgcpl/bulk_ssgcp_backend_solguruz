@@ -127,6 +127,14 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
         Route::resource('cms', 'CmsController');
         Route::post('/cms/status', 'CmsController@status')->name('cms_status');
 
+        //Datewise Reports 
+        Route::resource('reports','ReportController')->only(['index']);
+        Route::post('/datewise_report/ajax', 'ReportController@index_ajax')->name('dt_datewise_report');
+         
+        //Order Reports
+        Route::resource('orderreport','OrderReportController')->only(['index']);
+        Route::post('/order_report/ajax', 'OrderReportController@index_ajax')->name('dt_order_report');
+     
         //Business Categories
         Route::resource('business_categories','BusinessCategoryController');
         Route::post('/business_categories/ajax', 'BusinessCategoryController@index_ajax')->name('dt_business_categories');
