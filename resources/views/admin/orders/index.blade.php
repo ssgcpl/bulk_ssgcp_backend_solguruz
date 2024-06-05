@@ -67,7 +67,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                       <label></label>
-                      <h3><b>Total Sale : </b>Rs. {{$total_sale_price}} </h3>
+                      <h3><b>Total Sale : </b>Rs. {{number_format($total_sale_price,2)}} </h3>
                       </div>
                     </div>
                   </div>

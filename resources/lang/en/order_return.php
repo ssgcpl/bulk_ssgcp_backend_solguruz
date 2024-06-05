@@ -28,7 +28,7 @@ return [
     //atrributes
     'company_name' => 'Company Name',
     'order_return_status' => 'Return Order Status',
-    'number'=>'Number',
+    'number'=>'Phone Number',
     'created_date' =>'Date & Time',
     'total_price'=>'Total Price',
     'user_type'=>'User Type',

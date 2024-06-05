@@ -8,6 +8,13 @@
   .dt-buttons{margin-right: 10px}
   .select2-selection {padding: 0px 5px !important}
   .update_stock_popup {cursor: pointer; color: blue}
+  @media (min-width: 1200px) and (max-width: 1314px) {
+      #download_all_barcodes,#download_pdf,#apply_date {display: inline-table;}
+  }
+  @media (min-width: 768px) and (max-width: 1054px) {
+    #download_all_barcodes,#download_pdf,#apply_date {display: inline-table;}
+  }
+  
 </style>
 @endsection
 @section('content')

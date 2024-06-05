@@ -116,7 +116,7 @@
                             <div class="col-md-6">
                               <div class="form-group ">
                                 <label for="gro_qty" class="content-label">{{ trans('stocks.gro_qty') }}<span class="text-danger custom_asterisk">*</span></label>
-                                <input class="form-control @error('gro_qty') ? is-invalid : ''  @enderror"  placeholder="{{trans('stocks.gro_qty')}}" name="gro_qty[]" type="text" value="{{old('gro_qty')}}" required>
+                                <input class="gro_qty form-control @error('gro_qty') ? is-invalid : ''  @enderror"  placeholder="{{trans('stocks.gro_qty')}}" name="gro_qty[]" type="text" value="{{old('gro_qty')}}" required>
                                 @if ($errors->has('gro_qty')) 
                                   <strong class="invalid-feedback">{{ $errors->first('gro_qty') }}</strong>
                                 @endif
@@ -145,7 +145,9 @@
  <script type="text/javascript">
 
   $(document).ready(function() {
-
+    $(document).on('input', 'input.gro_qty', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
   $('.add_new_gro').click(function() {
       var html = ` <div class="row align-items-center"> 
                         <div class="col-md-6">
@@ -161,7 +163,7 @@
                             <div class="col-md-5">
                               <div class="form-group ">
                                 <label for="gro_qty" class="content-label">{{ trans('stocks.gro_qty') }}<span class="text-danger custom_asterisk">*</span></label>
-                                <input class="form-control @error('gro_qty') ? is-invalid : ''  @enderror"  placeholder="{{trans('stocks.gro_qty')}}" name="gro_qty[]" type="text" value="{{old('gro_qty')}}" required>
+                                <input class="gro_qty form-control @error('gro_qty') ? is-invalid : ''  @enderror"  placeholder="{{trans('stocks.gro_qty')}}" name="gro_qty[]" type="text" value="{{old('gro_qty')}}" required>
                                 @if ($errors->has('gro_qty')) 
                                   <strong class="invalid-feedback">{{ $errors->first('gro_qty') }}</strong>
                                 @endif
