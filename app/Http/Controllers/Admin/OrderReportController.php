@@ -118,6 +118,15 @@ class OrderReportController extends Controller
         $empQuery = $empQuery->orderBy($columnName, $columnSortOrder)->offset($row)->limit($rowperpage)->get();
         $data = array();
         foreach ($empQuery as $emp) {
+           // $on_hold = $emp->statuses->where('status', 'on_hold')->first();
+            $processing = $emp->statuses->where('status', 'processing')->first();
+            $shipped = $emp->statuses->where('status', 'shipped')->first();
+            $completed = $emp->statuses->where('status', 'completed')->first();
+            $emp['on_hold'] = $emp->placed_at ? date('d-m-Y h:i A', strtotime($emp->placed_at)) : '-';
+            $emp['processing'] = $processing ? date('d-m-Y h:i A', strtotime($processing->created_at)) : '-';
+            $emp['shipped'] = $shipped ? date('d-m-Y h:i A', strtotime($shipped->created_at)) : '-';
+            $emp['completed'] = $completed ? date('d-m-Y h:i A', strtotime($completed->created_at)) : '-';
+  
             $orderItems = $emp->order_items;
             $emp['selected'] = '<input type="checkbox" class="mark" value="' . $emp->id . '" >';
             $emp['company_name'] = $emp->user->company_name;

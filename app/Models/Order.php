@@ -40,4 +40,8 @@ class Order extends Model
     public function payments(){
         return $this->hasMany('App\Models\Payment','order_id');
     }
+    public function statuses()
+    {
+        return $this->hasMany('App\Models\OrderStatus'::class);
+    }
 }

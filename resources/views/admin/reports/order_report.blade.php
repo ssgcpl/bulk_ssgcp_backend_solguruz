@@ -140,6 +140,10 @@
                           <th>{{trans('common.id')}}</th>
                           <th>{{trans('orders.company_name')}}</th>
                           <th>{{trans('orders.mobile_number')}}</th>
+                          <th>{{trans('orders.on_hold')}}</th>
+                          <th>{{trans('orders.processing')}}</th>
+                          <th>{{trans('orders.shipped')}}</th>
+                          <th>{{trans('orders.completed')}}</th>
                           <th>{{trans('orders.order_status')}}</th>
                           <th>{{trans('orders.no_of_items')}}</th>
                           <th>{{trans('orders.order_amount')}}</th>
@@ -156,6 +160,10 @@
                           <th>{{trans('common.id')}}</th>
                           <th>{{trans('orders.company_name')}}</th>
                           <th>{{trans('orders.mobile_number')}}</th>
+                          <th>{{trans('orders.on_hold')}}</th>
+                          <th>{{trans('orders.processing')}}</th>
+                          <th>{{trans('orders.shipped')}}</th>
+                          <th>{{trans('orders.completed')}}</th>
                           <th>{{trans('orders.order_status')}}</th>
                           <th>{{trans('orders.no_of_items')}}</th>
                           <th>{{trans('orders.order_amount')}}</th>
@@ -223,7 +231,7 @@
                     search: 'applied',
                     order: 'applied'
                 },
-                columns: [1,2,3,4,5,6,7,8,9]
+                columns: [1,2,3,4,5,6,7,8,9,10,11,12] // Include all visible columns
             },
         }],
         processing: true,
@@ -252,6 +260,10 @@
            { data: 'id'},
            { data: 'company_name',orderable: false},
            { data: 'mobile_number',orderable: false},
+           { data: 'on_hold', visible: false }, // Hidden in table, visible in export
+           { data: 'processing', visible: false }, // Hidden in table, visible in export
+           { data: 'shipped', visible: false }, // Hidden in table, visible in export
+           { data: 'completed', visible: false }, // Hidden in table, visible in export
            { data: 'order_status',orderable: false},
            { data: 'total_items',orderable: false},
            { data: 'order_amount',orderable: false},

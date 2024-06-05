@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\Order;
+use App\Models\OrderStatus;
 use App\Models\OrderAddress;
 use App\Models\OrderNote;
 use App\Models\OrderItem;
@@ -447,6 +448,10 @@ class OrderController extends Controller
           $this->sendNotification($user,$title,$body,$slug,$order,null);
            ######### send notification to customer ############
       }
+      $orderStatus = new OrderStatus();
+      $orderStatus->order_id = $order->id;
+      $orderStatus->status = $request->order_status;
+      $orderStatus->save();
       // return redirect()->route('orders.edit',$order_id)->with('success','Order Status Updated');
       return response()->json(['success'=>'Order Status Updated']);
     }
