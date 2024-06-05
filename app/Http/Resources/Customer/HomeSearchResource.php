@@ -40,6 +40,7 @@ class HomeSearchResource extends JsonResource
             'type'               => $this->coupon ? (string)$this->coupon->item_type : '' ,
             'type_label'         => $this->coupon ? (string)trans('coupons.'.$this->coupon->item_type) : '' ,
             'expiry_date'        => $this->coupon ? (string)date('d-m-Y',strtotime($this->coupon->end_date)) : '' ,
+            'visible_to'         => $this->visible_to ? (string)$this->visible_to : '' ,
            
         ];
     }

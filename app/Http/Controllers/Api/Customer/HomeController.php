@@ -557,11 +557,11 @@ class HomeController extends BaseController
           $data = Product::where(['is_live' => '1','status' => 'active','stock_status' => 'in_stock'])->where('business_category_id',$cat->id);
 
           //Check if user is logged in and show data according to the account type
-          if($user){
-            $data = $data->whereIn('visible_to',['both',$user->user_type]);
-          }else {
-            $data = $data->whereIn('visible_to',['both','retailer']);
-          }
+          // if($user){
+          //   $data = $data->whereIn('visible_to',['both',$user->user_type]);
+          // }else {
+          //   $data = $data->whereIn('visible_to',['both','retailer']);
+          // }
 
           // check if category is active/publish
           $data = $data->whereHas('categories',function($q) {

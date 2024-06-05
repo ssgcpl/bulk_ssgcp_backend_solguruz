@@ -2581,20 +2581,26 @@ $(document).ready(function(){
                           }
                           else
                           {
+                            var qty_input = `<div class="qty-items">
+                                          <input type="button" value="-" class="qty-minus">
+                                          <input type="number" value="`+value.quantity+`" class="qty" min="0">
+                                          <input type="button" value="+" class="qty-plus">
+                                        </div>`;
                             if(category.type == 'books')
                             {
                               var cart_btn = '<a href="javascript:void(0);" data-book-id="'+value.product_id+'" class="btn secondary-btn add_to_cart_book">Add to Cart <i class="icon-bag"></i></a>';
+                              if(user_type != '' && value.visible_to != 'both'){
+                                if(value.visible_to != user_type){
+                                  cart_btn = '';
+                                  qty_input = '';
+                                }
+                              }
                             }
                             else
                             {
                               var cart_btn = '<a href="javascript:void(0);" data-coupon-id="'+value.product_id+'" class="btn secondary-btn add_to_cart">Add to Cart <i class="icon-bag"></i></a>';
                             }
 
-                            var qty_input = `<div class="qty-items">
-                                          <input type="button" value="-" class="qty-minus">
-                                          <input type="number" value="`+value.quantity+`" class="qty" min="0">
-                                          <input type="button" value="+" class="qty-plus">
-                                        </div>`;
                           }
 
                           if(category.type == 'books')
@@ -3326,13 +3332,28 @@ $(document).ready(function(){
                 }
               }
         });
+        $('#purchasable_user_filter').on('change',function(){
+          language    = $("ul#myTabLang li a.active").attr('id');
+          category_id = $("li.breadcrumb").last().attr('name');
+          page = 1;
+          if($(this).val() == 'only_purchasable'){
+            var current_user_type = user_type;
+            load_more_books(page,category_id,language,current_user_type); 
+          }else{
+            load_more_books(page,category_id,language);
+          }
+        });
         
-        function load_more_books(page,category_id,language)
+        function load_more_books(page,category_id,language,current_user_type = 'both')
         {
+          var purchasable_user_filter = $('#purchasable_user_filter').val();
+          if(purchasable_user_filter == 'only_purchasable'){
+            current_user_type = user_type;
+          }
           var business_category_id = $("#business_category_id").val();
              $.ajax({
               url: BASE_URL+"books_list?page="+page,
-              data: {"business_category_id":business_category_id,"category_id":category_id,"language":language,"user_id":userid },
+              data: {"business_category_id":business_category_id,"category_id":category_id,"language":language,"user_id":userid,'current_user_type':current_user_type},
               type: "GET",
               async:false,
               beforeSend: function(xhr){
@@ -3352,6 +3373,9 @@ $(document).ready(function(){
               },
               success: function(response) {
                   if(response.status == "200") {
+                    if(user_type != ''){
+                      $('#purchasable_filter').removeClass('d-none');
+                    }
                       if(page == 1)
                       {
                         $("#books_list_hindi").html("");
@@ -3390,17 +3414,24 @@ $(document).ready(function(){
 
                           var book_detail_url = "{{route('book_detail',':book_id')}}?lang="+language;
                           book_detail_url = book_detail_url.replace(':book_id',value.book_id);
+                          var qty_btn = `<div class="qty-items">
+                                    <input type="button" value="-" class="qty-minus">
+                                    <input type="number" value="`+value.quantity+`" class="qty" min="0">
+                                    <input type="button" value="+" class="qty-plus">
+                                  </div>`;
+                          if(user_type != '' && value.visible_to != 'both'){
+                            if(value.visible_to != user_type){
+                              cart_btn = '';
+                              qty_btn = '';
+                            }
+                          }
                           var books_html = `<div class="col-xl-4 col-lg-4 col-md-12 col-12"> 
                               <div class="product-list-box">
                                 <div class="img"><a href="`+book_detail_url+`" title=""><img src="`+value.image+`" alt=""></a></div>
                                 <div class="detail">
                                   <h6><a href="`+book_detail_url+`" title="">`+value.name+`</a></h6> 
                                   <div class="sale-price">₹`+value.sale_price+`<span>₹`+value.mrp+`</span></div> 
-                                  <div class="qty-items">
-                                    <input type="button" value="-" class="qty-minus">
-                                    <input type="number" value="`+value.quantity+`" class="qty" min="0">
-                                    <input type="button" value="+" class="qty-plus">
-                                  </div> 
+                                    `+qty_btn+` 
                                   `+cart_btn+`
                                 </div>
                               </div>
@@ -4356,11 +4387,18 @@ $(document).ready(function(){
                     {
                       var cart_btn = '<a href="javascript:void(0);" data-book-id="'+book.book_id+'" class="btn secondary-btn add_to_cart_book_detail">Add to Cart <i class="icon-bag"></i></a>';
                     }
-                    $("#buttons").html(`<div class="qty-items">
+                    var qty_btn = `<div class="qty-items">
                       <input type="button" value="-" class="qty-minus">
                       <input type="number" value="`+book.quantity+`" id="quantity" class="qty" min="0">
                       <input type="button" value="+" class="qty-plus">
-                    </div>`+cart_btn);
+                    </div>`;
+                    if(user_type != '' && book.visible_to != 'both'){
+                            if(book.visible_to != user_type){
+                              cart_btn = '';
+                              qty_btn = '';
+                            }
+                          }
+                    $("#buttons").html(qty_btn+cart_btn);
 
                     $("#name").html(book.name);
                     $("#sub_heading").html(book.sub_heading);

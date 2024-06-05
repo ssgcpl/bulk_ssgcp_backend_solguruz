@@ -42,6 +42,7 @@ class ProductController extends BaseController
         'category_id'  => 'nullable|exists:categories,id,is_live,1',
         'language' => 'required|in:english,hindi,all',
         'user_id' => 'sometimes|nullable|exists:users,id',
+        'current_user_type' => 'required|in:retailer,dealer,both',
       ]);
       if($validator->fails()){
         return $this->sendError($this->array, $validator->errors()->first());       
@@ -58,11 +59,19 @@ class ProductController extends BaseController
           }
          
         //Check if user is logged in and show data according to the account type
-        if(isset($request->user_id) && $request->user_id != null){
+        /*if(isset($request->user_id) && $request->user_id != null){
           $user = User::find($request->user_id);
           $data = $data->whereIn('visible_to',['both',$user->user_type]);
         }else {
           $data = $data->whereIn('visible_to',['both','retailer']);
+        }*/
+
+        if(isset($request->current_user_type) && $request->current_user_type != null ){
+          if($request->current_user_type == 'both'){
+            $data = $data->whereIn('visible_to',['retailer','dealer','both']);
+          }else{
+            $data = $data->whereIn('visible_to',[$request->current_user_type,'both']);
+          }
         }
         
         // check if category is active/publish
@@ -152,12 +161,12 @@ class ProductController extends BaseController
         $language = $request->language;
 
         $book = Product::where('id',$request->book_id);
-        if(isset($request->user_id) && $request->user_id != null){
-          $user = User::find($request->user_id);
-          $book = $book->whereIn('visible_to',['both',$user->user_type]);
-        }else {
-          $book = $book->whereIn('visible_to',['both','retailer']);
-        }
+        // if(isset($request->user_id) && $request->user_id != null){
+        //   $user = User::find($request->user_id);
+        //   $book = $book->whereIn('visible_to',['both',$user->user_type]);
+        // }else {
+        //   $book = $book->whereIn('visible_to',['both','retailer']);
+        // }
 
         // check if category of product is active /publish
         $book = $book->whereHas('categories',function($q) {

@@ -19,6 +19,8 @@
         <input type="hidden" id="business_category_id" value="{{@$business_category->id}}">
       </div>
       <div class="custom-tab-box">                  
+        <div class="row">
+        <div class="col-lg-9">              
         <ul class="nav custom-nav-tabs" id="myTabLang" role="tablist">
           <li class="nav-item" role="presentation">
             <a class="nav-link active" id="all" data-bs-toggle="tab" href="#tab33" role="tab" aria-controls="tab33" aria-selected="true">All</a>
@@ -30,6 +32,14 @@
             <a class="nav-link" id="english" data-bs-toggle="tab" href="#tab22" role="tab" aria-controls="tab22" aria-selected="false">English</a>
           </li>          
         </ul>
+      </div>
+      <div class="col-lg-3 d-none" id="purchasable_filter">
+        <select class="form-control" id="purchasable_user_filter">
+          <option value="all">All</option>
+          <option value="only_purchasable">Only Purchasable</option>
+        </select>
+      </div>
+        </div>
         <div class="tab-content" id="myTabContent">
           <div class="tag-list">
               <ul class="selected_category">

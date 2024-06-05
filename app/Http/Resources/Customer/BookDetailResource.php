@@ -67,7 +67,8 @@ class BookDetailResource extends JsonResource
             'last_returnable_date' => $this->last_returnable_date ? (string)date('d-m-Y',strtotime($this->last_returnable_date)) : '' ,
             'last_returnable_days' => (string)$last_returnable_days,
             'returnable_qty'       => $this->last_returnable_qty ? (string)$this->last_returnable_qty : '' ,
-            'quantity'             => $this->quantity ? (string)$this->quantity : '0'
+            'quantity'             => $this->quantity ? (string)$this->quantity : '0',
+            'visible_to'           => $this->visible_to ? (string)$this->visible_to : '' ,
             
         ];
     }
