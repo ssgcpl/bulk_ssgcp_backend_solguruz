@@ -189,9 +189,9 @@ class ProductBarcodeController extends Controller
             for ($i = 1; $i <= $quantity; $i++) {
 
             	$generator = new Picqer\Barcode\BarcodeGeneratorHTML();
-              //$unique_code = substr(str_shuffle("081231723897"), 0,12);//RANDOM
               //$unique_code = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0,12);//RANDOM
-                $unique_code = substr(str_shuffle("0123456789"), 0,10);//RANDOM
+                $unique_code_1 = substr(str_shuffle("123456789"), 0,1);//RANDOM
+              $unique_code = $unique_code_1 .substr(str_shuffle("0123456789"), 0,9);//RANDOM
 			         //$code = $generator->getBarcode($unique_code, $generator::TYPE_CODE_128);
 			         $generatorJpg = new Picqer\Barcode\BarcodeGeneratorJPG();
                $fileNameToStore = md5(uniqid(rand(), true)).'.'.'jpg'; //UNIQUE QR 
