@@ -1750,9 +1750,9 @@ $(document).ready(function(){
               var address_type = $('input[name=options]:checked').val();
               var checkout_address_type = $("#type").val();
               var flag;
-              var is_delivery_address = $('input[name=is_delivery_address]:checked').val();
-              
-              if(is_delivery_address=="on") { flag="yes"; } else { flag="no"; }
+              //var is_delivery_address = $('input[name=is_delivery_address]:checked').val();
+              var is_delivery_address  = $('#flexSwitchCheckDefault').is(':checked');
+              if(is_delivery_address == true) { flag="yes"; } else { flag="no"; }
               if($('input[name=options]').is(':checked') == false) { 
                 toastr.error("Please select Save As"); 
                 return false; 
@@ -3010,6 +3010,9 @@ $(document).ready(function(){
                     /*setTimeout(function(){
                       location.reload();
                     },1000);*/
+                    var cart_count = parseInt($('#cart_item_count').html());  
+                    var total_cart_item_count = cart_count+1;
+                    $('#cart_item_count').html(total_cart_item_count);
                   }
                   else {
                     toastr.error(response.message);
@@ -4472,7 +4475,9 @@ $(document).ready(function(){
                    // toastr.success(response.message);
                     $("#add_more_btn_detail").attr('href',"{{route('search')}}?type=books");
                     $("#add_to_cart_modal").modal("show");
-
+                    var cart_count = parseInt($('#cart_item_count').html());  
+                    var total_cart_item_count = cart_count+1;
+                    $('#cart_item_count').html(total_cart_item_count);
                    /* setTimeout(function(){
                       location.reload();
                     },1000);*/
