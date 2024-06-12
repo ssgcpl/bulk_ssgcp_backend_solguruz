@@ -2581,20 +2581,20 @@ $(document).ready(function(){
                           }
                           else
                           {
+                            var disabled = '';
+                            if(user_type != '' && value.visible_to != 'both'){
+                                if(value.visible_to != user_type){
+                                  disabled = 'disabled';
+                                }
+                              }
                             var qty_input = `<div class="qty-items">
-                                          <input type="button" value="-" class="qty-minus">
-                                          <input type="number" value="`+value.quantity+`" class="qty" min="0">
-                                          <input type="button" value="+" class="qty-plus">
+                                          <input type="button" value="-" class="qty-minus" `+disabled+`>
+                                          <input type="number" value="`+value.quantity+`" class="qty" min="0" `+disabled+`>
+                                          <input type="button" value="+" class="qty-plus" `+disabled+`>
                                         </div>`;
                             if(category.type == 'books')
                             {
-                              var cart_btn = '<a href="javascript:void(0);" data-book-id="'+value.product_id+'" class="btn secondary-btn add_to_cart_book">Add to Cart <i class="icon-bag"></i></a>';
-                              if(user_type != '' && value.visible_to != 'both'){
-                                if(value.visible_to != user_type){
-                                  cart_btn = '';
-                                  qty_input = '';
-                                }
-                              }
+                              var cart_btn = '<a href="javascript:void(0);" data-book-id="'+value.product_id+'" class="btn secondary-btn add_to_cart_book '+disabled+'" '+disabled+'>Add to Cart <i class="icon-bag"></i></a>';
                             }
                             else
                             {
@@ -3402,6 +3402,12 @@ $(document).ready(function(){
                         $("#no_data_all").addClass('d-none');
                         $.each(response.data,function(key,value){
                           last_page = response.meta.last_page;
+                          var disabled = '';
+                          if(user_type != '' && value.visible_to != 'both'){
+                            if(value.visible_to != user_type){
+                              disabled = 'disabled';
+                            }
+                          }
                           if(value.added_to_cart == '1')
                           {
                             var view_cart = "{{route('my_cart')}}";
@@ -3409,22 +3415,16 @@ $(document).ready(function(){
                           }
                           else
                           {
-                            var cart_btn = '<a href="javascript:void(0);" data-book-id="'+value.book_id+'" class="btn secondary-btn add_to_cart_book">Add to Cart <i class="icon-bag"></i></a>';
+                            var cart_btn = '<a href="javascript:void(0);" data-book-id="'+value.book_id+'" class="btn secondary-btn add_to_cart_book '+disabled+'" disabled>Add to Cart <i class="icon-bag"></i></a>';
                           }
 
                           var book_detail_url = "{{route('book_detail',':book_id')}}?lang="+language;
                           book_detail_url = book_detail_url.replace(':book_id',value.book_id);
                           var qty_btn = `<div class="qty-items">
-                                    <input type="button" value="-" class="qty-minus">
-                                    <input type="number" value="`+value.quantity+`" class="qty" min="0">
-                                    <input type="button" value="+" class="qty-plus">
+                                    <input type="button" value="-" class="qty-minus" `+disabled+`>
+                                    <input type="number" value="`+value.quantity+`" class="qty" min="0" `+disabled+`>
+                                    <input type="button" value="+" class="qty-plus" `+disabled+`>
                                   </div>`;
-                          if(user_type != '' && value.visible_to != 'both'){
-                            if(value.visible_to != user_type){
-                              cart_btn = '';
-                              qty_btn = '';
-                            }
-                          }
                           var books_html = `<div class="col-xl-4 col-lg-4 col-md-12 col-12"> 
                               <div class="product-list-box">
                                 <div class="img"><a href="`+book_detail_url+`" title=""><img src="`+value.image+`" alt=""></a></div>
@@ -4378,26 +4378,25 @@ $(document).ready(function(){
                       $('.pro-slide').slick("unslick");
                       sliderInit();
                     },500);
-
+                    var disabled = '';
+                    if(user_type != '' && book.visible_to != 'both'){
+                      if(book.visible_to != user_type){
+                        disabled = 'disabled';
+                      }
+                    }
                     if(book.added_to_cart == '1')
                     {
                       var cart_btn = '<a href="javascript:void(0);" id="'+book.cart_item_id+'" class="btn green-btn update_qty">Update <i class="icon-bag"></i></a>';
                     }
                     else
                     {
-                      var cart_btn = '<a href="javascript:void(0);" data-book-id="'+book.book_id+'" class="btn secondary-btn add_to_cart_book_detail">Add to Cart <i class="icon-bag"></i></a>';
+                      var cart_btn = '<a href="javascript:void(0);" data-book-id="'+book.book_id+'" class="btn secondary-btn add_to_cart_book_detail '+disabled+'"'+disabled+'>Add to Cart <i class="icon-bag"></i></a>';
                     }
                     var qty_btn = `<div class="qty-items">
-                      <input type="button" value="-" class="qty-minus">
-                      <input type="number" value="`+book.quantity+`" id="quantity" class="qty" min="0">
-                      <input type="button" value="+" class="qty-plus">
+                      <input type="button" value="-" class="qty-minus" `+disabled+`>
+                      <input type="number" value="`+book.quantity+`" id="quantity" class="qty" min="0" `+disabled+`>
+                      <input type="button" value="+" class="qty-plus" `+disabled+`>
                     </div>`;
-                    if(user_type != '' && book.visible_to != 'both'){
-                            if(book.visible_to != user_type){
-                              cart_btn = '';
-                              qty_btn = '';
-                            }
-                          }
                     $("#buttons").html(qty_btn+cart_btn);
 
                     $("#name").html(book.name);
