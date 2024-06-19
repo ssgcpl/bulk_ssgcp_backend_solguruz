@@ -28,11 +28,11 @@ class BookResource extends JsonResource
             
            $name = $this->name_hindi ? (string)$this->name_hindi : ''; 
         }
-    
-        return [
+        $user  = Auth::guard('api')->user();
+        $data =  [
             'book_id'     => $this->id ? (string)$this->id : '' ,
             'name'        => (string)$name, 
-            'sale_price'  => $this->price ? (string)number_format($this->price,2) : '',
+            //'sale_price'  => $this->price ? (string)number_format($this->price,2) : '',
             'mrp'         => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'image'       => $this->image ? (string)asset($this->image) : '',
             'visible_to'     => $this->visible_to ? (string)$this->visible_to : '' ,
@@ -41,5 +41,9 @@ class BookResource extends JsonResource
             'cart_item_id' => $this->cart_item_id ? (string)$this->cart_item_id :'',
            
         ];
+        if($user){
+            $data['sale_price']  = $this->price ? (string)number_format($this->price,2) : '';
+        }
+        return $data;
     }
 }

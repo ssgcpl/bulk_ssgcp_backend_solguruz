@@ -2611,7 +2611,7 @@ $(document).ready(function(){
                                     <div class="detail">
                                       <h6><a href="`+detail_url+`" title="">`+value.name+`</a></h6>
                                       <div class="price-qty">
-                                        <div class="sale-price">₹`+value.sale_price+`<span>₹`+value.mrp+`</span></div>
+                                        <div class="sale-price">${(value.sale_price ? '₹ '+value.sale_price : '')}<span>${(value.mrp ? '₹ '+value.mrp : '')}</span></div>
                                         `+qty_input+`
                                       </div>`+cart_btn+`
                                     </div>
@@ -3433,7 +3433,7 @@ $(document).ready(function(){
                                 <div class="img"><a href="`+book_detail_url+`" title=""><img src="`+value.image+`" alt=""></a></div>
                                 <div class="detail">
                                   <h6><a href="`+book_detail_url+`" title="">`+value.name+`</a></h6> 
-                                  <div class="sale-price">₹`+value.sale_price+`<span>₹`+value.mrp+`</span></div> 
+                                  <div class="sale-price">${(value.sale_price ? '₹ '+value.sale_price : '')}<span>${(value.mrp ? '₹ '+value.mrp : '')}</span></div> 
                                     `+qty_btn+` 
                                   `+cart_btn+`
                                 </div>
@@ -4411,7 +4411,7 @@ $(document).ready(function(){
                     }
 
                     $(".book-price-weight").html(`<ul>
-                        <li><label><img class="rupee" src="{{asset('web_assets/images/book-price.svg')}}" alt=""> Book Price</label><div class="price">₹ `+book.sale_price+`<span>₹ `+book.mrp+`</span></div></li>                
+                        <li><label><img class="rupee" src="{{asset('web_assets/images/book-price.svg')}}" alt=""> Book Price</label><div class="price">${(book.sale_price ? '₹ '+book.sale_price : '')}<span>${(book.mrp ? '₹ '+book.mrp : '')}</span></div></li>                
                         <li><label>Weight</label><p>`+book.weight+` K.G</p></li>
                       </ul>`);
 

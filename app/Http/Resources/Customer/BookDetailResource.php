@@ -46,14 +46,14 @@ class BookDetailResource extends JsonResource
         {
             $last_returnable_days = $days_count;
         }
-
-        return [
+        $user  = Auth::guard('api')->user();
+        $data =  [
             'book_id'              => $this->id ? (string)$this->id : '' ,
             'name'                 => $name,
             'sub_heading'          => $sub_heading,
             'description'          => $description,
             'additional_info'      => $additional_info,
-            'sale_price'           => $this->price ? (string)number_format($this->price,2) : '0.00' ,
+          //  'sale_price'           => $this->price ? (string)number_format($this->price,2) : '0.00' ,
             'mrp'                  => $this->mrp ? (string)number_format($this->mrp,2) : '0.00' ,
             'weight'               => $this->weight ? (string)$this->weight : '' ,
             'language'             => $this->language ? (string)$this->language : '' ,
@@ -71,5 +71,9 @@ class BookDetailResource extends JsonResource
             'visible_to'           => $this->visible_to ? (string)$this->visible_to : '' ,
             
         ];
+        if($user){
+            $data['sale_price']  =  $this->price ? (string)number_format($this->price,2) : '0.00';
+        }
+        return $data;
     }
 }

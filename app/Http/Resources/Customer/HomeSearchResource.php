@@ -24,12 +24,13 @@ class HomeSearchResource extends JsonResource
         {
             $language = 'hindi';
         }
-        return [
+        $user  = Auth::guard('api')->user();
+        $data =  [
             'product_id'         => $this->id ? (string)$this->id : '' ,
             'search_type'        => $this->search_type ? (string)$this->search_type :'',
             'name'               => $this->display_name ? (string)$this->display_name :'', 
             'language'           => $language, 
-            'sale_price'         => $this->sale_price ? (string)number_format($this->sale_price,2) : '0.00',
+            //'sale_price'         => $this->sale_price ? (string)number_format($this->sale_price,2) : '0.00',
             'mrp'                => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'image'              => $this->image ? (string)asset($this->image) : '',
             'quantity'           => $this->quantity ? (string)$this->quantity : '0' ,
@@ -43,5 +44,9 @@ class HomeSearchResource extends JsonResource
             'visible_to'         => $this->visible_to ? (string)$this->visible_to : '' ,
            
         ];
+        if($user){
+            $data['sale_price']  =  $this->sale_price ? (string)number_format($this->sale_price,2) : '0.00';
+        }
+        return $data;
     }
 }
