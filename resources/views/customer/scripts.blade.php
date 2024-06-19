@@ -4437,7 +4437,7 @@ $(document).ready(function(){
                               <div class="detail">
                                 <h6><a href="`+book_detail_url+`" title="">`+this.name+`</a></h6>
                                 <div class="price-qty">
-                                  <div class="sale-price"><span>₹`+this.mrp+`</span> ₹`+this.sale_price+`</div> 
+                                  <div class="sale-price"><span>${this.mrp ? '₹ ' + this.mrp : ''}</span>${this.sale_price ? ' ₹ ' + this.sale_price : ''}</div> 
                                 </div>              
                               </div>
                             </div>

@@ -54,7 +54,7 @@ class BookDetailResource extends JsonResource
             'description'          => $description,
             'additional_info'      => $additional_info,
           //  'sale_price'           => $this->price ? (string)number_format($this->price,2) : '0.00' ,
-            'mrp'                  => $this->mrp ? (string)number_format($this->mrp,2) : '0.00' ,
+          //  'mrp'                  => $this->mrp ? (string)number_format($this->mrp,2) : '0.00' ,
             'weight'               => $this->weight ? (string)$this->weight : '' ,
             'language'             => $this->language ? (string)$this->language : '' ,
             'stock_status'         => $this->stock_status ? (string)$this->stock_status : '' ,
@@ -73,6 +73,9 @@ class BookDetailResource extends JsonResource
         ];
         if($user){
             $data['sale_price']  =  $this->price ? (string)number_format($this->price,2) : '0.00';
+            $data['mrp']  =  $this->mrp ? (string)number_format($this->mrp,2) : '0.00';
+        }else{
+            $data['sale_price']  =  $this->mrp ? (string)number_format($this->mrp,2) : '0.00';
         }
         return $data;
     }

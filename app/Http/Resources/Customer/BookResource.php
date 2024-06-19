@@ -33,7 +33,7 @@ class BookResource extends JsonResource
             'book_id'     => $this->id ? (string)$this->id : '' ,
             'name'        => (string)$name, 
             //'sale_price'  => $this->price ? (string)number_format($this->price,2) : '',
-            'mrp'         => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
+            //'mrp'         => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'image'       => $this->image ? (string)asset($this->image) : '',
             'visible_to'     => $this->visible_to ? (string)$this->visible_to : '' ,
             'quantity'    => $this->quantity ? (string)$this->quantity : '0' ,
@@ -43,6 +43,9 @@ class BookResource extends JsonResource
         ];
         if($user){
             $data['sale_price']  = $this->price ? (string)number_format($this->price,2) : '';
+            $data['mrp']  =  $this->mrp ? (string)number_format($this->mrp,2) : '0.00';
+        }else{
+            $data['sale_price']  =  $this->mrp ? (string)number_format($this->mrp,2) : '0.00';
         }
         return $data;
     }

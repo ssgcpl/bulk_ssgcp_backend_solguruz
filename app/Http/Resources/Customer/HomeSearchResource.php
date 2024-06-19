@@ -31,7 +31,7 @@ class HomeSearchResource extends JsonResource
             'name'               => $this->display_name ? (string)$this->display_name :'', 
             'language'           => $language, 
             //'sale_price'         => $this->sale_price ? (string)number_format($this->sale_price,2) : '0.00',
-            'mrp'                => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
+            //'mrp'                => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'image'              => $this->image ? (string)asset($this->image) : '',
             'quantity'           => $this->quantity ? (string)$this->quantity : '0' ,
             'added_to_cart'      => $this->added_to_cart ? (string)$this->added_to_cart : '0' ,
@@ -46,6 +46,9 @@ class HomeSearchResource extends JsonResource
         ];
         if($user){
             $data['sale_price']  =  $this->sale_price ? (string)number_format($this->sale_price,2) : '0.00';
+            $data['mrp']  =  $this->mrp ? (string)number_format($this->mrp,2) : '0.00';
+        }else{
+            $data['sale_price']  =  $this->mrp ? (string)number_format($this->mrp,2) : '0.00';
         }
         return $data;
     }
