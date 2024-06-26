@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 //CUSTOMER
 Route::prefix('customer')->group( function() {
+    Route::get('postalcode/{pincode}', 'Api\Customer\PostalcodeController@index');
 
     // LOGIN / SIGNUP
     Route::get('country_list', 'Api\Customer\Auth\AuthController@country_list');

@@ -42,7 +42,7 @@ class ProductController extends BaseController
         'category_id'  => 'nullable|exists:categories,id,is_live,1',
         'language' => 'required|in:english,hindi,all',
         'user_id' => 'sometimes|nullable|exists:users,id',
-        'current_user_type' => 'required|in:retailer,dealer,both',
+        'current_user_type' => 'nullable|in:retailer,dealer,both',
       ]);
       if($validator->fails()){
         return $this->sendError($this->array, $validator->errors()->first());       
@@ -65,6 +65,7 @@ class ProductController extends BaseController
         }else {
           $data = $data->whereIn('visible_to',['both','retailer']);
         }*/
+        $user = User::find($request->user_id);
 
         if(isset($request->current_user_type) && $request->current_user_type != null ){
           if($request->current_user_type == 'both'){
