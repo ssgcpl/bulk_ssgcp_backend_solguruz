@@ -44,6 +44,9 @@ class HomeSearchResource extends JsonResource
             'visible_to'         => $this->visible_to ? (string)$this->visible_to : '' ,
            
         ];
+        if ($this->coupon) {
+            $data['visible_to'] = 'both';
+        } 
         if($user){
             $data['sale_price']  =  $this->sale_price ? (string)number_format($this->sale_price,2) : '0.00';
             $data['mrp']  =  $this->mrp ? (string)number_format($this->mrp,2) : '0.00';

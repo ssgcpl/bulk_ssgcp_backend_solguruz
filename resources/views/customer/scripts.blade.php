@@ -2626,7 +2626,7 @@ $(document).ready(function(){
                                   <div class="detail">
                                     <h6><a href="`+detail_url+`" title="">`+value.name+`</a></h6>
                                     <div class="price-qty">
-                                      <div class="sale-price">₹`+value.sale_price+`<span>₹`+value.mrp+`</span></div>
+                                    <div class="sale-price">${(value.sale_price ? '₹ '+value.sale_price : '')}<span>${(value.mrp ? '₹ '+value.mrp : '')}</span></div>
                                       `+qty_input+`
                                     </div>
                                     <div class="type">Type: <span>`+value.type_label+`</span></div>
