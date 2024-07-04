@@ -384,9 +384,18 @@ class CouponController extends BaseController
                 }
 
                 //delete the physical book cart items if already exist
+                if(isset($request->remove_confirm)){
                 $cart_item_books = OrderItem::whereNotNull('product_id')
                   ->where('order_id',$cart->id)
                   ->delete();
+            }
+                $get_physical_cart_items = OrderItem::whereNotNull('product_id')
+                ->where('order_id',$cart->id)->count();
+                
+                if($get_physical_cart_items > 0){
+                    $remove_item = array('remove_item'=>'1');
+                    return $this->sendResponse($remove_item, trans('orders_api.physical_item_will_be_remove'));
+                }
             }
 
 

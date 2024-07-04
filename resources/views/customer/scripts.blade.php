@@ -2985,13 +2985,17 @@ $(document).ready(function(){
         }
 
         //add to cart for book
-        $(document).on('click','.add_to_cart_book',function(){
+        $(document).on('click','.add_to_cart_book',function(event, remove_confirm){
               auth_guard_route(token);
               var quantity = $(this).prev().find('.qty').val();
               var book_id = $(this).data('book-id');
+              var data = {'book_id':book_id,'quantity':quantity};
+              if(remove_confirm){
+                data.remove_confirm = '1';
+              }
               $.ajax({
                 url: BASE_URL+"books/add_to_cart",
-                data: {'book_id':book_id,'quantity':quantity},
+                data: data,
                 type: "POST",
                 beforeSend: function(xhr){
                       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -3004,14 +3008,20 @@ $(document).ready(function(){
                   }
                 },
                 success: function(response) {
-                  console.log(response);
                   if(response.status == "200") {
+                    if(response.data.remove_item != undefined){
+                      confirmation_from_user_to_remove_existing_items('physical_item',book_id);
+                      return false;
+                  }
                     toastr.success(response.message);
-                    /*setTimeout(function(){
+                    setTimeout(function(){
                       location.reload();
-                    },1000);*/
+                    },1000);
                     var cart_count = parseInt($('#cart_item_count').html());  
                     var total_cart_item_count = cart_count+1;
+                    if(total_cart_item_count > 0){
+                      $('#cart_item_count').removeClass('d-none');
+                   }
                     $('#cart_item_count').html(total_cart_item_count);
                   }
                   else {
@@ -3023,13 +3033,17 @@ $(document).ready(function(){
         });
 
         //add to cart for coupon
-        $(document).on('click','.add_to_cart',function(){
+        $(document).on('click','.add_to_cart',function(event, remove_confirm){
             auth_guard_route(token);
             var quantity = $(this).parent().find('.qty').val();
             var coupon_id = $(this).data('coupon-id');
+            var data = {'coupon_id':coupon_id,'quantity':quantity};
+            if(remove_confirm){
+              data.remove_confirm = '1';
+             }
             $.ajax({
               url: BASE_URL+"coupon/add_to_cart",
-              data: {'coupon_id':coupon_id,'quantity':quantity},
+              data: data,
               type: "POST",
               beforeSend: function(xhr){
                     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -3043,6 +3057,10 @@ $(document).ready(function(){
                 },
               success: function(response) {
                 if(response.status == "200") {
+                  if(response.data.remove_item != undefined){
+                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id);
+                      return false;
+                  }
                   toastr.success(response.message);
                   setTimeout(function(){
                     location.reload();
@@ -3237,14 +3255,18 @@ $(document).ready(function(){
         }
 
         //add to cart for book
-        $(document).on('click','.add_to_cart_book',function(){
+        $(document).on('click','.add_to_cart_book',function(event,remove_confirm){
               auth_guard_route(token);
               var quantity = $(this).prev().find('.qty').val();
               var book_id = $(this).data('book-id');
               var language = $(this).data('lang');
+              var data = {'book_id':book_id,'quantity':quantity,'language':language};
+              if(remove_confirm){
+                data.remove_confirm = '1';
+              }
               $.ajax({
                 url: BASE_URL+"books/add_to_cart",
-                data: {'book_id':book_id,'quantity':quantity,'language':language},
+                data: data,
                 type: "POST",
                 beforeSend: function(xhr){
                       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -3257,7 +3279,10 @@ $(document).ready(function(){
                   }
                 },
                 success: function(response) {
-                  console.log(response);
+                  if(response.data.remove_item != undefined){
+                      confirmation_from_user_to_remove_existing_items('physical_item',book_id);
+                      return false;
+                  }
                   if(response.status == "200") {
                     toastr.success(response.message);
                     setTimeout(function(){
@@ -3273,13 +3298,17 @@ $(document).ready(function(){
         });
 
         //add to cart for coupon
-        $(document).on('click','.add_to_cart',function(){
+        $(document).on('click','.add_to_cart',function(event,remove_confirm){
             auth_guard_route(token);
             var quantity = $(this).parent().find('.qty').val();
             var coupon_id = $(this).data('coupon-id');
+            var data = {'coupon_id':coupon_id,'quantity':quantity};
+            if(remove_confirm){
+                data.remove_confirm = '1';
+              }
             $.ajax({
               url: BASE_URL+"coupon/add_to_cart",
-              data: {'coupon_id':coupon_id,'quantity':quantity},
+              data: data,
               type: "POST",
               beforeSend: function(xhr){
                     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -3293,6 +3322,10 @@ $(document).ready(function(){
               },
               success: function(response) {
                 if(response.status == "200") {
+                  if(response.data.remove_item != undefined){
+                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id);
+                      return false;
+                  }
                   toastr.success(response.message);
                   setTimeout(function(){
                     location.reload();
@@ -3470,15 +3503,18 @@ $(document).ready(function(){
           load_more_books(page,category_id,language);
         });*/
 
-        $(document).on('click','.add_to_cart_book',function(){
+        $(document).on('click','.add_to_cart_book',function(event, remove_confirm){
               auth_guard_route(token);
               var quantity = $(this).prev().find('.qty').val();
               var book_id = $(this).data('book-id');
               var language = $("ul#myTab li a.active").attr('id');
-              
+              var data = {'book_id':book_id,'quantity':quantity,'language':language};
+              if(remove_confirm){
+                data.remove_confirm = '1';
+              }
               $.ajax({
                 url: BASE_URL+"books/add_to_cart",
-                data: {'book_id':book_id,'quantity':quantity,'language':language},
+                data: data,
                 type: "POST",
                 beforeSend: function(xhr){
                       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -3491,14 +3527,21 @@ $(document).ready(function(){
                   }
                 },
                 success: function(response) {
-                  console.log(response);
+                  
                   if(response.status == "200") {
+                    if(response.data.remove_item != undefined){
+                      confirmation_from_user_to_remove_existing_items('physical_item',book_id);
+                      return false;
+                  }
                     toastr.success(response.message);
                     /*setTimeout(function(){
                       location.reload();
                     },1000);*/
                     var cart_count = parseInt($('#cart_item_count').html());  
                     var total_cart_item_count = cart_count+1;
+                    if(total_cart_item_count > 0){
+                    $('#cart_item_count').removeClass('d-none');
+                  }
                     $('#cart_item_count').html(total_cart_item_count);
                     var add_to_cart_btn = $("a[data-book-id='" + book_id + "']"); 
                     var view_cart = "{{route('my_cart')}}";
@@ -3603,14 +3646,17 @@ $(document).ready(function(){
           });
         }
 
-        $(document).on('click','.add_to_cart_book',function(){
+        $(document).on('click','.add_to_cart_book',function(event,remove_confirm){
               auth_guard_route(token);
               var quantity = $(this).prev().find('.qty').val();
               var book_id = $(this).data('book-id');
-              
+              var data = {'book_id':book_id,'quantity':quantity};
+              if(remove_confirm){
+                 data.remove_confirm = '1';
+              }
               $.ajax({
                 url: BASE_URL+"books/add_to_cart",
-                data: {'book_id':book_id,'quantity':quantity},
+                data: data,
                 type: "POST",
                 beforeSend: function(xhr){
                       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -3623,8 +3669,12 @@ $(document).ready(function(){
                   }
                 },
                 success: function(response) {
-                  console.log(response);
+                  
                   if(response.status == "200") {
+                    if(response.data.remove_item != undefined){
+                      confirmation_from_user_to_remove_existing_items('physical_item',book_id);
+                      return false;
+                  }
                     toastr.success(response.message);
                     setTimeout(function(){
                       location.reload();
@@ -4449,14 +4499,17 @@ $(document).ready(function(){
               }
           });
           
-          $(document).on('click','.add_to_cart_book_detail',function(){
+          $(document).on('click','.add_to_cart_book_detail',function(event,remove_confirm){
               auth_guard_route(token);
               var quantity = $(this).prev().find('.qty').val();
               var book_id = $(this).data('book-id');
-              
+              var data = {'book_id':book_id,'quantity':quantity,'language':language};
+              if(remove_confirm){
+                 data.remove_confirm = '1';
+              }
               $.ajax({
                 url: BASE_URL+"books/add_to_cart",
-                data: {'book_id':book_id,'quantity':quantity,'language':language},
+                data: data,
                 type: "POST",
                 beforeSend: function(xhr){
                       xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -4469,14 +4522,21 @@ $(document).ready(function(){
                   }
                 },
                 success: function(response) {
-                  console.log(response);
+                  
                   if(response.status == "200") {
+                    if(response.data.remove_item != undefined){
+                      confirmation_from_user_to_remove_existing_items('physical_item_detail',book_id);
+                      return false;
+                  }
                    // toastr.success(response.message);
                     $("#add_more_btn_detail").attr('href',"{{route('search')}}?type=books");
                     $("#add_to_cart_modal").modal("show");
                     var cart_count = parseInt($('#cart_item_count').html());  
                     var total_cart_item_count = cart_count+1;
                     $('#cart_item_count').html(total_cart_item_count);
+                    if(total_cart_item_count > 0){
+                    $('#cart_item_count').removeClass('d-none');
+                  }
                    /* setTimeout(function(){
                       location.reload();
                     },1000);*/
@@ -8477,7 +8537,7 @@ $(document).ready(function(){
   @endif
   
   @if(\Request::route()->getName() == 'latest_digital_coupons' || \Request::route()->getName() == 'digital_coupon_details')
-    $(document).on('click','.add_to_cart',function(){
+    $(document).on('click','.add_to_cart',function(event, remove_confirm){
           auth_guard_route(token);
           var coupon_id = $(this).attr('id');
           @if(\Request::route()->getName() == 'latest_digital_coupons')
@@ -8485,9 +8545,13 @@ $(document).ready(function(){
           @else
             var quantity = $("#quantity").val();
           @endif
+          var data = {'coupon_id':coupon_id,'quantity':quantity};
+            if(remove_confirm){
+                 data.remove_confirm = '1';
+             }
           $.ajax({
             url: BASE_URL+"coupon/add_to_cart",
-            data: {'coupon_id':coupon_id,'quantity':quantity},
+            data: data,
             type: "POST",
             beforeSend: function(xhr){
                   xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -8500,8 +8564,11 @@ $(document).ready(function(){
               }
             },
             success: function(response) {
-              console.log(response);
               if(response.status == "200") {
+                if(response.data.remove_item != undefined){
+                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id);
+                      return false;
+                }
                toastr.success(response.message);
                 setTimeout(function(){
                //   location.reload();
@@ -10123,6 +10190,9 @@ $(document).ready(function(){
                   $('.loader').css('visibility','visible');
                 },
                 success: function(response) {
+                  if(response.data.cart_item_count > 0){
+                    $('#cart_item_count').removeClass('d-none');
+                  }
                     $('#cart_item_count').text(response.data.cart_item_count);
                 },
                 error: function(error) {
@@ -10174,4 +10244,37 @@ $(document).ready(function(){
        });
     @endif
 });
+function confirmation_from_user_to_remove_existing_items(item,id){
+  $('#remove-cart-confirmation').modal('show');
+  var remove_confirm = { remove_confirm: '1' };
+  if(item == 'digital_item'){
+    $(document).on('click','#coupon-add-to-cart',function(){
+      var selector = '.add_to_cart[data-coupon-id="' + id + '"]'; 
+      var element = document.querySelector(selector);
+      if (!element) {
+        selector = '.add_to_cart[id="' + id + '"]';
+      }
+      $('#remove-cart-confirmation').modal('hide');
+        $(selector).trigger('click', remove_confirm);
+    });
+  }else if(item == 'physical_item_detail'){
+    $('.coupon-add-to-cart').attr('id','physical-add-to-cart');
+    $(document).on('click', '#physical-add-to-cart', function() {
+        var selector = '.add_to_cart_book_detail[data-book-id="' + id + '"]';      
+        $('#remove-cart-confirmation').modal('hide');
+        $(selector).trigger('click',remove_confirm);
+    });
+  }else{
+    $('.coupon-add-to-cart').attr('id','physical-add-to-cart');
+    $(document).on('click', '#physical-add-to-cart', function() {
+        var selector = '.add_to_cart_book[data-book-id="' + id + '"]'; 
+        var element = document.querySelector(selector);
+        if (!element) {
+          selector = '.add_to_cart_book[id="' + id + '"]';
+        }
+        $('#remove-cart-confirmation').modal('hide');
+        $(selector).trigger('click',remove_confirm);
+    });
+  }
+}
 </script>

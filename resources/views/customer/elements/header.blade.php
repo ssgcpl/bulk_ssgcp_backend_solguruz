@@ -37,12 +37,12 @@
         </div>
         <div class="menu-list">  
             <ul>               
-              <li class="notification"><a href="{{route('notifications')}}" title="" id="notification"><i class="icon-notification"></i><span id="notif_exist"></span></a></li> 
+              <li class="notification"><a href="{{route('notifications')}}" title="" id="notification"><i class="icon-notification"></i><span id="notif_exist" class="d-none"></span></a></li> 
               <li class="cart">
                 <a href="{{route('my_cart')}}" title="" id="my_cart"> 
                   <i class="icon-bag" >
                   </i>
-                  <span id="cart_item_count">0</span>
+                  <span id="cart_item_count" class="d-none">0</span>
                 </a>
               </li>
               <li class="dropdown">              
