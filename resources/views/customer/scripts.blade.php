@@ -5001,7 +5001,7 @@ $(document).ready(function(){
                           <li><div class="title secondary-color">Total MRP</div><div class="price">₹ `+order.order_summary.total_mrp+`</div></li>              
                           <li><div class="title secondary-color">Discount on MRP</div><div class="green-color">- ₹ `+order.order_summary.discount_on_mrp+`</div></li>               
                           <li>`+delivery_charges+`</li>             
-                          <li><div class="title"><b>Total Payable Amount</b></div><div class="price"><b id="total_payable_amount">₹ `+order.order_summary.total_payable+`</b></div></li>
+                          <li><div class="title"><b>Total Payable Amount</b></div><div class="price"><b id="total_payable_amount" data-payment="`+order.order_summary.total_payable+`">₹ `+order.order_summary.total_payable+`</b></div></li>
                         </ul>    `);
                   }
                   $('.loader').css('visibility','hidden');
@@ -9032,7 +9032,7 @@ $(document).ready(function(){
                            `+coin_discount+` 
                             <li><div class="title secondary-color">Discount on MRP</div><div class="price">- ₹ `+data.discount_on_mrp+`</div></li> 
                              `+delivery_charges+`                                      
-                          <li><div class="title"><b>Total Payable Amount</b></div><div class="price"><b id="total_payable_amount">₹ `+data.total_payable+`</b></div></li>
+                          <li><div class="title"><b>Total Payable Amount</b></div><div class="price"><b id="total_payable_amount" data-payment="`+data.total_payable+`">₹ `+data.total_payable+`</b></div></li>
                         </ul>`+selected_item_count;
         $("#pay_now").text("Pay ₹"+data.total_payable);
         $(".cart-summary").html(summary);
@@ -9089,6 +9089,9 @@ $(document).ready(function(){
       localStorage.setItem("payout",payment_method);
       if($("#total_payable_amount").text() == '₹ 0')
       {
+        payment_method = '0-amount';
+      }
+      if($("#total_payable_amount").data('payment') == '0.00'){
         payment_method = '0-amount';
       }
       $.ajax({
