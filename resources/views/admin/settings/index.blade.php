@@ -505,6 +505,22 @@
                                                             @endif
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label>Points to Rupee Converation Rate (1Rs. = {{$settings['points_per_rs']}} Points)<span
+                                                                    class="text-danger custom_asterisk">*</span></label>
+                                                            <input type="number" class="form-control"
+                                                                name="points_per_rs" placeholder="Points to Rupee Converation Rate"
+                                                                value="{{ old('points_per_rs') ? old('points_per_rs') : $settings['points_per_rs'] }}"
+                                                                required maxlength="100">
+                                                            @if ($errors->has('points_per_rs'))
+                                                                <strong
+                                                                    class="help-block alert-danger">{{ $errors->first('points_per_rs') }}</strong>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
 
