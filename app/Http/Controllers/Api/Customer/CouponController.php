@@ -574,6 +574,9 @@ class CouponController extends BaseController
                 'payu','ccavenue'
             ];
             if($cart->total_payable == 0.00){
+            if(!isset($request->payment_method)){
+                    $request->merge(['payment_method' => '0-amount']);
+             }
               $payment_methods[] = '0-amount';
             }
             
