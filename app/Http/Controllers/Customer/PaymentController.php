@@ -240,10 +240,10 @@ class PaymentController extends Controller
           $order->save();
           // Update Is Payment attempt status  :: end
           //Save Transaction ID (txnid) with Order data in Table For Later Verification
-          $delay = $settings['payu_job_delay_in_seconds'];
-          $job = (new GetOrderStatusFromPayu($order->id))->delay($delay);
-          \Log::info("job dispatched : ");
-          dispatch($job); 
+         // $delay = $settings['payu_job_delay_in_seconds'];
+         // $job = (new GetOrderStatusFromPayu($order->id))->delay($delay);
+         // \Log::info("job dispatched : ");
+         // dispatch($job); 
           return view('customer.payment.payu_redirect',compact('data')); 
 
         }
