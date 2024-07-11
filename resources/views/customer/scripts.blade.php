@@ -8617,16 +8617,16 @@ $(document).ready(function(){
         },
         success: function(response) {
           if(response.status == "200") {
-            console.log(response.data);
+            set_payment_method(response.data.payment_methods);
             if(response.data.coupon_items.length > 0)
             {
               $(".no-data-found").addClass('d-none');
               $("#cart_data").removeClass('d-none');
               set_coupon_items(response.data.coupon_items);
-              set_payment_method(response.data.payment_methods);
+            
               if(response.data.order_summary.total_payable == 0)
               {
-                $("#payment_method").addClass('d-none');
+               // $("#payment_method").addClass('d-none');
               }
               $("#earned_points").text(response.data.earned_points);
               $("#points").text(response.data.points_formula);
@@ -8758,12 +8758,14 @@ $(document).ready(function(){
     {
             var html = '';
             $.each(data,function(key,value){
-              html += `<label class="radio-box">                    
-                    <input type="radio" name="payment" class="payment_gateway" value="`+value+`"><span class="checkmark"></span>
-                    <div class="text">`+value.toUpperCase()+`</div>
-                  </label> `;
+              // html += `<label class="radio-box">                    
+              //       <input type="radio" name="payment" class="payment_gateway" value="`+value+`"><span class="checkmark"></span>
+              //       <div class="text">`+value.toUpperCase()+`</div>
+              //     </label> `;
+        
+                html +=  `<input type="radio" name="payment_method" id="`+value+`" value="`+value+`"> <label class="checkmark" for="`+value+`">`+value.toUpperCase()+`</label><br/>`;            
             });
-            $("#payment_method").append(html);
+            $("#payment_method").html(html);
     }
 
     $(document).on('click','.update_qty',function(e){

@@ -36,7 +36,9 @@ class CartResource extends JsonResource
             $payment_methods  = ['payu','ccavenue'];
             $coupon_items     = CouponCartItemResource::collection($this->order_items);
         }
-
+        if($this->total_payable == 0){
+            $payment_methods  = ['0-amount'];
+        }
         $points_redeemed = '0';
         if($this->redeemed_points_discount > 0) {
             $points_redeemed = '1';    
