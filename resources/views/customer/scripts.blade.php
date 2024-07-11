@@ -9087,7 +9087,7 @@ $(document).ready(function(){
     });
 
     $(document).on('click','#pay_now',function(){
-    	var payment_method = $("input[name=payment]:checked").val();
+    	var payment_method = $("input[name=payment_method]:checked").val();
       localStorage.setItem("payout",payment_method);
       if($("#total_payable_amount").text() == '₹ 0')
       {
