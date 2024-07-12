@@ -714,6 +714,93 @@ class OrderController extends BaseController
         }
 
     }
+    public function update_digital_cart_summary(Request $request)
+    {
+        $user = Auth::guard('api')->user();
+        $delay_time = Setting::get('payu_job_delay_in_seconds');
+        $delay_time = floor($delay_time/60);
+        //check any payment intiated for this user or not
+        if($this->closePaymentAttempt($user->id)){
+             return $this->sendError('',trans('orders_api.order_under_process',['delay_time'=>$delay_time])); 
+        }
+        try{
+            DB::beginTransaction();
+          
+            $cart = Order::where('user_id',$user->id)->where('is_cart','1')->where('order_type','digital_coupons')->first();
+            if(!$cart) {
+                return $this->sendError('',trans('orders_api.cart_is_empty')); 
+            }
+
+            //check if user is available
+            if($user->verified != '1' && $user->email_verified_at == NULL) {
+                return $this->sendError('',trans('orders_api.user_not_verified')); 
+            }
+
+            if($user->status != 'active') {
+                return $this->sendError('',trans('orders_api.user_not_active')); 
+            }
+            $validator=  Validator::make($request->all(),[
+                'checkout_items'      => 'array|required',
+                'checkout_items.*'    => 'required|exists:order_items,id,order_id,'.$cart->id
+            ],[
+                'checkout_items.required' => 'Please select at least one item to checkout.',
+                'checkout_items.*.required' => 'Please select at least one item to checkout.'
+            ]);
+
+            if($validator->fails()) {
+                return $this->sendValidationError('', $validator->errors()->first());
+            }
+
+            //update cart summary for selected items
+            $checkout_items      = OrderItem::whereIn('id',$request->checkout_items)->get();
+            $total_mrp           = 0;
+            $total_sale_price    = 0;
+            $discount_on_mrp     = 0;
+            $coin_point_discount = 0;
+            $total_payable       = 0;
+
+
+            foreach ($checkout_items as $item) {
+                $coupon = $item->coupon;
+                $item_mrp = $coupon->mrp;
+                $item_sale_price = $coupon->get_price($user);
+                
+                $item_total_mrp        = $item_mrp * $item->supplied_quantity;
+                $item_total_sale_price = $item_sale_price * $item->supplied_quantity;
+
+                // update order master as per latest updated product prices
+                $total_mrp        += $item_total_mrp;
+                $total_sale_price += $item_total_sale_price;
+                $discount_on_mrp  += ($item_total_mrp - $item_total_sale_price);
+                $total_payable    += $item_total_sale_price;
+            }
+
+            $delivery_charges = '0';
+            $total_payable = $total_payable + $delivery_charges;
+            //coin discount calculation
+            $user_points = (integer)$user->points;
+            $required_points = ($total_sale_price)*Setting::get('points_per_rs');
+            if($user_points > $required_points) {
+                $redeemed_points = $required_points;
+            }else{
+                $redeemed_points = $user_points;
+            }
+            $coin_point_discount =  $redeemed_points/Setting::get('points_per_rs');
+
+            $response = [
+                'total_mrp'           => (string)number_format($total_mrp,2),
+                'discount_on_mrp'     => (string)number_format($discount_on_mrp,2),
+                'delivery_charges'    => (string)number_format($delivery_charges,2),
+                'coin_point_discount' => (string)number_format($coin_point_discount,2),
+                'total_payable'       => (string)number_format($total_payable-$coin_point_discount,2),
+            ];
+            return $this->sendResponse($response, trans('orders_api.cart_summary_updated'));
+        } catch(\Exception $e) {
+            DB::rollback();
+            return $this->sendError('','Something went wrong');
+        }
+
+    }
 
     /**
     * Cart & Checkout: Checkout

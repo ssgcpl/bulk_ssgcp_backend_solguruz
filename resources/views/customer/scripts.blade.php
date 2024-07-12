@@ -8600,7 +8600,7 @@ $(document).ready(function(){
         });
       }
     @endif
-    
+
     $.ajax({
         url: BASE_URL+"books/my_cart",
         data: {},
@@ -8622,8 +8622,12 @@ $(document).ready(function(){
             {
               $(".no-data-found").addClass('d-none');
               $("#cart_data").removeClass('d-none');
+              @if(\Request::route()->getName() == 'coupons_checkout')
+              set_coupon_items_for_checkout(response.data.coupon_items,checkout_items);
+              @else
               set_coupon_items(response.data.coupon_items);
-            
+              @endif
+
               if(response.data.order_summary.total_payable == 0)
               {
                // $("#payment_method").addClass('d-none');
@@ -8640,7 +8644,37 @@ $(document).ready(function(){
               }
               var total_items = response.data.coupon_items.length;
               var order_type = 'coupon';
-              cart_summary(response.data.order_summary,total_items,order_type,user_type);
+             // cart_summary(response.data.order_summary,total_items,order_type,user_type);
+             var order_summary = response.data.order_summary;
+              var user_type = response.data.user_type;
+               <?php   $check_items = app('request')->input('chk_items'); ?>
+              var check_items = "[{{$check_items}}]";
+              check_items = JSON.parse(check_items);
+              $.ajax({
+                url: BASE_URL+"coupon/update_digital_cart_summary",
+                data: {"checkout_items" : check_items},
+                type: "POST",
+                beforeSend: function(xhr){
+                      xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+                      xhr.setRequestHeader('Authorization', 'Bearer '+token);
+                      $('.loader').css('visibility','visible');
+                },
+                error:function(response){
+                  if(response.status == '401'){
+                    auth_guard_route(response.status);
+                  }
+                },
+                success: function(response) {
+                  if(response.status == "200") {
+                   cart_summary(response.data,check_items.length,order_type,user_type);
+                  }
+                  else {
+                   cart_summary(order_summary,total_items,order_type,user_type);
+                  }
+                  $('.loader').css('visibility','hidden');
+                }
+
+              });
               $("#add_more_btn").attr('href',"{{route('search')}}?type=coupons");
             }
             else if(response.data.book_items.length > 0)
@@ -8715,16 +8749,17 @@ $(document).ready(function(){
     {
     	    var items = '';
           $.each(data,function(){
+            checkout_items.push(this.cart_item_id);
 	          var show_page = "{{route('digital_coupon_details',':id')}}";
 	          show_page = show_page.replace(':id',this.coupon_id);
-	          items += `<div class="cart-list white-bg"><!--<div class="top-check-list">
+	          items += `<div class="cart-list white-bg"><div class="top-check-list">
 	                    <div class="common-check">
 	                        <label class="checkbox">
-	                           <input type="checkbox" checked><span class="checkmark"></span>
+	                           <input type="checkbox"  data-cart-item-id="`+this.cart_item_id+`" checked class="checkout_coupon_items"><span class="checkmark"></span>
 	                        </label>
 	                    </div> 
 	                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#delete-confirm" class="delete" id="`+this.cart_item_id+`"><i class="icon-close" ></i></a>
-	                  </div>  -->
+	                  </div>
 	                  <div class="box">
 	                    <div class="img">
 	                      <a href="`+show_page+`"><img src="`+this.cover_image+`" alt=""></a> 
@@ -8763,7 +8798,7 @@ $(document).ready(function(){
               //       <div class="text">`+value.toUpperCase()+`</div>
               //     </label> `;
         
-                html +=  `<input type="radio" name="payment_method" id="`+value+`" value="`+value+`"> <label class="checkmark" for="`+value+`">`+value.toUpperCase()+`</label><br/>`;            
+                html +=  `<input type="radio" name="payment_method" id="`+value+`" value="`+value+`" ${value === '0-amount' ? 'checked' : ''}> <label class="checkmark" for="`+value+`">`+value.toUpperCase()+`</label><br/>`;            
             });
             $("#payment_method").html(html);
     }
@@ -8922,7 +8957,45 @@ $(document).ready(function(){
           }
         });
     });
-
+    $(document).on("change",".checkout_coupon_items",function(){
+        var cart_item_id = $(this).data('cart-item-id');
+        if(this.checked)
+        {
+          checkout_items.push(cart_item_id);
+        }
+        else
+        {
+          checkout_items = jQuery.grep(checkout_items, function(value) {
+            return value != cart_item_id;
+          });
+        }
+        $.ajax({
+          url: BASE_URL+"coupon/update_digital_cart_summary",
+          data: {"checkout_items" : checkout_items},
+          type: "POST",
+          beforeSend: function(xhr){
+                xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+                xhr.setRequestHeader('Authorization', 'Bearer '+token);
+                $('.loader').css('visibility','visible');
+          },
+          error:function(response){
+            if(response.status == '401'){
+              auth_guard_route(response.status);
+            }
+          },
+          success: function(response) {
+            if(response.status == "200") {
+              cart_summary(response.data,checkout_items.length,'coupon',user_type)
+            }
+            else {
+              toastr.error(response.message);
+              setTimeout(function(){ location.reload(true); },1000);
+              cart_summary(response.data,checkout_items,'coupon',user_type);
+            }
+            $('.loader').css('visibility','hidden');
+          }
+        });
+    });
     function set_book_items(data){
       var items = '';
       $.each(data,function(){
@@ -8993,6 +9066,50 @@ $(document).ready(function(){
       });
       $("#cart_items").html(items);
     }
+    function set_coupon_items_for_checkout(data){
+      <?php
+        $checkout_items = app('request')->input('chk_items');
+      ?>
+      var checkout_items = "[{{$checkout_items}}]";
+      checkout_items = JSON.parse(checkout_items);
+      var items = '';
+          $.each(data,function(){
+            if(jQuery.inArray(parseInt(this.cart_item_id), checkout_items) !== -1)
+        {
+            checkout_items.push(this.cart_item_id);
+	          var show_page = "{{route('digital_coupon_details',':id')}}";
+	          show_page = show_page.replace(':id',this.coupon_id);
+	          items += `<div class="cart-list white-bg">
+	                  <div class="box">
+	                    <div class="img">
+	                      <a href="`+show_page+`"><img src="`+this.cover_image+`" alt=""></a> 
+	                    </div>
+	                    <div class="details">
+	                    
+	                      <div class="head">
+	                    <a href="`+show_page+`"><h5>`+this.name+`</h5></a>
+	                        <p class="secondary-color">`+this.description+`</p>                
+	                      </div>`
+                          @if(\Request::route()->getName() =='coupons_checkout') 
+                          
+                            items += `<div class="price-qty">
+                          <div class="sale-price">₹`+this.sale_price+`<span>₹`+this.mrp+`</span></div></div><p><span class="secondary-color">Qty: </span>`+this.quantity+`</p>`;
+                          @else 
+                            items += `<div class="price-qty">
+                          <div class="sale-price">₹`+this.sale_price+`<span>₹`+this.mrp+`</span></div><div class="qty-items">
+                            <input type="button" value="-" id="`+this.cart_item_id+`" class="qty-minus update_qty">
+                            <input type="number" value="`+this.quantity+`" class="qty" min="0"  id="quantity_`+this.cart_item_id+`" data-id="`+this.cart_item_id+`">
+                            <input type="button" value="+" id="`+this.cart_item_id+`" class="qty-plus update_qty">
+                          </div></div>`;
+                          @endif
+	                      items+=`<p><span class="secondary-color">Type: </span>`+this.type+`</p> <div class="theme-red-color">Expiry Date: `+this.expiry_date+`</div>
+	                    </div> 
+	                  </div></div>`;
+          }
+	        });
+	        //$(".cart-list").html(items);
+	        $("#cart_items").html(items);
+    }
 
     function cart_summary(data,total_items,order_type,user_type){
 
@@ -9007,8 +9124,8 @@ $(document).ready(function(){
         if(order_type == 'coupon')
         {
           coin_discount = `<li><div class="title secondary-color">Coin Discount</div><div class="price">- ₹ `+data.coin_point_discount+`</div></li> `;
-
-          var checkout_url = "{{route('coupons_checkout')}}";
+          var selected_items = checkout_items.toString();
+          var checkout_url = "{{route('coupons_checkout')}}?chk_items="+selected_items;
         }
         var selected_item_count = '';
         if(order_type == 'book')

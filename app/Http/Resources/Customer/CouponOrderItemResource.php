@@ -22,7 +22,7 @@ class CouponOrderItemResource extends JsonResource
         $user = Auth::guard('api')->user();
         if($user) {
             $cover_image = $item ? asset($item->image) : '';
-            $name        = $item->coupon->name ? (string)$item->coupon->name : '';
+            $name        = $item->coupon->item_name ? (string)$item->coupon->item_name : '';
             $type        = $item->coupon ? (string)trans('coupons.'.$item->coupon->item_type) : '';
             $end_date    = $item->coupon->end_date ? (string)date('d-m-Y',strtotime($item->coupon->end_date)) : '';
             $description = $item->description ? (string)$item->description : '';

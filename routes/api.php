@@ -114,6 +114,7 @@ Route::prefix('customer')->group( function() {
         // Cart & Checkout (For Digital Coupons)
         Route::post('coupon/add_to_cart', 'Api\Customer\CouponController@add_to_cart');
         Route::get('redeemed_points/{operation}', 'Api\Customer\CouponController@redeemed_points');
+        Route::post('coupon/update_digital_cart_summary', 'Api\Customer\OrderController@update_digital_cart_summary');
         Route::post('coupon/checkout', 'Api\Customer\CouponController@checkout');
         //For both physical and digital cart & checkout
         Route::get('markOrderFailed', 'Api\Customer\OrderController@markOrderFailed');

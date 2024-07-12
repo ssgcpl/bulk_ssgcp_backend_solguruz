@@ -23,7 +23,7 @@ class CouponResource extends JsonResource
 
         return [
             'sub_coupon_id' => $this->id ? (string)$this->id : '' ,
-            'name'          => (string)$this->coupon->name,
+            'name'          => (string)$this->coupon->item_name,
             'sale_price'    => (string)number_format($this->get_price($user),2),
             'mrp'           => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'image'         => $this->image ? (string)asset($this->image) : '',

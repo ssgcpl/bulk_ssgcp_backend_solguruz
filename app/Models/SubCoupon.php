@@ -48,7 +48,7 @@ class SubCoupon extends Model
 
     public function get_name(){
 
-      return $this->coupon->name; 
+      return $this->coupon->item_name; 
     }
 
 }
