@@ -10,7 +10,7 @@ class SubCoupon extends Model
     use HasFactory;
     protected $table = 'sub_coupons';
 
-    protected $fillable = ['coupon_master_id','coupon_id','mrp','sale_price','description','available_quantity','state','image','status','is_deleted','business_category_id'];
+    protected $fillable = ['coupon_master_id','coupon_id','mrp','sale_price','description','available_quantity','state','image','visible_to','status','is_deleted','business_category_id'];
 
     public function coupon(){
         return $this->hasOne(CouponMaster::class, 'id','coupon_master_id');

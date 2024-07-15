@@ -2598,7 +2598,7 @@ $(document).ready(function(){
                             }
                             else
                             {
-                              var cart_btn = '<a href="javascript:void(0);" data-coupon-id="'+value.product_id+'" class="btn secondary-btn add_to_cart">Add to Cart <i class="icon-bag"></i></a>';
+                              var cart_btn = '<a href="javascript:void(0);" data-coupon-id="'+value.product_id+'" class="btn secondary-btn add_to_cart  '+disabled+'" '+disabled+'>Add to Cart <i class="icon-bag"></i></a>';
                             }
 
                           }
@@ -2620,6 +2620,17 @@ $(document).ready(function(){
                           }
                           else
                           {
+                            var disabled = '';
+                            if(user_type != '' && value.visible_to != 'both'){
+                                if(value.visible_to != user_type){
+                                  disabled = 'disabled';
+                                }
+                              }
+                               qty_input = `<div class="qty-items">
+                                          <input type="button" value="-" class="qty-minus" `+disabled+`>
+                                          <input type="number" value="`+value.quantity+`" class="qty" min="0" `+disabled+`>
+                                          <input type="button" value="+" class="qty-plus" `+disabled+`>
+                                        </div>`;
                             list_html += `<div class="col-xl-2 col-lg-2 col-md-4 col-6">
                                 <div class="book-box">
                                   <div class="img"><a href="`+detail_url+`" title=""><img src="`+value.image+`" alt=""></a></div>
@@ -8399,12 +8410,18 @@ $(document).ready(function(){
                 $.each(response.data,function(){
                   last_page = response.meta.last_page;
                   if(this.added_to_cart == '0'){
-                    var link = `  <a href="javascript:void(0);" id="`+this.sub_coupon_id+`" class="btn secondary-btn add_to_cart">Add to Cart <i class="icon-bag"></i></a>`;
-
+                    var disabled = '';
+                          if(user_type != '' && this.visible_to != 'both'){
+                            if(this.visible_to != user_type){
+                              disabled = 'disabled';
+                            }
+                          }
+                    var link = `  <a href="javascript:void(0);" id="`+this.sub_coupon_id+`" class="btn secondary-btn add_to_cart `+disabled+`" `+disabled+`>Add to Cart <i class="icon-bag"></i></a>`;
+                 
                     var qty_input = `<div class="qty-items">
-                                  <input type="button" value="-" class="qty-minus">
-                                  <input type="number" id="quantity_`+this.sub_coupon_id+`" name="quantity" value="`+this.quantity+`" class="qty" min="0">
-                                  <input type="button" value="+" class="qty-plus">
+                                  <input type="button" value="-" class="qty-minus" `+disabled+`>
+                                  <input type="number" id="quantity_`+this.sub_coupon_id+`" name="quantity" value="`+this.quantity+`" class="qty" min="0" `+disabled+`>
+                                  <input type="button" value="+" class="qty-plus" `+disabled+`>
                                 </div>`;
                   }else {
                     var view_cart = "{{route('my_cart')}}";
@@ -8457,10 +8474,16 @@ $(document).ready(function(){
                   $('.loader').css('visibility','visible');
             },
             success: function(response) {
-              console.log(response);
+              
               if(response.status == "200") {
+                var disabled = '';
+                    if(user_type != '' && response.data.visible_to != 'both'){
+                      if(response.data.visible_to != user_type){
+                        disabled = 'disabled';
+                      }
+                    }
                 if(response.data.added_to_cart == '0'){
-                  var link = `<a href="javascript:void(0)" id="`+response.data.sub_coupon_id+`" class="btn secondary-btn add_to_cart">Add to Cart <i class="icon-bag me-2"></i></a>`;
+                  var link = `<a href="javascript:void(0)" id="`+response.data.sub_coupon_id+`" class="btn secondary-btn add_to_cart `+disabled+`" `+disabled+`>Add to Cart <i class="icon-bag me-2"></i></a>`;
 
                 }else {
                   var view_cart = "{{route('my_cart')}}";
@@ -8477,7 +8500,14 @@ $(document).ready(function(){
                 $("#expiry_date").text(response.data.expiry_date);
                 $(".price").html("₹ "+response.data.sale_price+"<span>₹ "+response.data.mrp+"</span>");
                 $("#quantity").val(response.data.quantity);
-                $("#buttons").append(link);
+                // /
+                var qty_btn = `<div class="qty-items">
+                      <input type="button" value="-" class="qty-minus" `+disabled+`>
+                      <input type="number" value="`+response.data.quantity+`" id="quantity" class="qty" min="0" `+disabled+`>
+                      <input type="button" value="+" class="qty-plus" `+disabled+`>
+                    </div>`;
+                    $("#buttons").html(qty_btn+link);
+               // $("#buttons").append(link);
               }
               else {
                 toastr.error(response.message);
@@ -8754,7 +8784,7 @@ $(document).ready(function(){
 	          show_page = show_page.replace(':id',this.coupon_id);
 	          items += `<div class="cart-list white-bg"><div class="top-check-list">
 	                    <div class="common-check">
-	                        <label class="checkbox">
+	                        <label class="checkbox d-none">
 	                           <input type="checkbox"  data-cart-item-id="`+this.cart_item_id+`" checked class="checkout_coupon_items"><span class="checkmark"></span>
 	                        </label>
 	                    </div> 

@@ -459,7 +459,14 @@ class OrderController extends BaseController
                     }
                 }
             }
-          
+            if($cart->order_type == 'digital_coupons') {
+                foreach ($cart->order_items as $key => $cart_item) {
+                    $is_available = $this->isCouponItemAvailableForUser($cart_item->coupon_id,$user->id);
+                    if($is_available == '0'){
+                        $cart_item->delete();
+                    }
+                }
+            }
             $cart->user_type = $user->user_type;
             $cart->save();
  

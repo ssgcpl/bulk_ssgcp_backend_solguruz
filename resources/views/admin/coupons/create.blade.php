@@ -243,7 +243,7 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-3">
+                                                <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label for="price"
                                                             class="content-label">{{ trans('coupons.enter_the_mrp') }}<span
@@ -260,7 +260,7 @@
                                                         @endif
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label for="content:"
                                                             class="content-label">{{ trans('coupons.enter_the_sale_price') }}<span
@@ -270,7 +270,17 @@
                                                             type="text" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="languages"
+                                                            class="content-label">{{ trans('products.visible_to') }}<span
+                                                                class="text-danger custom_asterisk">*</span></label><br>
+                                                        <input name="visible_to[]" value="dealer" id="dealer" type="checkbox" checked="">&nbsp; <label for="english">{{ trans('products.dealer') }}</label>
+                                                        &nbsp;&nbsp;
+                                                        <input name="visible_to[]" value="retailer" id="retailer" type="checkbox" checked="">&nbsp;<label for="retailer">{{ trans('products.retailer') }}</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label for="content"
                                                             class="content-label">{{ trans('coupons.description') }}<span

@@ -67,6 +67,7 @@ class CouponController extends Controller
             'image'                => 'required|image|mimes:png,jpg,jpeg,svg|max:10000',
             'description'          => 'required|min:2|max:99',
             'category'             => 'required',
+            'visible_to'=> 'required',
         ]);
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()->first()]);
@@ -87,6 +88,11 @@ class CouponController extends Controller
             $data['coupon_id'] = $coupon_master->coupon_id;
             $data['coupon_master_id'] = $request->coupon_master_id;
             $data['available_quantity'] = $coupon_master->quantity;
+            if(count($data['visible_to']) == '2'){
+                $data['visible_to'] = 'both';
+              } else {
+                $data['visible_to'] = $data['visible_to'][0];
+              }
             $sub_coupon->fill($data);
             $sub_coupon->save();
 
@@ -288,6 +294,7 @@ class CouponController extends Controller
                 'image'                => 'nullable|image|mimes:png,jpg,jpeg,svg|max:10000',
                 'description'          => 'required|min:2|max:99',
                 'category'             => 'required',
+                'visible_to'=>'required',
             ]);
             if ($validator->fails()) {
                 return response()->json(['error' => $validator->errors()->first()]);
@@ -302,7 +309,11 @@ class CouponController extends Controller
                 $this->deleteMedia($sub_coupon->image);
                 $data['image'] = $this->saveMedia($data['image']);
             }
-
+            if(count($data['visible_to']) == '2'){
+                $data['visible_to'] = 'both';
+              } else {
+                $data['visible_to'] = $data['visible_to'][0];
+              }
             $sub_coupon->fill($data);
             $sub_coupon->save();
 

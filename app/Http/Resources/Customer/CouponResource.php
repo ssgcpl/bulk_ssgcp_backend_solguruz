@@ -32,6 +32,7 @@ class CouponResource extends JsonResource
             'quantity'      => $this->quantity ? (string)$this->quantity : '0' ,
             'added_to_cart' => $this->added_to_cart ? (string)$this->added_to_cart : '0' ,
             'cart_item_id'  => $this->cart_item_id ? (string)$this->cart_item_id :'',
+            'visible_to'    => $this->visible_to ? (string)$this->visible_to : '' ,
         ];
     }
 }
