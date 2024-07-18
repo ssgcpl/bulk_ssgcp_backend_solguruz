@@ -184,13 +184,23 @@ class PaymentController extends Controller
 
           // Update Is Payment attempt status  :: start
           //$order->is_cart = '0';
-          $order->placed_at = date('Y-m-d H:i:s');
-          $order->is_payment_attempt = '1';
+          //$order->placed_at = date('Y-m-d H:i:s');
+          //$order->is_payment_attempt = '1';
+
+
+          $order->is_payment_attempt = '3'; 
+          $order->payment_status = 'In Progress'; 
+
+          
           $order->save();
           // Update Is Payment attempt status  :: end
           //Will Redirect To Payment Page 
-          return view('customer.payment.ccavenue_redirect',compact('encrypted_data','access_code','payment_url')); 
-
+          if(isset($settings['ccavenue_payment_redirection_url'])){
+            $redirectUrl = $settings['ccavenue_payment_redirection_url']."?encrypted_data=" . urlencode($encrypted_data) . "&access_code=" . urlencode($access_code) . "&payment_url=" . urlencode($payment_url)."&payment_id=1";
+            return redirect()->away($redirectUrl);
+          }else{
+          return view('customer.payment.ccavenue_redirect',compact('encrypted_data','access_code','payment_url'));
+          }
 
         } else if($payment_mode == 'payu'){
 
@@ -235,8 +245,11 @@ class PaymentController extends Controller
 
           // Update Is Payment attempt status  :: start
           //$order->is_cart = '0';
-          $order->placed_at = date('Y-m-d H:i:s');
-          $order->is_payment_attempt = '1';
+          //$order->placed_at = date('Y-m-d H:i:s');
+          //$order->is_payment_attempt = '1';
+
+          $order->is_payment_attempt = '3'; 
+          $order->payment_status = 'In Progress'; 
           $order->save();
           // Update Is Payment attempt status  :: end
           //Save Transaction ID (txnid) with Order data in Table For Later Verification

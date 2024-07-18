@@ -233,6 +233,12 @@ class SettingsTableSeeder extends Seeder
         );
 
         Setting::updateOrCreate(
+            ['name' => 'ccavenue_payment_redirection_url'],
+            ['value' => 'https://ssgc.solz.me/ccavenuepaymentForBulkorder',
+            'status' => 'active'],
+        );
+
+        Setting::updateOrCreate(
             ['name' => 'payu_sandbox_key'],
             ['value' => 'oZ7oo9',
             'status' => 'active'],

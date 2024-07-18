@@ -1660,6 +1660,7 @@ public function sendNotifications($user,$title,$body){
                     })->where('product_id',$item_id)->whereNull('coupon_id')->whereHas('order',function($q1) use($user) { $q1->where('user_id',$user->id); })->count();
     return $is_available;
   }
+
   public function isCouponItemAvailableForUser($item_id,$user_id){
     $user = User::find($user_id);
     $is_available = OrderItem::whereHas('coupon',function($q) use($item_id,$user){
