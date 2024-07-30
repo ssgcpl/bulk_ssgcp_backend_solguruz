@@ -1827,9 +1827,15 @@ $(document).ready(function(){
                                   $("#landmark").val(response.data.landmark);
                                   //$('#state_id').val(response.data.state_id);
                                   //get_state_list(response.data.state_name);
-                                  get_state_list(response.data.state_id);
-                                  get_city_list(response.data.state_id,response.data.city_id)
-                                  get_postcode_list(response.data.city_id,response.data.postcode_id);
+
+                                  $("#postcode").val(response.data.postcode);
+                                  $("#state").val(response.data.state_name);
+                                  $("#city").val(response.data.city_name);
+
+                                 // get_state_list(response.data.state_id);
+                                 // get_city_list(response.data.state_id,response.data.city_id)
+                                 // get_postcode_list(response.data.city_id,response.data.postcode_id);
+                                 
                                   if(response.data.address_type == "Home"){
                                     $('input[name=options][value=Home]').prop('checked',true);
                                   }
@@ -10429,4 +10435,35 @@ function confirmation_from_user_to_remove_existing_items(item,id){
     });
   }
 }
+    //auto fill city state field based on postalcode 
+    $("#postcode").on("input", function() {
+
+var enteredPincode = $(this).val();
+enteredPincode = enteredPincode.replace(/\D/g, '');
+$(this).val(enteredPincode);
+if (enteredPincode.length === 6) {
+    $.ajax({
+        url: @json(env('APP_URL')) + 'api/customer/postalcode/' + enteredPincode,
+        method: "GET",
+        success: function(data) {
+            if (data.status == 200) {
+                $('#save_address_btn').prop('disabled', false);
+                $("#city").val(data.data[0].District);
+                $("#state").val(data.data[0].State);
+            }
+            if (data.status == 201) {
+                $('#save_address_btn').prop('disabled', true);
+                toastr.error(data.message);
+            }
+        },
+        error: function(error) {
+            toastr.error('Something went wrong');
+        }
+    });
+} else {
+    $("#city").val("");
+    $("#state").val("");
+}
+});
+
 </script>

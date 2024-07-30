@@ -785,6 +785,7 @@ class OrderController extends BaseController
             $delivery_charges = '0';
             $total_payable = $total_payable + $delivery_charges;
             //coin discount calculation
+        if($cart->redeemed_points > 0){
             $user_points = (integer)$user->points;
             $required_points = ($total_sale_price)*Setting::get('points_per_rs');
             if($user_points > $required_points) {
@@ -793,7 +794,7 @@ class OrderController extends BaseController
                 $redeemed_points = $user_points;
             }
             $coin_point_discount =  $redeemed_points/Setting::get('points_per_rs');
-
+           }
             $response = [
                 'total_mrp'           => (string)number_format($total_mrp,2),
                 'discount_on_mrp'     => (string)number_format($discount_on_mrp,2),
@@ -1000,7 +1001,7 @@ class OrderController extends BaseController
                     'customer_name'  => $billing_address->contact_name,
                     'contact_number' => $billing_address->contact_number,
                     'email'          => $billing_address->email,
-                    'city_id'        => $billing_address->post_code->city_id,
+                    'city_id'        => isset($billing_address->post_code)? $billing_address->post_code->city_id : '',
                     'city'           => $billing_address->city,
                     'area'           => $billing_address->area,
                     'house_no'       => $billing_address->house_no,
@@ -1019,7 +1020,7 @@ class OrderController extends BaseController
                     'customer_name'  => $shipping_address->contact_name,
                     'contact_number' => $shipping_address->contact_number,
                     'email'          => $shipping_address->email,
-                    'city_id'        => $shipping_address->post_code->city_id,
+                    'city_id'        => isset($shipping_address->post_code) ? $shipping_address->post_code->city_id : '',
                     'city'           => $shipping_address->city,
                     'area'           => $shipping_address->area,
                     'house_no'       => $shipping_address->house_no,

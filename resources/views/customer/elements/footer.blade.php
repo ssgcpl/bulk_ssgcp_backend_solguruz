@@ -156,27 +156,38 @@
         <h5 class="title">Address Details</h5>
 
         <div class="row">
-          <div class="col-xl-6 col-md-6 col-12">
+        <div class="col-xl-6 col-md-6 col-12" id="select-Parent-postcode">
             <div class="form-group mb-3">
-              <label>State</label>
-              <select name="state_id" id="state_id" class="form-select" aria-label="Default select example">
-              </select>          
+              <label>Pincode</label>
+              <input type="text" name="postcode" id="postcode" class="form-control" aria-label="Pincode" maxlength="6" required>
+              <p id="pincode_txt"></p>
             </div>
           </div>
           <div class="col-xl-6 col-md-6 col-12">
             <div class="form-group mb-3">
               <label>City</label>
-              <select name="city_id" id="city_id" class="form-select" aria-label="Default select example">
-              </select>          
+              <input type="text" name="city" id="city" class="form-control" readonly>
+
+              <!-- <select name="city_id" id="city_id" class="form-select" aria-label="Default select example">
+              </select>           -->
             </div>
           </div>
           <div class="col-xl-6 col-md-6 col-12">
+            <div class="form-group mb-3">
+              <label>State</label>
+              <input type="text" name="state" id="state" class="form-control" readonly>
+
+              <!-- <select name="state_id" id="state_id" class="form-select" aria-label="Default select example">
+              </select>           -->
+            </div>
+          </div>
+          <!-- <div class="col-xl-6 col-md-6 col-12">
             <div class="form-group mb-3">
               <label>Pincode</label>
               <select name="postcode_id" id="postcode_id" class="form-select" aria-label="Default select example">
               </select>               
             </div>
-          </div>
+          </div> -->
           <div class="col-xl-6 col-md-6 col-12">
             <div class="form-group mb-3">
               <label>Area</label>

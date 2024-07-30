@@ -1417,16 +1417,16 @@ public function sendNotifications($user,$title,$body){
               } 
             $order_items[] = [
                   'id' => $ik+1,
-                  'sku_id'=>$item->product->sku_id,
+                  'sku_id'=>isset($item->product->sku_id) ? $item->product->sku_id :'-',
                   'name' => $product_name,
-                  'sku_id'=>$item->product->sku_id,
+                  //'sku_id'=>$item->product->sku_id,
                   'quantity' => $item->supplied_quantity,
                   'mrp' => $item->mrp,
                   'rate' =>$item->sale_price,
                   'total' =>number_format($item->sale_price * $item->supplied_quantity,'2','.',','),
                   'weight' => $weight,
                   'total_weight'=>$total_weight,
-                  'isoldbook'=>($item->product->business_category_id == 2) ? true : false
+                  'isoldbook'=>(isset($item->product) && $item->product->business_category_id == 2) ? true : false
                 ];
           }
           usort($order_items, function($a, $b) {
@@ -1762,6 +1762,7 @@ public function sendNotifications($user,$title,$body){
         \Log::info("Payload " . $url.$data);       
         curl_setopt($req, CURLOPT_POSTFIELDS, $data);
         $resp = curl_exec($req);
+        $error_msg = curl_error($req);
         curl_close($req);
         $response = json_decode($resp,true);
         \Log::info("Data".$resp);
@@ -1771,6 +1772,144 @@ public function sendNotifications($user,$title,$body){
         }else {
           return false;
         }
+  }
+
+  public function verifyPaymentForCcavenue($cart){
+    $user = User::find($cart->user_id);
+      $settings = Setting::pluck('value','name')->all();
+      if($settings['ccavenue_mode'] == 'sandbox'){
+        $access_code = $settings['ccavenue_access_code'];
+        $working_key = $settings['ccavenue_working_key'];
+      } else {
+          $access_code = $settings['ccavenue_access_code'];
+          $working_key = $settings['ccavenue_working_key'];
+         
+      }
+
+
+            $merchant_json_data =
+            array(
+                'order_no' => '804',
+                'reference_no' =>'313011668607'
+            );
+          //  dd($merchant_json_data);
+            $headers = array("Content-Type: application/x-www-form-urlencoded");
+    
+            $merchant_data = json_encode($merchant_json_data);
+            $encrypted_data = encrypt($merchant_data, $working_key);
+            $final_data = 'enc_request='.$encrypted_data.'&access_code='.$access_code.'&command=orderStatusTracker&request_type=JSON&response_type=JSON';
+            
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "https://apitest.ccavenue.com/apis/servlet/DoWebTrans");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_VERBOSE, 1);
+            curl_setopt($ch, CURLOPT_HTTPHEADER,$headers) ;
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $final_data);
+            // Get server response ...
+            $result = curl_exec($ch);
+            dd($result);
+            $error_msg = curl_error($ch);
+            curl_close($ch);
+            $status = '';
+            $information = explode('&', $result);
+
+            $dataSize = sizeof($information);
+            for ($i = 0; $i < $dataSize; $i++) {
+                $info_value = explode('=', $information[$i]);
+                if ($info_value[0] == 'enc_response') {
+                    $status = decrypt(trim($info_value[1]), $working_key);
+                    
+                }
+            }
+            dd($status);
+            echo 'Status revert is: ' . $status.'<pre>';
+            $obj = json_decode($status);
+            print_r($obj);
+            ?>
+
+            <?php
+            //ADD NEW ENCRYPT Function
+
+            function encrypt($plainText,$key)
+            {
+                $key = hextobin(md5($key));
+                $initVector = pack("C*", 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f);
+                $openMode = openssl_encrypt($plainText, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $initVector);
+                $encryptedText = bin2hex($openMode);
+                return $encryptedText;
+            }
+
+            function decrypt($encryptedText,$key)
+            {
+                $key = hextobin(md5($key));
+                $initVector = pack("C*", 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f);
+                $encryptedText = hextobin($encryptedText);
+                $decryptedText = openssl_decrypt($encryptedText, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $initVector);
+                return $decryptedText;
+            }
+                //*********** Padding Function *********************
+
+            function pkcs5_pad ($plainText, $blockSize)
+            {
+                $pad = $blockSize - (strlen($plainText) % $blockSize);
+                return $plainText . str_repeat(chr($pad), $pad);
+            }
+
+                //********** Hexadecimal to Binary function for php 4.0 version ********
+
+            function hextobin($hexString) 
+            { 
+                $length = strlen($hexString); 
+                $binString="";   
+                $count=0; 
+                while($count<$length) 
+                {       
+                    $subString =substr($hexString,$count,2);           
+                    $packedString = pack("H*",$subString); 
+                    if ($count==0)
+                    {
+                        $binString=$packedString;
+                    } 
+                    
+                    else 
+                    {
+                        $binString.=$packedString;
+                    } 
+                    
+                    $count+=2; 
+                } 
+                return $binString; 
+            } 
+
+
+
+      //For multiple transaction id we can add multiple txnid by adding | in between
+      $txnid = $cart->order_id;
+            //Genrate Hash Token
+      $hash_string = $key.'|verify_payment|'.$txnid.'|'.$salt;
+      $hash = hash('sha512', $hash_string);
+      $req = curl_init($url);
+      curl_setopt($req, CURLOPT_URL, $url);
+      curl_setopt($req, CURLOPT_POST, true);
+      curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
+      $headers = array( "Content-Type: application/x-www-form-urlencoded");
+      curl_setopt($req, CURLOPT_HTTPHEADER, $headers);
+      $data = "key=".$key."&command=verify_payment&var1=".$txnid."&hash=".$hash;
+      \Log::info("Payload " . $url.$data);       
+      curl_setopt($req, CURLOPT_POSTFIELDS, $data);
+      $resp = curl_exec($req);
+      $error_msg = curl_error($req);
+      curl_close($req);
+      $response = json_decode($resp,true);
+      \Log::info("Data".$resp);
+      if($resp != ''){
+        $data = $response['transaction_details'][$txnid];
+        return $data;
+      }else {
+        return false;
+      }
   }
 
   public function markOrderStatusAsSuccess($cart_id,$user,$data){
@@ -1787,8 +1926,7 @@ public function sendNotifications($user,$title,$body){
                 $cart->is_payment_attempt = '2';
                // $this->generateInvoice($cart);
                 $cart->save();
-
-                $payment = Payment::where(['order_id' => $cart->id, 'user_id' => $user->id, 'payment_type' => 'payu'])->latest()->first();
+                $payment = Payment::where(['order_id' => $cart->id, 'user_id' => $user->id, 'payment_type' => $cart->payment_type])->latest()->first();
                 $payment->tran_ref     = $data['mihpayid'];
                 $payment->api_response = json_encode($data);
                 $payment->status       = 'paid';

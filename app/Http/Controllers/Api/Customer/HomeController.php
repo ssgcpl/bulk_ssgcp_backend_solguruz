@@ -162,6 +162,7 @@ class HomeController extends BaseController
           "android_version_update_type" => Setting::get('android_app_version_update_type'),
           "iphone_version" => Setting::get('apple_app_version'),
           "iphone_version_update_type" => Setting::get('apple_app_version_update_type'),
+          "points_percentage_usage_on_total" => Setting::get('points_per_rs'),
         ];
         return $this->sendResponse($version, trans('common.data_found'));
       } catch(\Exception $e) {
