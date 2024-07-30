@@ -47,8 +47,8 @@
       <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12">
         <h3 class="footer-title">Download App</h3>
         <div class="download-app">
-          <a href="#" title=""><img src="{{asset('web_assets/images/app-store.svg')}}" alt=""></a>
-          <a href="#" title=""><img src="{{asset('web_assets/images/google-play.svg')}}" alt=""></a>
+          <a href="https://apps.apple.com/in/app/bulkssgc/id6476923586" title=""><img src="{{asset('web_assets/images/app-store.svg')}}" alt=""></a>
+          <a href="https://play.google.com/store/apps/details?id=com.app.bossgcp" title=""><img src="{{asset('web_assets/images/google-play.svg')}}" alt=""></a>
         </div>
       </div>
     </div> 
