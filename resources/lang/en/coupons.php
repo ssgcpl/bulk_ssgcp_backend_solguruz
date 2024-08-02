@@ -32,6 +32,7 @@ return [
     'videos'               => 'Videos',
     'courses'              => 'Courses',
     'tests'                => 'Tests',
+    'affiliate_link'       => 'Affiliate Link',
     'coupon_name'          => 'Coupon Name',
     'available'            => 'Available',
     'expired'              => 'Expired',

@@ -28,7 +28,7 @@ class CouponResource extends JsonResource
             'mrp'           => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'image'         => $this->image ? (string)asset($this->image) : '',
             'type'          => $this->coupon ? (string)trans('coupons.'.$this->coupon->item_type) : '',
-            'expiry_date'   => $this->coupon ?(string) date('d-m-Y',strtotime($this->coupon->end_date)) : '' ,
+            'expiry_date'   => ($this->coupon && $this->coupon['item_type'] != 'affiliate_link') ?(string) date('d-m-Y',strtotime($this->coupon->end_date)) : 'No' ,
             'quantity'      => $this->quantity ? (string)$this->quantity : '0' ,
             'added_to_cart' => $this->added_to_cart ? (string)$this->added_to_cart : '0' ,
             'cart_item_id'  => $this->cart_item_id ? (string)$this->cart_item_id :'',

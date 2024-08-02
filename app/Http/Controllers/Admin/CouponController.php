@@ -235,10 +235,13 @@ class CouponController extends Controller
             $emp['item_type'] = $emp->coupon ? trans('coupons.' . $emp->coupon->item_type . '') : '';
             $emp['available_quantity'] = $emp->available_quantity;
             $emp['created_date']  = date("d-m-Y h:i A", strtotime($emp->created_at));
+            $emp['state'] = trans('coupons.available');
+            if($emp->coupon->item_type != 'affiliate_link'){
             if ($emp->coupon->end_date > Carbon::now()->format('Y-m-d H:i')) {
                 $emp['state'] = trans('coupons.available');
             } else {
                 $emp['state'] = trans('coupons.expired');
+            }
             }
             $business_category = BusinessCategory::where('id',$emp->business_category_id)->first();
             $emp['business_category'] = $business_category->category_name;
@@ -468,7 +471,9 @@ class CouponController extends Controller
             $sub_coupon = SubCoupon::pluck('coupon_master_id');
           //  $sub_coupon = SubCoupon::pluck('coupon_id');
             $coupons = CouponMaster::where('item_type', $item_type)->where('is_live', '1')->where('state', 'fresh')->where('end_date', '>=', Carbon::now()->format('Y-m-d h:i'))->whereNotIn('id', $sub_coupon)->where('is_deleted','0')->get();
-        
+            if($item_type == 'affiliate_link'){
+                $coupons = CouponMaster::where('item_type', $item_type)->where('is_live', '1')->whereNotIn('id', $sub_coupon)->where('is_deleted','0')->get();  
+            }
             return response()->json(['success' => '1', 'data' => $coupons, 'message' => 'coupon_list']);
         } catch (Exception $e) {
             return response()->json(['success' => '0', 'data' => [], 'message' => $e->getMessage()]);

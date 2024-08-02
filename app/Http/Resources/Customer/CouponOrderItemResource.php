@@ -50,7 +50,7 @@ class CouponOrderItemResource extends JsonResource
             'sale_price'        => (string)number_format($this->sale_price,2),
             'cover_image'       => $cover_image ? $cover_image : '',
             'type'              => $type,
-            'expiry_date'       => $end_date ? $end_date : '',
+            'expiry_date'       => $end_date ? $end_date : 'No',
             'available_coupons' => $available_coupons,
             'sold_coupons'      => $sold_coupons,
         ];

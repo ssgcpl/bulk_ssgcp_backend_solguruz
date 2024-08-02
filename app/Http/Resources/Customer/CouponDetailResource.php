@@ -27,7 +27,7 @@ class CouponDetailResource extends JsonResource
             'sale_price'    => (string)number_format($this->get_price($user),2),
             'mrp'           => $this->mrp ? (string)number_format($this->mrp,2) : '' ,
             'type'          => $this->coupon ? (string)trans('coupons.'.$this->coupon->item_type) : '',
-            'expiry_date'   => $this->coupon ?(string) date('d-m-Y',strtotime($this->coupon->end_date)) : '' , 
+            'expiry_date'   => ($this->coupon && $this->coupon->item_type != 'affiliate_link') ?(string) date('d-m-Y',strtotime($this->coupon->end_date)) : 'No' , 
             'description'   => $this->description,
             'cover_image'   => CouponCoverImageResource::collection($this->cover_images),
             'quantity'      => $this->quantity ? (string)$this->quantity : '0' ,

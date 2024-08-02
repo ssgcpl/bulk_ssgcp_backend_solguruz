@@ -102,7 +102,11 @@ class CouponController extends BaseController
             $data = $data->whereHas('coupon', function ($q) {
                 $q->where('is_live', '1')
                     ->where('is_deleted','0')
-                    ->where('end_date', '>=',Carbon::now()->format('Y-m-d h:i') );
+                    ->where(function ($query) {
+                        $query->where('item_type', '!=', 'Affiliate Link')
+                              ->orWhere('end_date', '>=', Carbon::now()->format('Y-m-d h:i'));
+                    });
+                    //->where('end_date', '>=',Carbon::now()->format('Y-m-d h:i') );
             });
 
             // check if category is active/publish
@@ -254,6 +258,10 @@ class CouponController extends BaseController
                 foreach ($qr_codes as $qr) {
                     $src = "https://samsamayikghatnachakra.com/".$qr['qr_code'];
                     $destination_path = '/uploads/qr_codes/'.basename($src);
+                    if($request->item_type == 'affiliate_link'){
+                        $src = env('SSGC_APP_URL').$qr['qr_code'];
+                        $destination_path = '/uploads/affilicate_qr_codes/'.basename($src);
+                    }
                     $dest = public_path($destination_path);
                     $image = $this->does_url_exists($src);
                     if ($image == 'true'){
@@ -605,10 +613,12 @@ class CouponController extends BaseController
                         $message = "Requested quantity for ". $item_name."  is not available. Available qty :".$is_active->available_quantity;
                         return $this->sendError('',$message);
                     }
+                    if($cart_item->coupon->coupon->item_type != 'affiliate_link'){
                     if($cart_item->coupon->coupon->end_date <= Carbon::now()->format('Y-m-d H:i')){
                         $item_name = $cart_item->coupon->coupon->name;
                         $message = "This coupon ". $item_name."  is expired.Please remove it from the cart.";
                         return $this->sendError('',$message);
+                    }
                     }
                 }
             }

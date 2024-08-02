@@ -357,6 +357,15 @@
                     success: function(res) {
                         console.log(res);
                         if (res.success == "1") {
+                            if(item_type == 'affiliate_link'){
+                                $('#expire_date, #discount').each(function() {
+                                    $(this).closest('.form-group').parent().hide();
+                                });
+                            }else{
+                                $('#expire_date, #discount').each(function() {
+                                    $(this).closest('.form-group').parent().show();
+                                });
+                            }
                             $("#coupon_master_id").empty()
                             $("#coupon_master_id").append('<option value="">' +
                                 '{{ trans('common.select') }}' + '</option>');

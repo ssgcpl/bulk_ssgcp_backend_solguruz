@@ -317,7 +317,7 @@ class HomeController extends BaseController
                 $q->where('is_live', '1')
                 ->where('is_deleted','0')
                 ->where('end_date', '>=',Carbon::now())
-                ->where('name','like','%'.$request->search_string.'%');
+                ->where('name','like','%'.$request->search_string.'%')->Orwhere('item_name','like','%'.$request->search_string.'%');
             })->where('status','active');
            
           }else{
@@ -582,7 +582,11 @@ class HomeController extends BaseController
                   ->whereHas('coupon', function ($q){
                     $q->where('is_live', '1')
                     ->where('is_deleted','0')
-                    ->where('end_date', '>=',Carbon::now()->format('Y-m-d h:i'));
+                    ->where(function ($query) {
+                      $query->where('item_type', '!=', 'Affiliate Link')
+                            ->orWhere('end_date', '>=', Carbon::now()->format('Y-m-d h:i'));
+                  });
+                   // ->where('end_date', '>=',Carbon::now()->format('Y-m-d h:i'));
                    })->orderBy('created_at','desc')->limit(20)->get();
           }
 

@@ -40,7 +40,7 @@ class HomeSearchResource extends JsonResource
             'stock_status_label' => $this->stock_status ? (string)trans('products.'.$this->stock_status) :'',
             'type'               => $this->coupon ? (string)$this->coupon->item_type : '' ,
             'type_label'         => $this->coupon ? (string)trans('coupons.'.$this->coupon->item_type) : '' ,
-            'expiry_date'        => $this->coupon ? (string)date('d-m-Y',strtotime($this->coupon->end_date)) : '' ,
+            'expiry_date'        => ($this->coupon && $this->coupon->item_type != 'affiliate_link') ? (string)date('d-m-Y',strtotime($this->coupon->end_date)) : 'No' ,
             'visible_to'         => $this->visible_to ? (string)$this->visible_to : '' ,
            
         ];

@@ -115,6 +115,7 @@ class PaymentController extends Controller
                         \Log::info($item_name."Digital Product requested quantity not available for Product Id: ".$cart_item->coupon_id." Order Id :".$cart->id);
                         return redirect('order_error'); 
                     }
+                    if($cart_item->coupon->coupon->item_type != 'affiliate_link'){
                     if($cart_item->coupon->coupon->end_date <= Carbon::now()->format('Y-m-d H:i')){
                         $item_name = $cart_item->coupon->coupon->name;
                         $message = "This coupon ". $item_name."  is expired.Please remove it from the cart.";
@@ -125,6 +126,7 @@ class PaymentController extends Controller
                         \Log::info($item_name."Digital Product expired for Product Id: ".$cart_item->coupon_id." Order Id :".$order->id);
                         return redirect('order_error'); 
                     }
+                }
                 }
 
             }
@@ -482,7 +484,7 @@ class PaymentController extends Controller
                        // return $this->sendError('',$message);
                     }
 
-                    if($cart_item->coupon->coupon->end_date <= Carbon::now()->format('Y-m-d H:i')){
+                    if($cart_item->coupon->coupon->item_type != 'affiliate_link' && $cart_item->coupon->coupon->end_date <= Carbon::now()->format('Y-m-d H:i')){
                         $item_name = $cart_item->coupon->coupon->name;
                         $message = "This coupon ". $item_name."  is expired.Please remove it from the cart.";
                          $subject = "SSGC BO - Order Failed Due to digital product expired for Order Id : ".$cart->id;
@@ -786,7 +788,7 @@ class PaymentController extends Controller
                         return redirect('order_error'); 
                        // return $this->sendError('',$message);
                     }
-                if($cart_item->coupon->coupon->end_date <= Carbon::now()->format('Y-m-d H:i')){
+                if($cart_item->coupon->coupon->item_type != 'affiliate_link' &&  $cart_item->coupon->coupon->end_date <= Carbon::now()->format('Y-m-d H:i')){
                     $item_name = $cart_item->coupon->coupon->name;
                     $message = "This coupon ". $item_name."  is expired.Please remove it from the cart.";
                     $subject = "SSGC BO - Order Failed Due to digital product expired for Order Id : ".$cart->id;

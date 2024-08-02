@@ -162,6 +162,7 @@
                                                             type="text" value="{{ $coupon_master->coupon_id}}" id="coupon_id_ssgc" disabled>
                                                     </div>
                                                 </div>
+                                                @if($coupon_master->item_type != 'affiliate_link')
                                                 <div class="col-md-2">
                                                     <div class="form-group">
                                                         <label for="content:"
@@ -173,6 +174,7 @@
                                                             type="text" value="{{ $coupon_master->discount}}" id="discount" disabled>
                                                     </div>
                                                 </div>
+                                                @endif
                                                 <div class="col-md-2">
                                                     <div class="form-group">
                                                         <label for="content"
@@ -207,6 +209,7 @@
                                                             type="text" value="{{ $coupon_master->item_name}}" id="item_name" disabled>
                                                     </div>
                                                 </div>
+                                                @if($coupon_master->item_type != 'affiliate_link')
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="content:"
@@ -218,6 +221,7 @@
                                                             type="text" value="{{ $coupon_master->end_date->format('d-m-Y h:i A');}}" id="expire_date" disabled>
                                                     </div>
                                                 </div>
+                                                @endif
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-4">

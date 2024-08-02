@@ -199,7 +199,7 @@
                                             <label for="content:"
                                                 class="content-label">{{ trans('coupons.expiry_date_and_time') }}<span
                                                     class="text-danger custom_asterisk">*</span></label>
-                                            <p class="details">{{ $coupon_master->end_date->format('d-m-Y h:i A');}} </p>
+                                            <p class="details">@if($coupon_master->item_type != 'affiliate_link'){{ $coupon_master->end_date->format('d-m-Y h:i A');}}@else - @endif </p>
                                         </div>
                                     </div>
                                 </div>

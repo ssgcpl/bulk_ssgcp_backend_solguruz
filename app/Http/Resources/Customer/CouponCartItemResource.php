@@ -24,7 +24,7 @@ class CouponCartItemResource extends JsonResource
             $cover_image = $item ? asset($item->image) : '';
             $name        = $item->coupon->item_name ? (string)$item->coupon->item_name : '';
             $type        = $item->coupon ? (string)trans('coupons.'.$item->coupon->item_type) : '';
-            $end_date    = $item->coupon->end_date ? (string)date('d-m-Y',strtotime($item->coupon->end_date)) : '';
+            $end_date    = ($item->coupon->end_date && $item->coupon->item_type != 'affiliate_link') ? (string)date('d-m-Y',strtotime($item->coupon->end_date)) : 'No';
             $description = $item->description ? (string)$item->description : '';
             $sale_price  = $item->get_price($user);
         }
