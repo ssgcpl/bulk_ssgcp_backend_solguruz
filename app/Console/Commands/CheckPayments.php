@@ -45,10 +45,10 @@ class CheckPayments extends Command
         \Log::info("Under Process Order Cron Excecuted started");
         $allOrderId = array();
             
-        $orders = Order::where('is_payment_attempt','1')
+        $orders = Order::where('is_payment_attempt','3')
                         ->whereNotNull('order_id')
                         ->whereNotNull('user_id')
-                        ->whereTime('placed_at', '<', Carbon::now()->subMinutes(40)->toTimeString())
+                     //   ->whereTime('placed_at', '<', Carbon::now()->subMinutes(40)->toTimeString())
                         ->chunk(500, function($orders) use ($allOrderId){
                             foreach ($orders as $key => $value) {
                                 \Log::info("payment type : ".$value->payment_type);

@@ -260,7 +260,7 @@ class CouponController extends BaseController
                     $destination_path = '/uploads/qr_codes/'.basename($src);
                     if($request->item_type == 'affiliate_link'){
                         $src = env('SSGC_APP_URL').$qr['qr_code'];
-                        $destination_path = '/uploads/affilicate_qr_codes/'.basename($src);
+                        $destination_path = '/uploads/affiliate_qr_codes/'.basename($src);
                     }
                     $dest = public_path($destination_path);
                     $image = $this->does_url_exists($src);

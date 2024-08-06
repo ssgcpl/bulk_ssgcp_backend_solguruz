@@ -46,16 +46,37 @@ class GetOrderStatusFromCCAvenue implements ShouldQueue
      */
     public function handle() {
         \Log::info("Job Get Order Status From CCAvenue started: ".$this->order_id);
-        $cart = Order::where('id',$this->order_id)->where('is_payment_attempt','1')->where('payment_status','pending')->where('payment_type','ccavenue')->whereNotNull('order_id')->latest()->first();
+        $cart = Order::where('id',$this->order_id)->where('is_payment_attempt','3')->where('payment_type','ccavenue')->whereNotNull('order_id')->latest()->first();
         if(isset($cart) && $cart != ""){
         \Log::info("ORDER IDDDD : ".$cart->order_id);
+            $data = $this->verifyPaymentForCcavenue($cart);
             $user = User::find($cart->user_id);
+            if($data){
+              if($data['order_status'] == 'Shipped'){
+                   \Log::info("Cart Id in success status ".$cart->id);
+                  $this->markOrderStatusAsSuccess($cart->id,$user,$data,0);
+                }else if($data['order_status'] == 'Aborted' || $data['order_status'] == 'Cancelled'){
+                  \Log::info("Cart Id in failure status ".$cart->id);
+                  $this->markOrderStatusAsFailed($cart->id,$user,$data,0);
+                  DB::commit();    
+                }else if($data['order_status'] == 'Awaited'){
+                    $job = (new GetOrderStatusFromCCAvenue($cart->id))->delay(300);
+                    dispatch($job); 
+                  \Log::info("Status ".$data['order_status']." order Id ".$cart->id);
+                }else {
+                  $this->markOrderStatusAsFailed($cart->id,$user,$data,0);
+                  DB::commit();   
+                }
+               }else {
+                \Log::info("Response not found so mark transaction as bounced for cart ID: ".$cart->id);
+                // Call job after 5 min delay 
             $starttimestamp = strtotime($cart->placed_at);
             $endtimestamp = strtotime(date("Y-m-d H:i:s"));
             $difference = round(abs($endtimestamp - $starttimestamp)/60);
             \Log::info("difference".$difference);
             if($difference > 40){
                 $this->markOrderStatusAsFailed($cart->id,$user,null,0);
+            }
             }
         } else {
             \Log::info("No data found for : ".$this->order_id);

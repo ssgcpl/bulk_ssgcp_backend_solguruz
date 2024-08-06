@@ -3,7 +3,7 @@
 namespace App\Models\Helpers;
 
 use Illuminate\Support\Facades\Storage;
-use DB,PDF;
+use DB,PDF,Http;
 use Redirect;
 use App\Models\User;
 use App\Models\UserSubscription;
@@ -48,6 +48,7 @@ use PayPalCheckoutSdk\Core\ProductionEnvironment;
 use App\Jobs\GetOrderStatusFromPayu;
 use App\Mail\SendOrderPlacedEmailCustomer;
 use App\Mail\SendOrderFailedEmailAdmin;
+use App\Models\Helpers\PaymentHelper;
 
 
 trait CommonHelper
@@ -59,6 +60,7 @@ trait CommonHelper
   /**
   * Genrate Payment Client
   */
+  use PaymentHelper;
   public function genrateClient(){
 
       $settings = Setting::pluck('value', 'name')->all();
@@ -1702,10 +1704,14 @@ public function sendNotifications($user,$title,$body){
           $cart->payment_status = 'failed';
           $cart->save();
          
-          $payment = Payment::where(['order_id' => $cart->id, 'user_id' => $user->id, 'payment_type' => 'payu'])->latest()->first();
+          $payment = Payment::where(['order_id' => $cart->id, 'user_id' => $user->id, 'payment_type' => $cart->payment_type])->latest()->first();
           if($payment){
             $payment = Payment::find($payment->id);
+            if($payment['payment_type'] == 'ccavenue'){
+              $payment->tran_ref = @$data['reference_no'];
+            }else{
             $payment->tran_ref = @$data['mihpayid'];
+            }
             $payment->api_response = json_encode(@$data);
             // update this flag when transaction cancelled by iser
             $payment->is_user_cancelled = $is_user_cancelled;
@@ -1774,147 +1780,77 @@ public function sendNotifications($user,$title,$body){
         }
   }
 
-  public function verifyPaymentForCcavenue($cart){
+  public function verifyPaymentForCcavenue($cart)
+  {
     $user = User::find($cart->user_id);
-      $settings = Setting::pluck('value','name')->all();
-      if($settings['ccavenue_mode'] == 'sandbox'){
-        $access_code = $settings['ccavenue_access_code'];
-        $working_key = $settings['ccavenue_working_key'];
-      } else {
-          $access_code = $settings['ccavenue_access_code'];
-          $working_key = $settings['ccavenue_working_key'];
-         
-      }
+    $settings = Setting::pluck('value', 'name')->all();
+    if ($settings['ccavenue_mode'] == 'sandbox') {
+      $access_code = $settings['ccavenue_access_code'];
+      $working_key = $settings['ccavenue_working_key'];
+    } else {
+      $access_code = $settings['ccavenue_access_code'];
+      $working_key = $settings['ccavenue_working_key'];
+    }
+    $latestPaymentWithTransactionId = $cart->payments()
+      ->whereNotNull('tran_ref')
+      ->orderBy('id', 'desc') // Assuming 'created_at' is the field to determine the latest payment
+      ->first();
+    if ($latestPaymentWithTransactionId) {
 
 
-            $merchant_json_data =
-            array(
-                'order_no' => '804',
-                'reference_no' =>'313011668607'
-            );
-          //  dd($merchant_json_data);
-            $headers = array("Content-Type: application/x-www-form-urlencoded");
-    
-            $merchant_data = json_encode($merchant_json_data);
-            $encrypted_data = encrypt($merchant_data, $working_key);
-            $final_data = 'enc_request='.$encrypted_data.'&access_code='.$access_code.'&command=orderStatusTracker&request_type=JSON&response_type=JSON';
-            
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://apitest.ccavenue.com/apis/servlet/DoWebTrans");
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_VERBOSE, 1);
-            curl_setopt($ch, CURLOPT_HTTPHEADER,$headers) ;
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $final_data);
-            // Get server response ...
-            $result = curl_exec($ch);
-            dd($result);
-            $error_msg = curl_error($ch);
-            curl_close($ch);
-            $status = '';
-            $information = explode('&', $result);
+      $merchant_json_data =
+        array(
+          'order_no' => $cart->id,
+          'reference_no' => $latestPaymentWithTransactionId->tran_ref
+        );
+        $merchant_data = json_encode($merchant_json_data);
 
-            $dataSize = sizeof($information);
-            for ($i = 0; $i < $dataSize; $i++) {
-                $info_value = explode('=', $information[$i]);
-                if ($info_value[0] == 'enc_response') {
-                    $status = decrypt(trim($info_value[1]), $working_key);
-                    
-                }
-            }
-            dd($status);
-            echo 'Status revert is: ' . $status.'<pre>';
-            $obj = json_decode($status);
-            print_r($obj);
-            ?>
+       $encrypted_data = $this->encrypt($merchant_data,$working_key);
 
-            <?php
-            //ADD NEW ENCRYPT Function
+      $requestData = [
+        'enc_request' => $encrypted_data,
+        'access_code' => $access_code,
+        'command' => 'orderStatusTracker',
+        'request_type' => 'JSON',
+        'response_type' => 'JSON',
+        'version' => '1.2'
+      ];
 
-            function encrypt($plainText,$key)
-            {
-                $key = hextobin(md5($key));
-                $initVector = pack("C*", 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f);
-                $openMode = openssl_encrypt($plainText, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $initVector);
-                $encryptedText = bin2hex($openMode);
-                return $encryptedText;
-            }
-
-            function decrypt($encryptedText,$key)
-            {
-                $key = hextobin(md5($key));
-                $initVector = pack("C*", 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f);
-                $encryptedText = hextobin($encryptedText);
-                $decryptedText = openssl_decrypt($encryptedText, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $initVector);
-                return $decryptedText;
-            }
-                //*********** Padding Function *********************
-
-            function pkcs5_pad ($plainText, $blockSize)
-            {
-                $pad = $blockSize - (strlen($plainText) % $blockSize);
-                return $plainText . str_repeat(chr($pad), $pad);
-            }
-
-                //********** Hexadecimal to Binary function for php 4.0 version ********
-
-            function hextobin($hexString) 
-            { 
-                $length = strlen($hexString); 
-                $binString="";   
-                $count=0; 
-                while($count<$length) 
-                {       
-                    $subString =substr($hexString,$count,2);           
-                    $packedString = pack("H*",$subString); 
-                    if ($count==0)
-                    {
-                        $binString=$packedString;
-                    } 
-                    
-                    else 
-                    {
-                        $binString.=$packedString;
-                    } 
-                    
-                    $count+=2; 
-                } 
-                return $binString; 
-            } 
-
-
-
-      //For multiple transaction id we can add multiple txnid by adding | in between
-      $txnid = $cart->order_id;
-            //Genrate Hash Token
-      $hash_string = $key.'|verify_payment|'.$txnid.'|'.$salt;
-      $hash = hash('sha512', $hash_string);
-      $req = curl_init($url);
-      curl_setopt($req, CURLOPT_URL, $url);
-      curl_setopt($req, CURLOPT_POST, true);
-      curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
-      $headers = array( "Content-Type: application/x-www-form-urlencoded");
-      curl_setopt($req, CURLOPT_HTTPHEADER, $headers);
-      $data = "key=".$key."&command=verify_payment&var1=".$txnid."&hash=".$hash;
-      \Log::info("Payload " . $url.$data);       
-      curl_setopt($req, CURLOPT_POSTFIELDS, $data);
-      $resp = curl_exec($req);
-      $error_msg = curl_error($req);
-      curl_close($req);
-      $response = json_decode($resp,true);
-      \Log::info("Data".$resp);
-      if($resp != ''){
-        $data = $response['transaction_details'][$txnid];
-        return $data;
-      }else {
+      $response = Http::asForm()->post('https://apitest.ccavenue.com/apis/servlet/DoWebTrans', $requestData)->body();
+      $status = '';
+      $responseArray = array();
+      parse_str($response, $responseArray);
+      if(isset($responseArray['enc_error_code'])){
         return false;
+      }else{
+        $enc_response = $responseArray['enc_response'];
+        $enc_response = str_replace("\r\n", "", $enc_response);
+
+        $res = $this->decrypt($enc_response, $working_key);
+
+        if ($res != '') {
+          $responseArray = json_decode($res, true);
+          return $responseArray;
+        } else {
+          return false;
+        }
       }
+      
+    } else {
+      return false;
+    }
   }
 
   public function markOrderStatusAsSuccess($cart_id,$user,$data){
-          $cart = Order::findOrfail($cart_id);   
-          $cart->transaction_id = $data['mihpayid'];
+        $admin = User::where('user_type','admin')->first();
+        $settings = Setting::pluck('value','name')->all();
+        $admin_email = $settings['admin_email'];
+        $cart = Order::findOrfail($cart_id);   
+          if($cart['payment_type'] == 'ccavenue'){
+            $cart->transaction_id = $data['reference_no'];
+          }else{
+            $cart->transaction_id = $data['mihpayid'];
+          }
           $cart->order_status   = 'processing';
           if($cart->order_type == 'digital_coupons')
           {
@@ -1927,7 +1863,7 @@ public function sendNotifications($user,$title,$body){
                // $this->generateInvoice($cart);
                 $cart->save();
                 $payment = Payment::where(['order_id' => $cart->id, 'user_id' => $user->id, 'payment_type' => $cart->payment_type])->latest()->first();
-                $payment->tran_ref     = $data['mihpayid'];
+                $payment->tran_ref     = $cart->transaction_id;
                 $payment->api_response = json_encode($data);
                 $payment->status       = 'paid';
                 $payment->save();

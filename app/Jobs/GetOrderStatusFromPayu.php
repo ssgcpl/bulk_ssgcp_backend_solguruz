@@ -45,7 +45,8 @@ class GetOrderStatusFromPayu implements ShouldQueue
     public function handle()
     {
       \Log::info("Job Get Order Status From PAYU for started: ".$this->order_id);
-      $cart = Order::where('id',$this->order_id)->where('is_payment_attempt','1')->where('payment_type','payu')->where('payment_status','pending')->whereNotNull('order_id')->latest()->first();
+     // $cart = Order::where('id',$this->order_id)->where('is_payment_attempt','1')->where('payment_type','payu')->where('payment_status','pending')->whereNotNull('order_id')->latest()->first();
+      $cart = Order::where('id',$this->order_id)->where('is_payment_attempt','3')->where('payment_type','payu')->whereNotNull('order_id')->latest()->first();
       
       if($cart)
       {
