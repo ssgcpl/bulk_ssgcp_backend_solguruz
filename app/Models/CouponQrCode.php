@@ -9,7 +9,7 @@ class CouponQrCode extends Model
 {
     use HasFactory;
     protected $table = 'coupon_qr_codes';
-    protected $fillable = ['coupon_master_id','qr_code_value','qr_code','state'];
+    protected $fillable = ['coupon_master_id','qr_code_value','qr_code','unique_qrcode_link','state'];
 
     public function coupon_master()
     {

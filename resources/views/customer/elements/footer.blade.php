@@ -495,7 +495,7 @@
         <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
       </div>
       <div class="modal-body text-center">        
-        <p>Are you sure you want to remove existing cart items?</p>
+        <p id="remove_existing_item_text">Are you sure you want to remove existing cart items?</p>
          <div class="mt-5 button-list text-center">
           <a href="javascript:void(0)" type="button" class="btn secondary-btn me-1" data-bs-dismiss="modal">No</a>
           <a href="javascript:void(0)" id="coupon-add-to-cart" type="button" class="btn primary-btn coupon-add-to-cart">Yes</a>

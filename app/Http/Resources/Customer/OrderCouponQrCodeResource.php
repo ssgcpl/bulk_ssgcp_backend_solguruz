@@ -18,6 +18,7 @@ class OrderCouponQrCodeResource extends JsonResource
           return [
             'qr_id'            => $this->id ? (string)$this->id : '' ,
             'qr_code_value'    => $this->coupon_qr_code ? (string)$this->coupon_qr_code->qr_code_value : '' ,
+            'unique_qrcode_link'    => $this->coupon_qr_code ? (string)$this->coupon_qr_code->unique_qrcode_link : '' ,
             'qr_image'         => $this->coupon_qr_code ? asset($this->coupon_qr_code->qr_code) : '' ,
             'state'            => $this->coupon_qr_code ? (string)$this->coupon_qr_code->state : '' ,
             'customer_name'    => $this->customer_name ?? '',

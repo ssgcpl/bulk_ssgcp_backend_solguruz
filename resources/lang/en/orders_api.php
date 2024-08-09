@@ -48,7 +48,8 @@ return [
     'order_under_process'                => 'Your Order is  in under process currently. so please wait for :delay_time minute to confirm the order transaction status.',
     'order_marked_failed' =>'Order marked as failed',
     'order_status_already_updated' =>'Order status already updated',
-    'physical_item_will_be_remove'=>'Are you sure to remove physical cart items?'
+    'physical_item_will_be_remove'=>'Are you sure to remove existing physical cart items?',
+    'digital_coupon_item_will_be_remove'=>'Are you sure to remove existing digital coupon cart items?'
 ]
 
 ?>

@@ -244,6 +244,7 @@ class CouponController extends BaseController
                 foreach ($request->qr_codes as $qr) {
                     $coupon_qr_code = CouponQrCode::where('coupon_master_id',$coupon_master->id)->where('qr_code_value',$qr['qr_code_value'])->first();
                     $coupon_qr_code->state = $qr['state'];
+                    $coupon_qr_code->unique_qrcode_link  = $request->item_type == 'affiliate_link' ? $qr['unique_qrcode_link'] : null;
                     $coupon_qr_code->update();
                 }
 
@@ -271,6 +272,7 @@ class CouponController extends BaseController
                     'coupon_master_id' => $coupon_master->id,
                     'qr_code_value'    => $qr['qr_code_value'],
                     'qr_code'          => $qr['qr_code'],
+                    'unique_qrcode_link'  => $request->item_type == 'affiliate_link' ? $qr['unique_qrcode_link'] : null,
                     'state'            => $qr['state'],
                     ]);
                 }

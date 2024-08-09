@@ -2173,6 +2173,7 @@ $(document).ready(function(){
         var sold_count = '0';
                  
       	$.each(coupon_items,function(index){
+          var item_type = this.item_type;
       		if(this.coupon_id == active_coupon_id){
       				available_count = this.available_coupons.length;
                     $("#available_count").text(available_count);
@@ -2196,7 +2197,8 @@ $(document).ready(function(){
                       if(this.state == 'redeemed'){
                         var link = ` <div class="btn redeemed">Redeemed</div>`
                       }else {
-                        var link = `<a href="javascript:void(0);" class="btn primary-btn share_coupon_code" data-code= "`+this.qr_code_value+`">Share <i class="icon-share ms-2"></i></a>`;
+                        var link = `<a href="javascript:void(0);" class="btn primary-btn share_coupon_code" data-code="` + (item_type == 'affiliate_link' ? encodeURIComponent(this.unique_qrcode_link) : this.qr_code_value) + `">Share <i class="icon-share ms-2"></i></a>`;                    
+                        //var link = `<a href="javascript:void(0);" class="btn primary-btn share_coupon_code" data-code= "`+this.qr_code_value+`">Share <i class="icon-share ms-2"></i></a>`;
                       }
                       sold_coupons +=`  <li>
                                         <div class="info">
@@ -3027,7 +3029,7 @@ $(document).ready(function(){
                 success: function(response) {
                   if(response.status == "200") {
                     if(response.data.remove_item != undefined){
-                      confirmation_from_user_to_remove_existing_items('physical_item',book_id);
+                      confirmation_from_user_to_remove_existing_items('physical_item',book_id,response.message);
                       return false;
                   }
                     toastr.success(response.message);
@@ -3075,7 +3077,7 @@ $(document).ready(function(){
               success: function(response) {
                 if(response.status == "200") {
                   if(response.data.remove_item != undefined){
-                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id);
+                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id,response.message);
                       return false;
                   }
                   toastr.success(response.message);
@@ -3297,7 +3299,7 @@ $(document).ready(function(){
                 },
                 success: function(response) {
                   if(response.data.remove_item != undefined){
-                      confirmation_from_user_to_remove_existing_items('physical_item',book_id);
+                      confirmation_from_user_to_remove_existing_items('physical_item',book_id,response.message);
                       return false;
                   }
                   if(response.status == "200") {
@@ -3340,7 +3342,7 @@ $(document).ready(function(){
               success: function(response) {
                 if(response.status == "200") {
                   if(response.data.remove_item != undefined){
-                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id);
+                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id,response.message);
                       return false;
                   }
                   toastr.success(response.message);
@@ -3547,7 +3549,7 @@ $(document).ready(function(){
                   
                   if(response.status == "200") {
                     if(response.data.remove_item != undefined){
-                      confirmation_from_user_to_remove_existing_items('physical_item',book_id);
+                      confirmation_from_user_to_remove_existing_items('physical_item',book_id,response.message);
                       return false;
                   }
                     toastr.success(response.message);
@@ -3689,7 +3691,7 @@ $(document).ready(function(){
                   
                   if(response.status == "200") {
                     if(response.data.remove_item != undefined){
-                      confirmation_from_user_to_remove_existing_items('physical_item',book_id);
+                      confirmation_from_user_to_remove_existing_items('physical_item',book_id,response.message);
                       return false;
                   }
                     toastr.success(response.message);
@@ -4542,7 +4544,7 @@ $(document).ready(function(){
                   
                   if(response.status == "200") {
                     if(response.data.remove_item != undefined){
-                      confirmation_from_user_to_remove_existing_items('physical_item_detail',book_id);
+                      confirmation_from_user_to_remove_existing_items('physical_item_detail',book_id,response.message);
                       return false;
                   }
                    // toastr.success(response.message);
@@ -8602,7 +8604,7 @@ $(document).ready(function(){
             success: function(response) {
               if(response.status == "200") {
                 if(response.data.remove_item != undefined){
-                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id);
+                      confirmation_from_user_to_remove_existing_items('digital_item',coupon_id,response.message);
                       return false;
                 }
                toastr.success(response.message);
@@ -10402,8 +10404,9 @@ $(document).ready(function(){
        });
     @endif
 });
-function confirmation_from_user_to_remove_existing_items(item,id){
+function confirmation_from_user_to_remove_existing_items(item,id,message){
   $('#remove-cart-confirmation').modal('show');
+  $('#remove_existing_item_text').text(message);
   var remove_confirm = { remove_confirm: '1' };
   if(item == 'digital_item'){
     $(document).on('click','#coupon-add-to-cart',function(){

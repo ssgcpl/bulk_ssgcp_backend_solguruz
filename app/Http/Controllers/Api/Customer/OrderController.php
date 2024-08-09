@@ -136,7 +136,7 @@ class OrderController extends BaseController
                 
                 if($get_physical_cart_items > 0){
                     $remove_item = array('remove_item'=>'1');
-                    return $this->sendResponse($remove_item, trans('orders_api.physical_item_will_be_remove'));
+                    return $this->sendResponse($remove_item, trans('orders_api.digital_coupon_item_will_be_remove'));
                 }
                 //remove the applied coin points if applied
                 if($cart->redeemed_points > 0)
@@ -1214,7 +1214,7 @@ class OrderController extends BaseController
                     'customer_name'  => $billing_address->contact_name,
                     'contact_number' => $billing_address->contact_number,
                     'email'          => $billing_address->email,
-                    'city_id'        => $billing_address->post_code->city_id,
+                    'city_id'        => isset($billing_address->post_code)? $billing_address->post_code->city_id : '',
                     'city'           => $billing_address->city,
                     'area'           => $billing_address->area,
                     'house_no'       => $billing_address->house_no,
@@ -1233,7 +1233,7 @@ class OrderController extends BaseController
                     'customer_name'  => $shipping_address->contact_name,
                     'contact_number' => $shipping_address->contact_number,
                     'email'          => $shipping_address->email,
-                    'city_id'        => $shipping_address->post_code->city_id,
+                    'city_id'        => isset($shipping_address->post_code) ? $shipping_address->post_code->city_id : '',
                     'city'           => $shipping_address->city,
                     'area'           => $shipping_address->area,
                     'house_no'       => $shipping_address->house_no,
