@@ -858,7 +858,7 @@ class CouponController extends BaseController
             'qr_id'            => 'required|exists:order_coupon_qr_codes,id',
             'customer_name'    => 'required|string|min:3|max:50',
             'customer_contact' => 'required|digits:10',
-            'sale_price'       => 'required|numeric',
+           // 'sale_price'       => 'required|numeric',
         ]);
 
         if($validator->fails()) {

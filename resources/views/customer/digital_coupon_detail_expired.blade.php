@@ -185,10 +185,10 @@
           <label>Mobile Number</label>
           <input type="text" id="customer_contact" class="form-control" placeholder="Mobile Number" name="customer_contact" required="">
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label>Price</label>
           <input type="text" class="form-control" id="sale_price" name="sale_price" placeholder="Price" name="" required="">
-        </div>
+        </div> -->
        </div> 
       <div class="custom-footer text-center">         
         <button type="submit" id="sale_coupon_btn" class="btn primary-btn">Submit & Share <i class="icon-share ms-2"></i></button>

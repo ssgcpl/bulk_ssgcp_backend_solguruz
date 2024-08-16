@@ -2210,7 +2210,7 @@ $(document).ready(function(){
                                             <div class="secondary-color">Mobile Number</div>
                                             <p>+91 `+this.customer_contact+`</p>                
                                           </div>
-                                          <div class="list">
+                                          <div class="list d-none">
                                             <div class="secondary-color">Price</div>
                                             <p>₹ `+this.sale_price+`</p>                
                                           </div>
