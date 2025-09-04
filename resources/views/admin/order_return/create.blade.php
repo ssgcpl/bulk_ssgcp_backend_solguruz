@@ -549,7 +549,7 @@
                   url: '{{route("check_barcodes")}}',
                   data: { 'user_id':user_id,'barcode':barcode },
                   type: "POST",
-                  async:false,
+                  async:true,
                   beforeSend: function(xhr){
                       $('#barcode').prop('disabled',true);
                     },
