@@ -294,6 +294,7 @@
             data: {
                     "_token": "{{csrf_token()}}",
                     "user_id":$("#user_id").val(),
+                    "barcode":$("#barcode").val(),
                    },
            //success:function(data) { console.log(data); },
             error:function(data){ console.log(data); },
@@ -322,6 +323,7 @@
             },
           ]
       });
+      $("#barcode").val('');
     }
 
    
@@ -554,7 +556,6 @@
                       $('#barcode').prop('disabled',true);
                     },
                   success: function(response) {
-                    $("#barcode").val('');
                     if(response.success){
                       $("#total_mrp").val(response.data.total_mrp);
                       $("#total_sale_price").val(response.data.total_sale_price);
@@ -563,6 +564,7 @@
                       //barcodes.push(response.data);
                       fill_datatable();
                     }else {
+                      $("#barcode").val('');
                       toastr.error(response.error);
                     }
                     $("#barcode").prop('disabled',false);

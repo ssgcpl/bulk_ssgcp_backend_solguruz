@@ -494,13 +494,17 @@ class OrderReturnController extends Controller
         }
        
         // Check barcode verified
-        $is_barcode_verified  = VerifiedBarcode::where(['barcode'=>$barcode,'product_id'=>$product_barcode->product_id])->count(); 
+        $is_barcode_verified  = VerifiedBarcode::where(['barcode'=>$barcode,'product_id'=>$product_barcode->product_id,'status'=>'1'])->count(); 
         if($is_barcode_verified != 0) {
              return response()->json(['error'=>'Barcode Already Taken']);
         }
 
         try {
           $data = $request->all();
+          $is_barcode_available  = VerifiedBarcode::where(['barcode'=>$barcode,'product_id'=>$product_barcode->product_id,'status'=>'0'])->first();
+          if($is_barcode_available){
+            $is_barcode_available->delete();
+          }
           $verified_barcodes =  new VerifiedBarcode();
           $verified_barcodes['product_id'] = $product_barcode->product_id;
           $verified_barcodes['barcode'] = $barcode;
@@ -549,7 +553,10 @@ class OrderReturnController extends Controller
         $user_id = $request->user_id;
         $product_ids = array();
         $products = VerifiedBarcode::where('status','0')->get();
-       
+        $barcode = $request->barcode;
+        if(isset($request->barcode)){
+          $products = VerifiedBarcode::where('status','0')->where('barcode',$request->barcode)->get();
+        }
         foreach ($products as $product) {
           $product_ids[] = $product->product_id;
         }
@@ -601,6 +608,9 @@ class OrderReturnController extends Controller
           }
           
           $emp['ordered_qty'] =  VerifiedBarcode::where('status','0')->where('product_id',$emp->id)->count();
+          if($barcode != null){
+            $emp['ordered_qty'] =  VerifiedBarcode::where('status','0')->where('product_id',$emp->id)->where('barcode',$barcode)->count();
+          }
           $emp['accepted_qty'] = $emp['ordered_qty'];
           $emp['returned_qty'] = $emp['accepted_qty'];
           $returnable_qty = $emp->get_max_return_quantity($emp['accepted_qty']);
