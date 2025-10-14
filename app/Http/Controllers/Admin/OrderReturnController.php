@@ -507,6 +507,7 @@ class OrderReturnController extends Controller
           }
           $verified_barcodes =  new VerifiedBarcode();
           $verified_barcodes['product_id'] = $product_barcode->product_id;
+          $verified_barcodes['user_id'] = $request->user_id;
           $verified_barcodes['barcode'] = $barcode;
           $verified_barcodes['status'] = 0;
           $verified_barcodes['added_by'] = Auth::user()->id;
@@ -525,7 +526,7 @@ class OrderReturnController extends Controller
 
     public function get_temp_verified_product($user){
         $product_ids = array();
-        $products = VerifiedBarcode::where('status','0')->get();
+        $products = VerifiedBarcode::where('status','0')->where('user_id',$user->id)->get();
        
         foreach ($products as $product) {
           $product_ids[] = $product->product_id;
@@ -552,11 +553,11 @@ class OrderReturnController extends Controller
 
         $user_id = $request->user_id;
         $product_ids = array();
-        $products = VerifiedBarcode::where('status','0')->get();
+        $products = VerifiedBarcode::where('status','0')->where('user_id',$request->user_id)->get();
         $barcode = $request->barcode;
-        if(isset($request->barcode)){
-          $products = VerifiedBarcode::where('status','0')->where('barcode',$request->barcode)->get();
-        }
+        // if(isset($request->barcode)){
+        //   $products = VerifiedBarcode::where('status','0')->where('barcode',$request->barcode)->get();
+        // }
         foreach ($products as $product) {
           $product_ids[] = $product->product_id;
         }
@@ -607,10 +608,10 @@ class OrderReturnController extends Controller
             $emp['sale_price']= $emp->get_price($user);  
           }
           
-          $emp['ordered_qty'] =  VerifiedBarcode::where('status','0')->where('product_id',$emp->id)->count();
-          if($barcode != null){
-            $emp['ordered_qty'] =  VerifiedBarcode::where('status','0')->where('product_id',$emp->id)->where('barcode',$barcode)->count();
-          }
+          $emp['ordered_qty'] =  VerifiedBarcode::where('status','0')->where('product_id',$emp->id)->where('user_id',$user_id)->count();
+          // if($barcode != null){
+          //   $emp['ordered_qty'] =  VerifiedBarcode::where('status','0')->where('product_id',$emp->id)->where('barcode',$barcode)->count();
+          // }
           $emp['accepted_qty'] = $emp['ordered_qty'];
           $emp['returned_qty'] = $emp['accepted_qty'];
           $returnable_qty = $emp->get_max_return_quantity($emp['accepted_qty']);

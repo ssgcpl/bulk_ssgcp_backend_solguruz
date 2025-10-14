@@ -524,6 +524,7 @@
     }) 
     $("#barcode").attr('disabled',true);
     $("#user_id").on('change',function(){
+      fill_datatable();
       if($("#user_id").val() != ''){
         $("#barcode").attr('disabled',false);
       }else {
