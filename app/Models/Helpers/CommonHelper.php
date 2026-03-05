@@ -285,7 +285,7 @@ trait CommonHelper
     $client->useApplicationDefaultCredentials();
     $token = $client->fetchAccessTokenWithAssertion();
     if(isset($token['access_token'])){
-      Cache::put('firebase_access_token', $token['access_token'], 10);
+      Cache::put('firebase_access_token', $token['access_token'], 3300);
       return $token['access_token'];
     }
     return false;
