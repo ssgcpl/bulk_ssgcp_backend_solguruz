@@ -133,7 +133,8 @@ class NestedCategoryController extends BaseController
           $root_categories = [];
           foreach ($related_categories as $rcat) {
             $is_product_exist = $this->isProductExist($business_category_id,$rcat,$layout,$lang);
-            if($is_product_exist > 0){
+            $check = ($layout == 'digital_coupons') ? ($is_product_exist >= 0) : ($is_product_exist > 0);
+            if($check){
               $root = $this->get_root_category($rcat);
               if($root){
                 if(!in_array($root, $root_categories)) {

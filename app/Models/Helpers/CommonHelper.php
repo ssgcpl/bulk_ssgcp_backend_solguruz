@@ -49,6 +49,8 @@ use App\Jobs\GetOrderStatusFromPayu;
 use App\Mail\SendOrderPlacedEmailCustomer;
 use App\Mail\SendOrderFailedEmailAdmin;
 use App\Models\Helpers\PaymentHelper;
+use Google\Client as googleClient;
+use Illuminate\Support\Facades\Cache;
 
 
 trait CommonHelper
@@ -272,7 +274,44 @@ trait CommonHelper
   /**
   * Send Notification
   */
+  public function getAccessToken() {
+    if (Cache::has('firebase_access_token')) {
+      return Cache::get('firebase_access_token');
+    }
+    $serviceAccountPath = storage_path('app/keys/ssgc-bo-firebase-adminsdk-wuq57-6d23beed70.json');
+    $client = new googleClient();
+    $client->setAuthConfig($serviceAccountPath);
+    $client->addScope('https://www.googleapis.com/auth/firebase.messaging');
+    $client->useApplicationDefaultCredentials();
+    $token = $client->fetchAccessTokenWithAssertion();
+    if(isset($token['access_token'])){
+      Cache::put('firebase_access_token', $token['access_token'], 10);
+      return $token['access_token'];
+    }
+    return false;
+  }
 
+  function sendMessage($accessToken, $message) {
+      $projectId = env('projectId');
+      $url = 'https://fcm.googleapis.com/v1/projects/' . $projectId . '/messages:send';
+      $headers = [
+      'Authorization: Bearer ' . $accessToken,
+      'Content-Type: application/json',
+      ];
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, $url);
+      curl_setopt($ch, CURLOPT_POST, true);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['message' => $message]));
+      $response = curl_exec($ch);
+      if ($response === false) {
+        $error = curl_error($ch);
+        return json_decode($error,true);
+      }
+      curl_close($ch);
+      return json_decode($response, true);
+  }
 
   public function sendNotification($user,$title,$body,$slug,$data=null,$url=null,$send_by=null){
     if($user == null){
@@ -302,6 +341,30 @@ trait CommonHelper
         
           $body = trim(preg_replace('/\s\s+/', ' ', $body));
           $body = strlen($body) > 100 ? substr($body,0,100)."..." : $body; 
+          $message = [ 
+            "token" => $device->device_token,
+            "notification" => [
+                "body" => $body,
+                "title" => $title
+            ],
+            "data" => [
+                "click_action" => "FLUTTER_NOTIFICATION_CLICK",
+                'type'       =>  $slug,
+                'type_id'   =>  (string)@$data->id,
+                'url'   =>  @$url,
+            ]
+          ];
+
+          try {
+            $accessToken = $this->getAccessToken();
+            $response  = $this->sendMessage($accessToken, $message);
+            if(isset($response['error'])){
+              return false;
+            }
+            return true;
+          } catch (Exception $e) {
+            return false;
+          }
           $message = [
               "to" => $device->device_token,
               "notification" => [
