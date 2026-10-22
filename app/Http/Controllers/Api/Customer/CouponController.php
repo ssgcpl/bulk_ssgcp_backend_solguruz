@@ -12,6 +12,8 @@ use App\Models\Category;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\OrderCouponQrCode;
+use App\Models\Address;
+use App\Models\OrderAddress;
 use Illuminate\Validation\Rule;
 use App\Http\Resources\Customer\CouponResource;
 use App\Http\Resources\Customer\CartResource;
@@ -545,6 +547,8 @@ class CouponController extends BaseController
     * @authenticated
     *
     * @bodyParam payment_method string required
+    * @bodyParam billing_address_id number required
+    * @bodyParam shipping_address_id number Optional for digital coupons
     *
     * @response
     {
@@ -592,10 +596,28 @@ class CouponController extends BaseController
                     'required',
                     Rule::in($payment_methods)
                  ],
+                'billing_address_id' => 'required|exists:addresses,id',
+                'shipping_address_id' => 'nullable|exists:addresses,id',
+            ],[
+                'billing_address_id.required' => 'Billing address is required.',
             ]);
 
             if($validator->fails()) {
                 return $this->sendValidationError('', $validator->errors()->first());
+            }
+
+            $billing_address = Address::where('user_id',$user->id)->where('id',$request->billing_address_id)->first();
+            if(!$billing_address) {
+                return $this->sendError('', trans('orders_api.billing_address_not_valid'));
+            }
+
+            //shipping address is optional for digital coupons
+            $shipping_address = null;
+            if($request->filled('shipping_address_id')) {
+                $shipping_address = Address::where('user_id',$user->id)->where('id',$request->shipping_address_id)->first();
+                if(!$shipping_address) {
+                    return $this->sendError('', trans('orders_api.shipping_address_not_valid'));
+                }
             }
 
             //check whether coupon is active /publish and check whether coupon qty is available or not
@@ -624,14 +646,20 @@ class CouponController extends BaseController
                     }
                 }
             }
-             
+
+            //replace addresses saved by an earlier checkout attempt of this cart
+            OrderAddress::where('order_id',$cart->id)->delete();
+            $this->saveOrderAddress($cart->id, $billing_address, 'billing');
+            if($shipping_address) {
+                $this->saveOrderAddress($cart->id, $shipping_address, 'shipping');
+            }
 
             $response = [
                 'url' => route('order_payment',
                         [
                             'cart_id'    => $cart->id,
                             'user_id'    => $user->id,
-                            'address_id' => '0',
+                            'address_id' => $billing_address->id,
                             'gateway'    => $request->payment_method
                         ])
             ];

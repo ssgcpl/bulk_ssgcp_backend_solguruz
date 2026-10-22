@@ -186,6 +186,106 @@
                     </div>
                 </form>
 
+                    @if($shipping_address || $billing_address)
+                    <div class="row">
+                      @if($shipping_address)
+                      <div class="col-md-6">
+                        <h5>Shipping Address</h5>
+                          <table>
+                            <tr>
+                              <td>Customer Name :</td>
+                              <td>{{ $shipping_address->customer_name }}</td>
+                            </tr>
+                            <tr>
+                              <td>Email :</td>
+                              <td>{{ $shipping_address->email }}</td>
+                            </tr>
+                             <tr>
+                              <td>Phone :</td>
+                              <td>{{ $shipping_address->contact_number }}</td>
+                            </tr>
+                            <tr>
+                              <td>House :</td>
+                              <td>{{ $shipping_address->house_no }}</td>
+                            </tr>
+                            <tr>
+                              <td>Street :</td>
+                              <td>{{ $shipping_address->street }}</td>
+                            </tr>
+                            <tr>
+                              <td>Landmark :</td>
+                              <td>{{ $shipping_address->landmark }}</td>
+                            </tr>
+                            <tr>
+                              <td>Area :</td>
+                              <td>{{ $shipping_address->area }}</td>
+                            </tr>
+                            <tr>
+                              <td>City :</td>
+                              <td>{{ $shipping_address->city }}</td>
+                            </tr>
+                            <tr>
+                              <td>Postcode :</td>
+                              <td>{{ $shipping_address->postal_code }}</td>
+                            </tr>
+                            <tr>
+                              <td>State :</td>
+                              <td>{{ $shipping_address->state }}</td>
+                            </tr>
+                          </table>
+                      </div>
+                      @endif
+
+                      @if($billing_address)
+                      <div class="col-md-6">
+                          <h5>Billing Address</h5>
+                          <table>
+                              <tr>
+                                <td>Customer Name :</td>
+                                <td>{{ $billing_address->customer_name }}</td>
+                              </tr>
+                              <tr>
+                                <td>Email :</td>
+                                <td>{{ $billing_address->email }}</td>
+                              </tr>
+                               <tr>
+                                <td>Phone :</td>
+                                <td>{{ $billing_address->contact_number }}</td>
+                              </tr>
+                              <tr>
+                                <td>House :</td>
+                                <td>{{ $billing_address->house_no }}</td>
+                              </tr>
+                              <tr>
+                                <td>Street :</td>
+                                <td>{{ $billing_address->street }}</td>
+                              </tr>
+                              <tr>
+                                <td>Landmark :</td>
+                                <td>{{ $billing_address->landmark }}</td>
+                              </tr>
+                              <tr>
+                                <td>Area :</td>
+                                <td>{{ $billing_address->area }}</td>
+                              </tr>
+                              <tr>
+                                <td>City :</td>
+                                <td>{{ $billing_address->city }}</td>
+                              </tr>
+                              <tr>
+                                <td>Postcode :</td>
+                                <td>{{ $billing_address->postal_code }}</td>
+                              </tr>
+                              <tr>
+                                <td>State :</td>
+                                <td>{{ $billing_address->state }}</td>
+                              </tr>
+                          </table>
+                      </div>
+                      @endif
+                    </div>
+                    @endif
+
               </div>
             </div>
           </div>

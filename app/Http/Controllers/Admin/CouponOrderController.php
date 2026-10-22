@@ -32,11 +32,11 @@ class CouponOrderController extends Controller
         $coupon_code_sold = OrderItem::where('order_id',$id)
                                     ->whereHas('order_coupon_qr_codes',function($q){ 
                                     $q->where('status', 'sold'); })->count();
-        //$shipping_address = OrderAddress::where(['is_shipping'=>'1','order_id'=>$id])->first();
-        //$billing_address = OrderAddress::where(['is_billing'=>'1','order_id'=>$id])->first();
+        $shipping_address = OrderAddress::where(['is_shipping'=>'1','order_id'=>$id])->first();
+        $billing_address = OrderAddress::where(['is_billing'=>'1','order_id'=>$id])->first();
         $order_notes  = OrderNote::where('order_id', $id)->orderBy('id', 'DESC')->get();
 
-        return view('admin.coupon_orders.edit', compact('page_title', 'order', 'user_type', 'order_notes','coupon_code_sold'));
+        return view('admin.coupon_orders.edit', compact('page_title', 'order', 'user_type', 'order_notes','coupon_code_sold','shipping_address','billing_address'));
     }
 
     public function ajax_order_items(Request $request)

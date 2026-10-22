@@ -1447,7 +1447,8 @@ public function sendNotifications($user,$title,$body){
           $order_items_old = [];
           $billing_address = [];
           $shipping_address = [];
-          if($order->order_type == 'physical_books'){
+          //shipping address is optional for digital coupons
+          if($order->billing_address){
           $billing_address = [
              'company_name' => $order->billing_address->company_name,
              'customer_name'=>$order->billing_address->customer_name,
@@ -1455,6 +1456,8 @@ public function sendNotifications($user,$title,$body){
               'state' => $order->billing_address->state ,
               'mobile' => $order->billing_address->contact_number,
               'email' => $order->billing_address->email];
+          }
+          if($order->shipping_address){
           $shipping_address = [
              'company_name' => $order->shipping_address->company_name,
              'customer_name'=>$order->shipping_address->customer_name,
@@ -1742,6 +1745,27 @@ public function sendNotifications($user,$title,$body){
       generateOrderId(); // call recursivly
     }
     return $code; 
+  }
+
+  //copy customer's saved address to order address ($type : billing / shipping)
+  public function saveOrderAddress($order_id, $address, $type) {
+    return OrderAddress::create([
+      'order_id'       => $order_id,
+      'company_name'   => $address->company_name,
+      'customer_name'  => $address->contact_name,
+      'contact_number' => $address->contact_number,
+      'email'          => $address->email,
+      'city_id'        => isset($address->post_code) ? $address->post_code->city_id : '',
+      'city'           => $address->city,
+      'area'           => $address->area,
+      'house_no'       => $address->house_no,
+      'street'         => $address->street,
+      'landmark'       => $address->landmark,
+      'state'          => $address->state,
+      'postal_code'    => $address->postcode,
+      'address_type'   => $address->address_type,
+      'is_'.$type      => '1',
+    ]);
   }
 
   public function closePaymentAttempt($user_id){

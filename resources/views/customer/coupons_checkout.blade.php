@@ -28,6 +28,29 @@
                 </label>
             </div>            
           </div>
+          <div class="default-address my-3">
+            <div class="same-billing white-bg">
+              <h6>Billing Address <a href="javascript:void(0);" title="" id="" class="theme-color d-none edit_address" ><i class="icon-edit-address"></i></a></h6>
+              <input type="hidden" id="billing_address_id" value="">
+              <label id="default_address">
+
+              </label>
+              <div id="add_address"></div>
+            </div>
+
+            <div class="same-billing white-bg">
+              <h6>Shipping Address (Optional) <a href="javascript:void(0);" title="" id="" class="theme-color d-none edit_shipping_address" ><i class="icon-edit-address"></i></a> <a href="javascript:void(0);" title="Remove" id="remove_shipping" class="theme-color d-none"><i class="fa fa-trash"></i></a></h6>
+              <input type="hidden" id="shipping_address_id" value="">
+              <div class="link" id="shipping_btns">
+                <a href="javascript:void(0);" class="theme-color" title="" id="same_as_billing">Same As Billing Address</a>
+                <a href="#" class="theme-color change_shipping" title="">Add New</a>
+              </div>
+              <label id="shipping_address">
+
+              </label>
+              <div class="text-center" id="change_address"></div>
+            </div>
+          </div>
           <div class="erned-point white-bg my-3" id="payment_method">
             <h6>Payment</h6>
           </div>

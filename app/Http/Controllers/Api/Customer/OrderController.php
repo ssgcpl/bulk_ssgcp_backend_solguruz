@@ -994,44 +994,8 @@ class OrderController extends BaseController
                     return $this->sendError('', trans('orders_api.shipping_address_not_valid'));
                 }
 
-
-                $billing_address_data = [
-                    'order_id'       => $cart->id,
-                    'company_name'   => $billing_address->company_name,
-                    'customer_name'  => $billing_address->contact_name,
-                    'contact_number' => $billing_address->contact_number,
-                    'email'          => $billing_address->email,
-                    'city_id'        => isset($billing_address->post_code)? $billing_address->post_code->city_id : '',
-                    'city'           => $billing_address->city,
-                    'area'           => $billing_address->area,
-                    'house_no'       => $billing_address->house_no,
-                    'street'         => $billing_address->street,
-                    'landmark'       => $billing_address->landmark,
-                    'state'          => $billing_address->state,
-                    'postal_code'    => $billing_address->postcode,
-                    'address_type'   => $billing_address->address_type,
-                    'is_billing'     => '1',
-                ];
-                OrderAddress::create($billing_address_data);
-
-                $shipping_address_data = [
-                    'order_id'       => $cart->id,
-                    'company_name'   => $shipping_address->company_name,
-                    'customer_name'  => $shipping_address->contact_name,
-                    'contact_number' => $shipping_address->contact_number,
-                    'email'          => $shipping_address->email,
-                    'city_id'        => isset($shipping_address->post_code) ? $shipping_address->post_code->city_id : '',
-                    'city'           => $shipping_address->city,
-                    'area'           => $shipping_address->area,
-                    'house_no'       => $shipping_address->house_no,
-                    'street'         => $shipping_address->street,
-                    'landmark'       => $shipping_address->landmark,
-                    'state'          => $shipping_address->state,
-                    'postal_code'    => $shipping_address->postcode,
-                    'address_type'   => $shipping_address->address_type,
-                    'is_shipping'    => '1',
-                ];
-                OrderAddress::create($shipping_address_data);
+                $this->saveOrderAddress($cart->id, $billing_address, 'billing');
+                $this->saveOrderAddress($cart->id, $shipping_address, 'shipping');
               
             }
 
@@ -1207,44 +1171,8 @@ class OrderController extends BaseController
                     return $this->sendError('', trans('orders_api.shipping_address_not_valid'));
                 }
 
-
-                $billing_address_data = [
-                    'order_id'       => $cart->id,
-                    'company_name'   => $billing_address->company_name,
-                    'customer_name'  => $billing_address->contact_name,
-                    'contact_number' => $billing_address->contact_number,
-                    'email'          => $billing_address->email,
-                    'city_id'        => isset($billing_address->post_code)? $billing_address->post_code->city_id : '',
-                    'city'           => $billing_address->city,
-                    'area'           => $billing_address->area,
-                    'house_no'       => $billing_address->house_no,
-                    'street'         => $billing_address->street,
-                    'landmark'       => $billing_address->landmark,
-                    'state'          => $billing_address->state,
-                    'postal_code'    => $billing_address->postcode,
-                    'address_type'   => $billing_address->address_type,
-                    'is_billing'     => '1',
-                ];
-                OrderAddress::create($billing_address_data);
-
-                $shipping_address_data = [
-                    'order_id'       => $cart->id,
-                    'company_name'   => $shipping_address->company_name,
-                    'customer_name'  => $shipping_address->contact_name,
-                    'contact_number' => $shipping_address->contact_number,
-                    'email'          => $shipping_address->email,
-                    'city_id'        => isset($shipping_address->post_code) ? $shipping_address->post_code->city_id : '',
-                    'city'           => $shipping_address->city,
-                    'area'           => $shipping_address->area,
-                    'house_no'       => $shipping_address->house_no,
-                    'street'         => $shipping_address->street,
-                    'landmark'       => $shipping_address->landmark,
-                    'state'          => $shipping_address->state,
-                    'postal_code'    => $shipping_address->postcode,
-                    'address_type'   => $shipping_address->address_type,
-                    'is_shipping'    => '1',
-                ];
-                OrderAddress::create($shipping_address_data);
+                $this->saveOrderAddress($cart->id, $billing_address, 'billing');
+                $this->saveOrderAddress($cart->id, $shipping_address, 'shipping');
               
             }           
 

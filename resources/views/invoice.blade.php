@@ -64,6 +64,7 @@
                                 <p style="margin:5px 0;"><b>Email:{{$data['billing_address']['email']}}</b></p>
                                 <p style="margin:5px 0"><b>Mob.:{{$data['billing_address']['mobile']}}</b></p>
                             </td>
+                            @if($data['shipping_address'])
                             <td style="text-align: left;padding: 0 24px;width: 50%;vertical-align:top;">
                                 <h3>Shipping address</h3>
                                 <p style="margin:5px 0;"><b>{{$data['shipping_address']['company_name']}}</b></p>
@@ -73,6 +74,7 @@
                                 <p style="margin:5px 0;"><b>Email:{{$data['shipping_address']['email']}}</b></p>
                                 <p style="margin:5px 0"><b>Mob.:{{$data['shipping_address']['mobile']}}</b></p>
                             </td>
+                            @endif
                             @endif
                     </table>
                 </td>

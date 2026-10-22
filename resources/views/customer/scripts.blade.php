@@ -1505,7 +1505,7 @@ $(document).ready(function(){
 
 
   @endif
-  @if(\Request::route()->getName() == 'customer.profile' || \Request::route()->getName() == 'books_checkout')
+  @if(\Request::route()->getName() == 'customer.profile' || \Request::route()->getName() == 'books_checkout' || \Request::route()->getName() == 'coupons_checkout')
 
     function get_user_addresses(){
        $.ajax({
@@ -9251,9 +9251,14 @@ $(document).ready(function(){
       if($("#total_payable_amount").data('payment') == '0.00'){
         payment_method = '0-amount';
       }
+      var billing_address_id = $("#billing_address_id").val();
+      if(billing_address_id == ''){
+        toastr.error("Please select billing address first");
+        return false;
+      }
       $.ajax({
           url: BASE_URL+"coupon/checkout",
-          data: {payment_method : payment_method},
+          data: {payment_method : payment_method, billing_address_id : billing_address_id, shipping_address_id : $("#shipping_address_id").val()},
           type: "POST",
           beforeSend: function(xhr){
                 xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -9282,7 +9287,7 @@ $(document).ready(function(){
     });
 
     //checkout address
-    @if(\Request::route()->getName() == 'books_checkout')
+    @if(\Request::route()->getName() == 'books_checkout' || \Request::route()->getName() == 'coupons_checkout')
       $.ajax({
             url: BASE_URL+"addresses",
             data: {},
@@ -9310,7 +9315,9 @@ $(document).ready(function(){
                     if(this.is_delivery_address == 'yes')
                     {
                       set_billing_address(this);
+                      @if(\Request::route()->getName() == 'books_checkout')
                       set_shipping_address(this);
+                      @endif
                       return false;
                     }
                     else
@@ -9459,7 +9466,18 @@ $(document).ready(function(){
         $(".edit_shipping_address").attr('id',address.id);
         $("#shipping_address_id").val(address.id);
         $("#shipping_btns").addClass('d-none');
+        $("#remove_shipping").removeClass('d-none');
       }
+
+      //shipping address is optional on coupons checkout
+      $(document).on('click','#remove_shipping',function(){
+        $("#shipping_address").html('');
+        $("#change_address").html('');
+        $("#shipping_address_id").val('');
+        $(".edit_shipping_address").addClass('d-none');
+        $("#remove_shipping").addClass('d-none');
+        $("#shipping_btns").removeClass('d-none');
+      });
 
       $(document).on('click',".change_billing",function(){
          $.ajax({
