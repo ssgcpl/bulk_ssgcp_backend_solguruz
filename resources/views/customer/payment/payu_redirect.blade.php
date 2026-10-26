@@ -15,6 +15,7 @@
 	<input type="hidden" name="furl" value="{{$data->furl}}" />
 	<input type="hidden" name="phone" value="{{$data->phone}}" />
 	<input type="hidden" name="hash" value="{{$data->hash}}" />
+	<input type="hidden" name="udf2" value="{{$data->udf2 ?? ''}}" />
 	<!-- <input type="submit" value="submit">  -->
 </form>
 <script language='javascript'>document.redirect.submit();</script>

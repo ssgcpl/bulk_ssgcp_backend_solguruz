@@ -64,6 +64,11 @@ class HomeController extends Controller
         if(!$data){
           return "No Data Found"; 
         }
+        // Shared PayU account: only Bulk SSGC payments (udf2 = bulk_ssgc) are processed, SSGC ones are ignored
+        if(($data['udf2'] ?? '') != 'bulk_ssgc'){
+            \Log::info("webhookForPayu ignored, not a Bulk SSGC payment : txnid ".($data['txnid'] ?? '')." udf2 ".($data['udf2'] ?? ''));
+            return response("Ignored: not a Bulk SSGC payment", 200);
+        }
         $user = User::where('email',$data['email'])->first();
         $cart = Order::where('order_id',$data['txnid'])->where('is_payment_attempt','1')->orWhere('is_payment_attempt','3')->where('user_id',@$user->id)->first();
         $settings = Setting::pluck('value','name')->all();

@@ -226,12 +226,13 @@ class PaymentController extends Controller
           $data->lastname = $customer->last_name ? $customer->last_name : '';
           $data->email = $customer->email;
           $data->phone = $customer->mobile_number;
+          $data->udf2 = 'bulk_ssgc';
           //If you change Success/Failure Redirect Url, Change route's CSRF Token Exception in app/Http/Middleware/VerifyCsrfToken.php 
           $data->surl = route('payu_callback_order',['user_id' => $customer->id, 'cart_id' => $cart_id]);//Success
           $data->furl = route('payu_callback_order',['user_id' => $customer->id, 'cart_id' => $cart_id]); //Failure
 
           //Genrate Hash Token
-          $hash_string = $data->key.'|'.$data->txnid.'|'.$data->amount.'|'.$data->productinfo.'|'.$data->firstname.'|'.$data->email.'|||||||||||'.$data->salt;
+          $hash_string = $data->key.'|'.$data->txnid.'|'.$data->amount.'|'.$data->productinfo.'|'.$data->firstname.'|'.$data->email.'||'.$data->udf2.'|||||||||'.$data->salt;
           $hash = hash('sha512', $hash_string);
           \Log::info("Hash String:".$hash_string);
           $data->hash = $hash;
