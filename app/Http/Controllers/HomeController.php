@@ -357,6 +357,20 @@ class HomeController extends Controller
           $settings = Setting::pluck('value','name')->all();
           $admin_email = $settings['admin_email'];
 
+          //Convert String Response To Array
+          $response = array();
+          foreach (explode('&',(string)$res) as $value) {
+            $tmp = explode('=', $value);
+            $response[$tmp[0]] = $tmp[1] ?? '';
+          }
+
+          // Shared CCAvenue account: only Bulk SSGC payments (merchant_param1 = bulk_ssgc) are processed, SSGC ones are ignored
+          $platform = $response['merchant_param1'] ?? '';
+          if($platform != 'bulk_ssgc'){
+            \Log::info("webhookForCCAvenue ignored, not a Bulk SSGC payment : order_id ".$cart_id." merchant_param1 ".$platform);
+            return response("Ignored: not a Bulk SSGC payment", 200);
+          }
+
           if($res == null){
             $cart = Order::where('id',$cart_id)->where('user_id',@$user_id)->where('is_cart','1')->first();
             if($cart->order_type == 'physical_books')
@@ -373,15 +387,6 @@ class HomeController extends Controller
           $user = User::find($cart->user_id);
        
          
-          //Convert String Response To Array
-          $res = explode('&',$res);
-          $response = array();
-
-          foreach ($res as $value) {
-            $tmp = explode('=', $value);
-            $response[$tmp[0]] = $tmp[1];
-          }
-          
             if($response != null && $response['order_status'] == 'Success'){
              
                 $cart->transaction_id = $response['tracking_id'];

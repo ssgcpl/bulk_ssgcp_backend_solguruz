@@ -167,6 +167,7 @@ class PaymentController extends Controller
           $data['language'] = 'EN';
           $data['billing_email'] = $customer->email;
           $data['billing_tel'] = $customer->mobile_number;
+          $data['merchant_param1'] = 'bulk_ssgc';
           //The above are required parameters.Check views/admin/payment/ccavenue_request.blade.php for all optional request parameters.
 
           $working_key = $settings['ccavenue_working_key'];//Shared by CCAVENUES
