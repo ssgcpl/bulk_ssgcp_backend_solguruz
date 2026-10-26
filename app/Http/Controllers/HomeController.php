@@ -57,6 +57,7 @@ class HomeController extends Controller
 
     public function webhookForPayu(Request $request)
     {
+        \Log::info("Response from webhook for Payu for bulk order: ".json_encode($request->all()));
         //$response =  '{"mihpayid":"17380967851","mode":"UPI","status":"'.$status.'","key":"JZ3ygG","txnid":"'.$order_id.'","amount":"30.00","addedon":"2023-05-18 16:22:44","productinfo":"Purchase items for Order ID  id 1000131326","firstname":"mukesh","lastname":"dabra","address1":null,"address2":null,"city":null,"state":null,"country":null,"zipcode":null,"email":"ronak.soni@kodytechnolab.com","phone":"9690725608","udf1":null,"udf2":null,"udf3":null,"udf4":null,"udf5":null,"udf6":null,"udf7":null,"udf8":null,"udf9":null,"udf10":null,"card_token":null,"card_no":null,"field0":null,"field1":"mdabra219-1@oksbi","field2":"313816","field3":"mdabra219-1@oksbi","field4":"MUKESH KUMAR SO SHARMA NAND","field5":"samsamayikghatnachakra-5297212.payu@indus","field6":"INDBFBF698453DC73166E053F87C180AB13","field7":"APPROVED OR COMPLETED SUCCESSFULLY|00","field8":null,"field9":"Success|Completed Using Callback","payment_source":"payu","PG_TYPE":"UPI-PG","error":"E000","error_Message":"No Error","net_amount_debit":"30","discount":"0.00","offer_key":null,"offer_availed":null,"unmappedstatus":"captured","hash":"c8777ea50ba4e78785a4660cf35d1aa2341ccf5a0e767127e064a7a64909fbed298dd6e18e40b759d3fec8f30089e5cce6e28200230af6b0fb8446311096b746","bank_ref_no":"313848601632","bank_ref_num":"313848601632","bankcode":"TEZ","surl":"https:\/\/www.samsamayikghatnachakra.com\/payu_callback_order\/365657\/157629","curl":"https:\/\/www.samsamayikghatnachakra.com\/payu_callback_order\/365657\/157629","furl":"https:\/\/www.samsamayikghatnachakra.com\/payu_callback_order\/365657\/157629","meCode":"{\"pgMerchantId\":\"INDB000004531915\"}"}';   
        $data = $request->all();
         //$data = json_decode($request->all(),true);
@@ -64,7 +65,7 @@ class HomeController extends Controller
           return "No Data Found"; 
         }
         $user = User::where('email',$data['email'])->first();
-        $cart = Order::where('order_id',$data['txnid'])->where('is_payment_attempt','1')->where('user_id',@$user->id)->first();
+        $cart = Order::where('order_id',$data['txnid'])->where('is_payment_attempt','1')->orWhere('is_payment_attempt','3')->where('user_id',@$user->id)->first();
         $settings = Setting::pluck('value','name')->all();
         $admin_email = $settings['admin_email'];
         if(!$cart) {
@@ -266,14 +267,15 @@ class HomeController extends Controller
           $payment->save();   
           $id = $this->createDuplicateOrder($cart->id); 
   
-          $cart = Order::where('id',$cart_id)->where('user_id',@$user_id)->where('is_cart','1')->first();
+          $cart = Order::where('id',$cart->id)->where('user_id',@$cart->user_id)->first();
           //$cart = Order::where('id',$id)->where('user_id',@$user_id)->where('is_cart','1')->first();
           
           if($cart)
           {
             if($cart->order_type == 'physical_books')
             {
-              $this->mergeCart($cart_id);
+              \Log::info("Merging Cart for Order Id : ".$cart->id);
+              $this->mergeCart($cart->id);
             }
           }
           DB::commit();    
@@ -336,12 +338,12 @@ class HomeController extends Controller
     {
        
          //$response = '{"encResp":"c430d030354da4502ab5a375a70165e95e1648efe3e96cb802e5d2829139f01bdecfa0f929f39b774a30f2502c2182a8ee5ca68b081e84ef896a10b491999b16a4fc3523c3fbd33106399aa27accd91b9c7b33fb0a92f47ae5fd4fbe71d014c3fbc3ac64c1c5e023fde33139ef7bc6efe37eee59ac35c8bb43c2f3a077409de1bf1a3299ed696a1ac0104af26837c5c933e7986fb8cfb7db3f2b1fe12667edc78cc4635087a7fff57fb98e4218efa978291eae7e3bf2dae1eb8b4371fd651839d32aec3e30eb3b0058a708a90bb86e73e3e96316e6bfd079aa02ebeb632b52b8cc2b0586e196eaf5dcb0e9364c3a5c355a1988b309b05916bb2fb13b5bf7a0fcc74132f2212472bcd76ba2d1776692235ef487b8a1110bd420b107dd5b534d6af47dce99910e9fb3c9f944a6cac350a10f0adf4c14a2d94f5e1b97e6b53aee3d8a718d22e12fcd1f63629c9b3c45641f0dc2960c7e7695461c0e371f795269a85d35919a7b9af4389a60f338306479b58628002af37236a187a06e1f881c32234471ceb03e08405d82404702ae3ede65ee3a3144154ef5a7f06bf436cc3b48b217b0f1f0d60c8c7d93678f60ece237649baab1eee566a9c20acc8ed8d9271b22c1513ef97711c0c63e5a4f47e7a7c3babb0d64b912ab7f71417168707dd38e3d89ba22ae6240c24b5e6adaaf8d5ae416674df739e0563640ce825d46324ec848939f206fcf1d37fd379db2953fe2f2f17f58df3459409bce808bc6cf777658a32320c4fa912c7ca673a3a7b6ce17eb2c0a10653d9298a90f4e98b292ed0adf29ff8022164216f2143e6c6af8b65639bd8165edde53b29f8b1c1802894bfb208fda1948dbbcdd3a944dcfc5aa14049debe072054b5964827c54115fe55735b5f9dbf8aaa7f4e3dd9d70cc0e86d04ad82cccf6080a06bae2d56f0f82ba9ca42ae7009885e0c2a7f9cf00840e9344402d012c647f2d06e26b38773341f1c079fe0b32931eef1c8c5c73b7fb6560f9c15cd6b4ede231b0f99c5d8dfd3fb06e2f6d6da8e2aa8245184b619baaf6ae1688d2c3a91c9be7613a70fb113ab06659a7b116564937f2071935b3ee9c9bacd5ceb2aa5c702f903d338c28e133c37ad06e28561e0d8261c892e97091cae3349e43e9f8df820a54e5d0da1dcbb753710cab32f9","order_id":"1969"}';
-       
+        \Log::info("Response from webhook for CCAvenue for bulk order: ".json_encode($request->all()));
         $data = json_encode($request->all(),true); 
         if($request->all() == []){
           return "No Response Found";
         } 
-          //$data    = json_decode($response,true);
+          $data    = json_decode($data,true);
           $cart_id = $data['order_id'];
           \Log::info("Data here : ".$data['order_id']);
           try{
@@ -358,7 +360,7 @@ class HomeController extends Controller
             }
             DB::commit();
           }
-          $cart = Order::where('id',$cart_id)->where('is_payment_attempt','1')->first();
+          $cart = Order::where('id',$cart_id)->where('is_payment_attempt','1')->orWhere('is_payment_attempt','3')->first();
           if(!$cart) {
               \Log::info("Cart Not Found");
               return "No Cart Found";

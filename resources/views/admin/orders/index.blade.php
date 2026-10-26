@@ -230,7 +230,7 @@
 
         $('.data_table_ajax').DataTable({
         "scrollY": 600, "scrollX": true,
-        aaSorting : [[1, 'desc']],
+        aaSorting : [[9, 'desc']],
         dom: 'Blfrtip',
         lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
         pageLength: 10,
@@ -301,7 +301,7 @@
            { data: 'order_amount',orderable: false},
            { data: 'order_types',orderable: false},
            { data: 'print_status',orderable: false},
-           { data: 'created_date',orderable: false},
+           { data: 'placed_at', render: function(data, type, row) { return row.created_date; }},
            {
             data: '',
                 mRender : function(data, type, row) {

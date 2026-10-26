@@ -17,7 +17,7 @@ include 'customer.php';
 */
 
 Route::post('/webhookForPayu', 'HomeController@webhookForPayu');
-Route::get('/webhookForCCAvenue', 'HomeController@webhookForCCAvenue');
+Route::post('/webhookForCCAvenue', 'HomeController@webhookForCCAvenue');
 Route::get('/fix-user-migration', 'HomeController@fixUserMigration');
 Route::get('/fix-product-migration', 'HomeController@fixProductMigration');
 

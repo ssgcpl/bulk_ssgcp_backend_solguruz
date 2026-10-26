@@ -165,7 +165,8 @@ class PaymentController extends Controller
           $data['currency'] = 'INR';
           $data['redirect_url'] = route('ccavenue_callback_order',['user_id' => $customer->id, 'cart_id' => $cart_id]);//
           $data['language'] = 'EN';
-
+          $data['billing_email'] = $customer->email;
+          $data['billing_tel'] = $customer->mobile_number;
           //The above are required parameters.Check views/admin/payment/ccavenue_request.blade.php for all optional request parameters.
 
           $working_key = $settings['ccavenue_working_key'];//Shared by CCAVENUES
@@ -197,12 +198,7 @@ class PaymentController extends Controller
           $order->save();
           // Update Is Payment attempt status  :: end
           //Will Redirect To Payment Page 
-          if(isset($settings['ccavenue_payment_redirection_url'])){
-            $redirectUrl = $settings['ccavenue_payment_redirection_url']."?encrypted_data=" . urlencode($encrypted_data) . "&access_code=" . urlencode($access_code) . "&payment_url=" . urlencode($payment_url)."&payment_id=1";
-            return redirect()->away($redirectUrl);
-          }else{
           return view('customer.payment.ccavenue_redirect',compact('encrypted_data','access_code','payment_url'));
-          }
 
         } else if($payment_mode == 'payu'){
 
