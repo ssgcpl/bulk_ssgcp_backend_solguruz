@@ -33,7 +33,11 @@ Route::group(['namespace'=>'Customer'] ,function() {
   Route::get('signup', 'AuthController@signup')->name('signup');
   Route::get('forgot_password', 'AuthController@forgot_password')->name('forgot_password');
   Route::get('reset_password', 'AuthController@reset_password')->name('reset_password');
-  
+
+  // Public account deletion (Google Play / App Store data-deletion policy)
+  Route::get('delete-account', 'AccountDeletionController@index')->name('delete_account');
+  Route::post('delete-account', 'AccountDeletionController@handle')->name('delete_account.submit');
+
   Route::get('profile','ProfileController@index')->name('customer.profile');
   //Refer & Earn
   Route::get('refer_earn','ProfileController@refer_earn')->name('refer_earn'); 
