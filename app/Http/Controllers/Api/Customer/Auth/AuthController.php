@@ -19,6 +19,7 @@ use App\Models\ReferHistory;
 use App\Http\Resources\Customer\UserResource;
 use App\Http\Resources\Customer\CountryResource;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Hash;
 use DB;
 use Validator;
 use Notification;
@@ -487,6 +488,11 @@ class AuthController extends BaseController
         ]);
         if($request->mobile_number != null){
 
+            if($this->isDeletedAccount('mobile_number', $request->mobile_number))
+            {
+                return $this->sendError('',trans('auth.account_deleted'));
+            }
+
             $user = User::where('mobile_number',$request->mobile_number)->where('status','active')->whereIn('user_type',['retailer','dealer'])->first();
             if(!$user)
             {
@@ -599,6 +605,13 @@ class AuthController extends BaseController
             return $this->sendError('', $validator->errors()->first());       
         }
 
+        // Deleted account: same message for email and mobile login
+        $login_field = isset($request->email) ? 'email' : 'mobile_number';
+        if($this->isDeletedAccount($login_field, $request->$login_field))
+        {
+            return $this->sendError('',trans('auth.account_deleted'));
+        }
+
         if(isset($request->email))
         {
 
@@ -644,7 +657,8 @@ class AuthController extends BaseController
                 return $this->sendException(new UserResource($user), trans('auth.phone_not_verified')); 
             }
 
-            $auth_check = Auth::attempt(['mobile_number' => $request->mobile_number, 'password' => $request->password]);
+            // Check the password of the active user found above (not an old deleted account with the same mobile number)
+            $auth_check = Hash::check($request->password, $user->password);
         }
 
         
@@ -1267,5 +1281,20 @@ class AuthController extends BaseController
 
         DeviceDetail::where('user_id',$user->id)->delete();
         return $this->sendResponse('', trans('auth.account_deleted_successfully'));
+    }
+
+    /**
+     * True when this email / mobile number belongs only to deleted customer account(s).
+     * (A deleted user may have signed up again with the same details; that new account must still log in.)
+     */
+    private function isDeletedAccount($field, $value)
+    {
+        if(empty($value)) {
+            return false;
+        }
+        $customers = User::where($field, $value)->whereIn('user_type', ['retailer','dealer']);
+
+        return (clone $customers)->where('status', 'deleted')->exists()
+            && !(clone $customers)->where('status', '!=', 'deleted')->exists();
     }
 }

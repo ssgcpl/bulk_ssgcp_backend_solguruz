@@ -38,15 +38,10 @@ class AccountDeletionController extends Controller
         $page_title = 'Delete Account';
         $mobile_number = $request->session()->get(self::SESSION_KEY);
 
-        $resend_in = 0;           // seconds until "Resend OTP" is enabled
-        $limit_reached_in = 0;    // seconds until a new OTP can be requested (0 = resends still available)
-        if ($mobile_number) {
-            $hourlyKey = $this->hourlyKey($mobile_number);
-            $resend_in = $this->cooldownRemaining($mobile_number);
-            if (RateLimiter::tooManyAttempts($hourlyKey, self::MAX_OTP_PER_WINDOW)) {
-                $limit_reached_in = RateLimiter::availableIn($hourlyKey);
-            }
-        }
+        $resend_in = $mobile_number ? $this->cooldownRemaining($mobile_number) : 0; // seconds until "Resend OTP" is enabled
+
+        // Set only when the user clicked "Resend OTP" after the hourly limit was used up
+        $limit_reached_in = (int) $request->session()->get('otp_limit_wait', 0);
 
         return view('customer.delete_account', compact('page_title', 'mobile_number', 'resend_in', 'limit_reached_in'));
     }
@@ -102,7 +97,15 @@ class AccountDeletionController extends Controller
         // Max 3 OTPs per hour
         $hourlyKey = $this->hourlyKey($mobile_number);
         if (RateLimiter::tooManyAttempts($hourlyKey, self::MAX_OTP_PER_WINDOW)) {
-            $wait = $this->formatWait(RateLimiter::availableIn($hourlyKey));
+            $available_in = RateLimiter::availableIn($hourlyKey);
+
+            // OTP screen (Resend clicked): show the live countdown in place of the Resend button
+            if ($request->session()->get(self::SESSION_KEY) === $mobile_number) {
+                return $this->backToPage()->with('otp_limit_wait', $available_in);
+            }
+
+            // Mobile number screen
+            $wait = $this->formatWait($available_in);
             return $this->backToPage()->withInput()->withErrors(['general' => "OTP limit exceeded. Please try again after {$wait}."]);
         }
 
