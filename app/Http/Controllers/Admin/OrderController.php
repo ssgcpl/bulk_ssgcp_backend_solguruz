@@ -248,6 +248,8 @@ class OrderController extends Controller
         $columnName      =    $request['columns'][$columnIndex]['data']; // Column name
         $columnSortOrder =    $request['order'][0]['dir']; // asc or desc
         $searchValue     =    $request['search']['value']; // Search value
+        // order_status may be missing from the request; fall back to the saved order status
+        $order_status    =    $request['order_status'] ?? optional(Order::find($request['order_id'] ?? null))->order_status;
 
 
         ## Total number of records without filtering
@@ -289,7 +291,7 @@ class OrderController extends Controller
           $emp['sku_id']= $emp->product->sku_id;
         	$emp['product_image'] = ($emp->product->image) ? '<img src="'.asset($emp->product->image).'" width="100%" height="100%">' : '';
         	$emp['supplied_qty'] =  ($emp->supplied_quantity) ? '<input type="textbox" name="supplied_qty"'.$emp->id.'" id="supplied_qty_'.$emp->id.'" value="'.$emp->supplied_quantity.'" disabled style="width:100px;"></input><a class="edit_supplied_qty" href="javascript:void(0)"  id="'.$emp->id.'"><span class="fa fa-edit errspan"></span></a>':$emp->supplied_quantity;
-          if($request['order_status'] == 'completed'){
+          if($order_status == 'completed'){
             $emp['supplied_qty'] =  ($emp->supplied_quantity) ? '<input type="textbox" name="supplied_qty"'.$emp->id.'" id="supplied_qty_'.$emp->id.'" value="'.$emp->supplied_quantity.'" disabled style="width:100px;"></input>':$emp->supplied_quantity;
           }
         	$emp['weight'] = number_format($emp->product->weight * $emp->supplied_quantity,'2','.',',');

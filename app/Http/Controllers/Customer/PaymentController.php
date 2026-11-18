@@ -504,7 +504,8 @@ class PaymentController extends Controller
             $this->maintainReferralHistory((integer)$cart->redeemed_points, 'deducted', 'no_deduct',$user,'',$cart->id);
           }
 
-        
+          $send_order_placed_communications = $this->isOrderPlacedNotificationPending($user->id,$cart->id);
+          if($send_order_placed_communications){
           //###### Customer Order Placed Notification ######
           $title    = 'Order Placed Successfully';
          // $body     = "Congratulations! Your order ".$cart->order_id.", worth ".$cart->total_payable." Rs. has been placed successfully.";
@@ -555,6 +556,7 @@ class PaymentController extends Controller
               }
           }
           //###### Send Order Placed Email ######
+          }
           // return redirect('order_payment_success');
 
           if($cart->order_type == 'physical_books')
@@ -808,7 +810,8 @@ class PaymentController extends Controller
             $this->maintainReferralHistory((integer)$cart->redeemed_points, 'deducted', 'no_deduct',$user,'',$cart->id);
           }
 
-        
+          $send_order_placed_communications = $this->isOrderPlacedNotificationPending($user->id,$cart->id);
+          if($send_order_placed_communications){
           //###### Customer Order Placed Notification ######
           $title    = 'Order Placed Successfully';
          // $body     = "Congratulations! Your order ".$cart->order_id.", worth ".$cart->total_payable." Rs. has been placed successfully.";
@@ -857,6 +860,7 @@ class PaymentController extends Controller
             {
               return redirect('order_payment_success?type=coupon');
             }
+          }
           }
            	
           // return redirect('order_payment_success');

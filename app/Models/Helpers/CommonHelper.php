@@ -494,6 +494,17 @@ trait CommonHelper
 }
 
 
+  public function isOrderPlacedNotificationPending($user_id,$order_id){
+    $already_sent = Notification::where('user_id',$user_id)
+                      ->whereIn('slug',['customer_order_placed','customer_coupon_order_placed'])
+                      ->where('data_id',$order_id)
+                      ->exists();
+    if($already_sent){
+      \Log::info("Order placed notification already sent, skipping for Order Id : ".$order_id);
+    }
+    return !$already_sent;
+  }
+
 public function sendNotifications($user,$title,$body){
 
       if($user == null){
@@ -1507,7 +1518,7 @@ public function sendNotifications($user,$title,$body){
           $item['id'] = $ik + 1;
       }
           $data = [
-            'invoice_no' => $order->order_id,'order_type'=>$order->order_type,'dated' => date('M d, Y',strtotime($order->created_at)),
+            'invoice_no' => $order->order_id,'order_type'=>$order->order_type,'dated' => date('M d, Y',strtotime($order->placed_at)),
             'order_id' => $order->id,'user_name'=>$order->user->first_name." ".$order->user->last_name,'billing_address' => $billing_address,'shipping_address'=>$shipping_address,
             'order_items' => $order_items,'total_weight'=>number_format($order->total_weight,'2','.',','),'bundles'=>$order->bundles,'payment_type'=>$payment_type,'total_amount'=> $order->total_payable,'total_sale_price'=>$order->total_sale_price,'delivery_charges'=>$order->delivery_charges,
           ];
@@ -1874,9 +1885,11 @@ public function sendNotifications($user,$title,$body){
     if ($settings['ccavenue_mode'] == 'sandbox') {
       $access_code = $settings['ccavenue_access_code'];
       $working_key = $settings['ccavenue_working_key'];
+      $verify_payment_url = 'https://apitest.ccavenue.com/apis/servlet/DoWebTrans';
     } else {
       $access_code = $settings['ccavenue_access_code'];
       $working_key = $settings['ccavenue_working_key'];
+      $verify_payment_url = 'https://api.ccavenue.com/apis/servlet/DoWebTrans';
     }
     $latestPaymentWithTransactionId = $cart->payments()
       ->whereNotNull('tran_ref')
@@ -1903,7 +1916,7 @@ public function sendNotifications($user,$title,$body){
         'version' => '1.2'
       ];
 
-      $response = Http::asForm()->post('https://apitest.ccavenue.com/apis/servlet/DoWebTrans', $requestData)->body();
+      $response = Http::asForm()->post($verify_payment_url, $requestData)->body();
       $status = '';
       $responseArray = array();
       parse_str($response, $responseArray);
@@ -2048,6 +2061,8 @@ public function sendNotifications($user,$title,$body){
                   $this->maintainReferralHistory((integer)$cart->redeemed_points, 'deducted', 'no_deduct',$user,'',$cart->id);
                 }
 
+                $send_order_placed_communications = $this->isOrderPlacedNotificationPending($user->id,$cart->id);
+                if($send_order_placed_communications){
                 //###### Send Order Placed Email ######
                 if($user->email) {
                     try
@@ -2088,5 +2103,6 @@ public function sendNotifications($user,$title,$body){
                 //###### Send Order Placed SMS to Customer #####
                 $send_order_placed_sms = $this->sendOrderStatusSMS('',$user->mobile_number,$cart,'order_placed');
                 //###### Send Order Placed SMS to Customer #####
+                }
               }
 }

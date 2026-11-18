@@ -70,7 +70,7 @@ class HomeController extends Controller
             return response("Ignored: not a Bulk SSGC payment", 200);
         }
         $user = User::where('email',$data['email'])->first();
-        $cart = Order::where('order_id',$data['txnid'])->where('is_payment_attempt','1')->orWhere('is_payment_attempt','3')->where('user_id',@$user->id)->first();
+        $cart = Order::where('order_id',$data['txnid'])->whereIn('is_payment_attempt',['1','3'])->where('user_id',@$user->id)->first();
         $settings = Setting::pluck('value','name')->all();
         $admin_email = $settings['admin_email'];
         if(!$cart) {
@@ -193,6 +193,8 @@ class HomeController extends Controller
                   $this->maintainReferralHistory((integer)$cart->redeemed_points, 'deducted', 'no_deduct',$user,'',$cart->id);
                 }
 
+                $send_order_placed_communications = $this->isOrderPlacedNotificationPending($user->id,$cart->id);
+                if($send_order_placed_communications){
                 //###### Send Order Placed Email ######
                 if($user->email) {
                     try
@@ -243,6 +245,7 @@ class HomeController extends Controller
                 //###### Send Order Placed SMS to Customer #####
                 $send_order_placed_sms = $this->sendOrderStatusSMS('',$user->mobile_number,$cart,'order_placed');
                 //###### Send Order Placed SMS to Customer #####
+                }
 
                 // return redirect('order_payment_success');
 
@@ -379,7 +382,7 @@ class HomeController extends Controller
             }
             DB::commit();
           }
-          $cart = Order::where('id',$cart_id)->where('is_payment_attempt','1')->orWhere('is_payment_attempt','3')->first();
+          $cart = Order::where('id',$cart_id)->whereIn('is_payment_attempt',['1','3'])->first();
           if(!$cart) {
               \Log::info("Cart Not Found");
               return "No Cart Found";
@@ -506,6 +509,8 @@ class HomeController extends Controller
                   $this->maintainReferralHistory((integer)$cart->redeemed_points, 'deducted', 'no_deduct',$user,'',$cart->id);
                 }
 
+                $send_order_placed_communications = $this->isOrderPlacedNotificationPending($user->id,$cart->id);
+                if($send_order_placed_communications){
                 try
                 {
                   //###### Send Order Placed Email ######
@@ -545,6 +550,7 @@ class HomeController extends Controller
             //###### Send Order Placed SMS to Customer #####
             $send_order_placed_sms = $this->sendOrderStatusSMS('',$user->mobile_number,$cart,'order_placed');
             //###### Send Order Placed SMS to Customer #####
+            }
           }else{
 
             $cart->order_status = 'failed';
